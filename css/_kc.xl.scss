@@ -1,0 +1,178 @@
+@media (min-width:992px) {
+    /********************* CONTAINERS *******************/
+
+    .f-row {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        width: 100%;
+        position: relative;
+    }
+
+    .container-9 {
+        width: 90%;
+        position: relative;
+    }
+
+    .container-8 {
+        width: 80%;
+        position: relative;
+    }
+
+    .container-7 {
+        width: 70%;
+        position: relative;
+    }
+
+    .container-6 {
+        width: 60%;
+        position: relative;
+    }
+
+    .container-5 {
+        width: 50%;
+        position: relative;
+    }
+
+    /********************* HOLDERS **********************/
+    
+    .f-holder-1 {
+        min-width: 100%;
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .f-holder-2 {
+        min-width: 50%;
+        width: 50%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .f-holder-3 {
+        min-width: (100% / 3);
+        width: (100% / 3);
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .f-holder-4 {
+        min-width: 25%;
+        width: 25%;
+        position: relative;
+        padding: 1rem;
+    }
+
+    
+    .f-holder-5 {
+        min-width: 20%;
+        width: 20%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .f-holder-6 {
+        min-width: (100% / 6);
+        width: (100% / 6);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .s-holder-2 {
+        width: 34%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .s-holder-3 {
+        width: 26%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .s-holder-4 {
+        width: 21%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .s-holder-5 {
+        width: 17%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+
+
+
+    /*********************** TILES ***************************/
+
+    .tile-3-2 {
+        width: (100% / 3 * 2);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-4-3 {
+        width: 75%;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-5-2 {
+        width: 40%;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-5-3 {
+        width: 60;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-5-4 {
+        width: 80%;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-6-4 {
+        width: (100% / 3 * 2);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-6-5 {
+        width: (100% / 6 * 5);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .square-box {
+        padding-top: 100%;
+        position: relative;
+    }
+
+    .rect-box-5 {
+        padding-top: 50%;
+        position: relative;
+    }
+
+    .rect-box-6 {
+        padding-top: 60%;
+        position: relative;
+    }
+
+    .rect-box-7 {
+        padding-top: 70%;
+        position: relative;
+    }
+}

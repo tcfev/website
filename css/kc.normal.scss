@@ -1,0 +1,1247 @@
+@import './var';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+// ********************* OVER_MENU ******************
+
+.over-menu {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.25rem 0.25rem;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &.over-row {
+        flex-direction: row;
+    }
+
+    &.over-col {
+        flex-direction: column;
+    }
+
+    &.middle {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.top-center {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &.top-left {
+        left: 0em;
+        top: -0.75em;
+    }
+
+    &.top-right {
+        right: 0em;
+        top: -0.75em;
+    }
+
+    &.top-right-base {
+        right: 0em;
+        top: -110%;
+    }
+
+    &.top-center-base {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -110%;
+    }
+
+    &.bottom-left {
+        left: 0em;
+        bottom: -0.75em;
+    }
+
+    &.bottom-right {
+        right: 0em;
+        bottom: -0.75em;
+    }
+
+    & .over-item {
+        cursor: pointer;
+        margin: 0 0.5em;
+        font-size: 1em;
+    }
+}
+
+.over-menu-holder {
+    position: relative;
+    width: fit-content;
+
+    &:hover > .over-menu{
+        opacity: 1;
+    }
+}
+
+
+
+
+/********************* CONTAINERS *******************/
+
+.f-row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.container-9 {
+    width: 90%;
+    position: relative;
+}
+
+.container-8 {
+    width: 80%;
+    position: relative;
+}
+
+.container-7 {
+    width: 70%;
+    position: relative;
+}
+
+.container-6 {
+    width: 60%;
+    position: relative;
+}
+
+.container-5 {
+    width: 50%;
+    position: relative;
+}
+
+/********************* HOLDERS **********************/
+
+.f-holder-1 {
+    min-width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+}
+
+.f-holder-2 {
+    min-width: 50%;
+    width: 50%;
+    position: relative;
+    padding: 1rem;
+}
+
+.f-holder-3 {
+    min-width: (100% / 3);
+    width: (100% / 3);
+    position: relative;
+    padding: 1rem;
+}
+
+.f-holder-4 {
+    min-width: 25%;
+    width: 25%;
+    position: relative;
+    padding: 1rem;
+}
+
+
+.f-holder-5 {
+    min-width: 20%;
+    width: 20%;
+    position: relative;
+    padding: 1rem;
+}
+
+.f-holder-6 {
+    min-width: (100% / 6);
+    width: (100% / 6);
+    position: relative;
+    padding: 1rem;
+}
+
+.s-holder-2 {
+    width: 34%;
+    flex-grow: 1;
+    position: relative;
+    padding: 1rem;
+}
+
+.s-holder-3 {
+    width: 26%;
+    flex-grow: 1;
+    position: relative;
+    padding: 1rem;
+}
+
+.s-holder-4 {
+    width: 21%;
+    flex-grow: 1;
+    position: relative;
+    padding: 1rem;
+}
+
+.s-holder-5 {
+    width: 17%;
+    flex-grow: 1;
+    position: relative;
+    padding: 1rem;
+}
+
+
+
+/*********************** TILES ***************************/
+
+.tile-3-2 {
+    width: (100% / 3 * 2);
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-4-3 {
+    width: 75%;
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-5-2 {
+    width: 40%;
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-5-3 {
+    width: 60%;
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-5-4 {
+    width: 80%;
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-6-4 {
+    width: (100% / 3 * 2);
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-6-5 {
+    width: (100% / 6 * 5);
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-7-2 {
+    width: (100% / 7 * 2);
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-7-3 {
+    width: (100% / 7 * 3);
+    position: relative;
+    
+    padding: 1rem;
+}
+.tile-7-4 {
+    width: (100% / 7 * 4);
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-7-5 {
+    width: (100% / 7 * 5);
+    position: relative;
+    padding: 1rem;
+}
+
+.tile-7-6 {
+    width: (100% / 7 * 6);
+    position: relative;
+    padding: 1rem;
+}
+
+.square-box {
+    padding-top: 100%;
+    position: relative;
+}
+
+.rect-box-5 {
+    padding-top: 50%;
+    position: relative;
+}
+
+.rect-box-6 {
+    padding-top: 60%;
+    position: relative;
+}
+
+.rect-box-7 {
+    padding-top: 70%;
+    position: relative;
+}
+
+
+/*********************** GRIDS ***************************/
+
+@import './Grid';
+
+
+
+
+/*********************** DISPLAY *************************/
+
+.dsp-f {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.f-grow {
+    flex-grow: 1;
+}
+
+.f-shrink {
+    flex-shrink: 3;
+}
+
+.dsp-b {
+    display: block;
+}
+
+.dsp-n {
+    display: none;
+}
+
+.dsp-ib {
+    display: inline-block;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: flex;
+}
+
+/*********************** POSITIONS ***********************/
+
+.pos-a {
+    position: absolute !important;
+}
+
+.pos-r {
+    position: relative !important;
+}
+
+.pos-f {
+    position: fixed !important;
+}
+
+.pos-s {
+    position: sticky !important;
+}
+
+
+
+
+/*********************** MARGINS **************************/
+
+@import './margin';
+
+
+/*********************** PADDINGS **************************/
+
+@import './padding';
+
+
+/*********************** TABLES **********************/
+
+@import './TBL';
+
+
+/*********************** BACKGROUNDS **********************/
+
+@import './BG';
+
+/*********************** TEXT_COLORS **********************/
+
+@import './CL';
+
+/*********************** WIDTH ***************************/
+
+.w-25p {
+    width: 25%;
+}
+
+.w-50p {
+    width: 50%;
+}
+
+.w-75p {
+    width: 75%;
+}
+
+.w-100p {
+    width: 100%;
+}
+
+.w-20x {
+    width: 20px;
+}
+
+.w-30x {
+    width: 30px;
+}
+
+.w-40x {
+    width: 40px;
+}
+
+.w-50x {
+    width: 50px;
+}
+
+.w-75x {
+    width: 75px;
+}
+
+.w-100x {
+    width: 100px;
+}
+
+.m-w-100p {
+    max-width: 100%;
+}
+
+.m-w-90p {
+    max-width: 90%;
+}
+
+.i-w-100p {
+    min-width: 100%;
+}
+
+.w-max {
+    width: max-content;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+/*********************** HEIGHT **************************/
+
+.h-25p {
+    height: 25%;
+}
+
+.h-50p {
+    height: 50%;
+}
+
+.h-75p {
+    height: 75%;
+}
+
+.h-100p {
+    height: 100%;
+}
+
+.h-a {
+    height: auto;
+}
+
+.h-20x {
+    height: 20px;
+}
+
+.h-30x {
+    height: 30px;
+}
+
+.h-40x {
+    height: 40px;
+}
+
+.h-50x {
+    height: 50px;
+}
+
+.h-100x {
+    height: 100px;
+}
+
+.h-200x {
+    height: 200px;
+}
+
+.h-300x {
+    height: 330px;
+}
+
+.m-h-100p {
+    min-height: 100%;
+    height: auto;
+}
+
+.h-100v {
+    height: 100vh;
+}
+
+.m-h-100v {
+    min-height: 100vh;
+    height: auto;
+}
+
+.i-h-200px {
+    min-height: 200px;
+}
+
+.i-h-100px {
+    min-height: 100px;
+}
+
+
+
+/*********************** MENU_NAV ***********************/
+
+.menu-nav {
+    // display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    z-index: 1000;
+    width: 100%;
+    // align-items: center;
+    // transition: all ease-in-out 0.3s;
+
+    & .menu-nav-logo {
+        min-width: 100px;
+        text-align: center;
+        & img {
+            width: 35px;
+        }
+    }
+
+    &.top-nav {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        & li {
+            // color: $white;
+            padding: 0.5rem 1.25rem;
+        }
+    }
+
+    &.scrolled {
+        background-color: rgba(10,45,51,0.9);
+    }
+}
+
+
+
+
+/***************************** ALIGN *************************/
+.va-baseline {
+    vertical-align: baseline;
+}
+
+.va-sub {
+    vertical-align: sub;
+}
+
+
+.aic {
+    align-items: center;
+}
+
+.ais {
+    align-items: stretch;
+}
+
+.aibl {
+    align-items: baseline;
+}
+
+.aife {
+    align-items: flex-end;
+}
+
+.jcb {
+    justify-content: space-between;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jca {
+    justify-content: space-around;
+}
+
+.jce {
+    justify-content: space-evenly;
+}
+
+.jcr {
+    justify-content: flex-end;
+}
+
+.jcl {
+    justify-content: flex-start;
+}
+
+/************************** DIRECTION *************************/
+
+.f-d-row {
+    flex-direction: row;
+}
+
+.f-d-col {
+    flex-direction: column;
+}
+
+// ********************** SCROLL EFFECTS ***********************
+
+.scroll-special-fix {
+    position: relative;
+    transition: opacity 300ms ease-in;
+    &.onscreen .target{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+.scroll-effect-dark {
+    transition: all 100ms ease-in;
+    &.onscreen {
+        background-color: $grey-9;
+        color: $white;
+    }
+}
+
+.scroll-effect-fade {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+.scroll-effect-fade.onscreen {
+    opacity: 1;
+}
+
+.scroll-effect-left {
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: opacity 400ms ease-in, transform 300ms ease-in;
+}
+
+.scroll-effect-left.onscreen {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.scroll-effect-right {
+    transform: translateX(30%);
+    opacity: 0;
+    transition: opacity 400ms ease-in, transform 300ms ease-in;
+}
+
+.scroll-effect-right.onscreen {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.scroll-effect-top {
+    transform: translateY(-15%);
+    opacity: 0;
+    transition: opacity 400ms ease-in, transform 300ms ease-in;
+}
+
+.scroll-effect-top.onscreen {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.scroll-effect-expand-x {
+    transform: scaleX(0.01);
+    transition: transform 700ms ease-in;
+}
+
+.scroll-effect-expand-x.onscreen {
+    transform: scaleX(1);
+}
+
+.scroll-effect-expand-y {
+    transform: scaleY(0.01);
+    transition: transform 700ms ease-in;
+}
+
+.scroll-effect-expand-y.onscreen {
+    transform: scaleY(1);
+}
+
+
+/************************** FONTS *****************************/
+
+@import './font';
+
+
+
+/************************** MENU_BUTTON **********************/
+
+.kc-menu-btn {
+    direction: ltr !important;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    margin: 0 10px;
+    display: none;
+    z-index: 1001;
+}
+
+.kc-menu-btn .line{
+    width: 35px;
+    height: 5px;
+    border-radius: 2.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.kc-menu-btn .line::after,
+.kc-menu-btn .line::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: inherit;
+    border-radius: 2.5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.kc-menu-btn .line::after {
+    transform: translateY(7px);
+}
+
+.kc-menu-btn .line::before {
+    transform: translateY(-12px);
+}
+
+.open .kc-menu-btn .line {
+    width: 0;
+}
+
+
+.open .kc-menu-btn .line::before {
+    transform: translate(-15px, -2px) rotate(45deg);
+}
+
+.open .kc-menu-btn .line::after {
+    transform: translate(-15px, -3px) rotate(-45deg);
+}
+
+/*********************** SHADOWS ************************/
+
+.shdw-1 {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.shdw-2 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.shdw-3 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*********************** BORDERS ************************/
+@import './BRD';
+
+
+// ********************** BUTTONS *************************
+
+
+@import './BTN';
+
+
+// ********************** SIDE_BAR ************************
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    overflow-x: hidden;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    z-index: 1001;
+
+    & ul {
+        margin-top: 50px;
+        list-style: none;
+    }
+
+    & a {
+        color: inherit;
+    }
+
+    & li {
+        width: 230px;
+        
+        &.selected {
+            background-color: $blue-6;
+        }
+
+        // &.selected:hover {
+        //     background-color: $green-6;
+        // }
+    }
+
+    & label {
+        line-height: 50px;
+        display: inline-block;
+        padding: 0 1rem;
+        cursor: pointer;
+        vertical-align: top !important;
+        white-space:nowrap;
+    }
+
+    & .icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.1em;
+        text-align: center;
+        display: inline-block;
+    }
+
+    &.open {
+        width: 220px;
+    }
+}
+
+.side-bar-left {
+    left: 0 !important;
+}
+
+.side-bar-right {
+    right: 0 !important;
+}
+
+
+
+
+// ********************** ICONS **********************
+
+@import './icon';
+
+
+// ******************** TOOL_TIP *********************
+
+.tp {
+    position: relative;
+
+    & .tt {
+        z-index: 1001;
+        position: absolute;
+        width: auto;
+        border-radius: 5px;
+        padding: 3px 10px;
+        transition: 0.4s;
+        visibility: hidden;
+        opacity: 0;
+
+        &.ttop {
+            bottom: 100%;
+            left: 50%;
+            transform: translate(-50%, -30px);
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 50%;
+                top: 100%;
+                background-color: inherit;
+                transform: translate(-50%, -7px) rotate(45deg);
+            }
+        }
+    }
+
+    &:hover .tt {
+        opacity: 1;
+        visibility: visible;
+
+        &.ttop {
+            transform: translate(-50%, -10px);
+        }
+    }
+}
+
+
+// ******************* UTILITY ******************
+
+.karaco-sample-dom {
+    display:none !important;
+}
+
+hr {
+    width: 95%;
+    margin: 1.5rem auto;
+    border-left: hidden;
+    border-bottom: hidden;
+    border-right: hidden;
+
+    &.dark {
+        border-top-color: $grey-2;
+    }
+
+    &.light {
+        border-top-color: $light;
+    }
+}
+
+vr {
+    width: 1px;
+    margin: -1px;
+}
+
+.v-d {
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+}
+
+.v-u {
+    writing-mode: vertical-rl;
+}
+
+.h-u {
+    writing-mode: horizontal-tb;
+}
+
+.ov-h {
+    overflow: hidden;
+}
+
+.ov-x-h {
+    overflow-x: hidden;
+}
+
+.ov-y-h {
+    overflow-y: hidden;
+}
+
+.ov-v {
+    overflow: visible;
+}
+
+.ov-x-v {
+    overflow-x: visible;
+}
+
+.ov-y-v {
+    overflow-y: visible;
+}
+
+.ov-s {
+    overflow: scroll;
+}
+
+.ov-x-s {
+    overflow-x: scroll;
+}
+
+.ov-y-s {
+    overflow-y: scroll;
+}
+
+.ov-a {
+    overflow: auto;
+}
+
+.ov-x-a {
+    overflow-x: auto;
+}
+
+.ov-y-a {
+    overflow-y: auto;
+}
+
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.image-view {
+    cursor: pointer !important;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// ************** DIAGONAL *************
+
+.diagonal-l-t::after {
+    left: -15%;
+    top: -50%;
+    transform: rotate(15deg);
+}
+
+.diagonal-l-b::after {
+    left: -15%;
+    top: -50%;
+    transform: rotate(-15deg);
+}
+
+.diagonal-r-b::after {
+    right: -15%;
+    top: -50%;
+    transform: rotate(15deg);
+}
+
+.diagonal-r-t::after {
+    right: -15%;
+    top: -50%;
+    transform: rotate(-15deg);
+}
+
+.diagonal-l-t,
+.diagonal-l-b,
+.diagonal-r-t,
+.diagonal-r-b{
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 200%;
+        width: 30%;
+        background-color: inherit;
+    }
+}
+
+
+// ************* SWITCH ****************
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    & .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        border: 1px solid #999;
+        transition: .4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    &.big {
+        width: 60px;
+        height: 30px;
+
+        & .slider.round {
+            border-radius: 15px;
+
+            &::before {
+                border-radius: 50%;
+            }
+        }
+
+        & .slider::before {
+            height: 21px;
+            width: 21px;
+            left: 4px;
+            bottom: 4px;
+        }
+
+        & input:checked + .slider::before {
+            transform: translateX(30px);
+        }
+    }
+
+    &.small {
+        width: 30px;
+        height: 15px;
+
+        & .slider.round {
+            border-radius: 7.5px;
+
+            &::before {
+                border-radius: 50%;
+            }
+        }
+
+        & .slider::before {
+            height: 10px;
+            width: 10px;
+            left: 1.25px;
+            bottom: 1.25px;
+        }
+
+        & input:checked + .slider::before {
+            transform: translateX(15px);
+        }
+    }
+
+    & input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+            background-color: $bright-green-6;
+        }
+    }
+  }
+  
+  
+  /* .switch input:focus + .slider {
+    box-shadow: 0 0 1px #a656ff;
+  } */
+
+// ************* IMG RADIO *************
+
+// .img-radio {
+//     position: relative;
+//     width: fit-content;
+//     display: inline-block;
+//     cursor: pointer;
+
+//     & img {
+//         transition: all ease 0.2s;
+//     }
+
+//     & input {
+//         opacity: 0;
+//         width: 0;
+//         height: 0;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+
+//     > input:checked {
+//         opacity: 1;
+//         width: 100px;
+//         height: 100px;
+
+//         & + .rad-img {
+//             background: '#000';
+//         }
+//     }
+// }
+
+
+.image {
+    opacity: 0.3;
+    border: 2px solid $light;
+    transition: all ease 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+}
+
+.radio-img {
+    > input { 
+        display:none;
+    }
+    > .image{
+        cursor:pointer;
+    }
+
+    > input:checked + .image{
+        opacity: 1;
+        border: 2px solid $grey-3;
+    }
+    
+}
+
+// ************** POPUPS ***************
+@import './_POP';
+
+
+
+// ************ CALENDAR ***************
+
+@import './_CAL';
+
+
+// *************** FORMS ***************
+
+@import './form';
+
+
+// *************** EFFECTS & TRANSTIONS ***************
+
+@import './HVR';
+
+
+
+
+@import './kc.480';
+@import './kc.992';
+@import './kc.680';

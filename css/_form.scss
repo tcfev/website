@@ -1,0 +1,49 @@
+.kc-form-1 {
+    width: 90%;
+    margin: 0 5% 2.5% 5%;
+    & input[type=text] {
+        width: 100%;
+        border: 1px solid #000;
+        border-radius: 0.25em;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    & textarea {
+        width: 100%;
+        border: 1px solid #000;
+        border-radius: 0.25em;
+        padding: 0.25em;
+        resize: vertical;
+        min-height: 5em;
+        margin-bottom: 0.25em;
+    }
+
+    & button {
+        padding: 0.5em;
+        border-radius: 0.25em;
+        border: 1px solid #000;
+        margin-bottom: 0.5em;
+        cursor: pointer;
+    }
+}
+
+.kc-form-white {
+    & input {
+        border: none !important;
+        color: #fff;
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    & textarea {
+        border: none !important;
+        color: #fff;
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    & button {
+        border: none;
+        color: #fff;
+        background-color: rgba(255,255,255,0.2);
+    }
+}

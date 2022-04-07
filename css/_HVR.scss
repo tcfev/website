@@ -1,0 +1,45 @@
+.hvr-lift-up,
+.hvr-lift-up > *{
+    transition: all ease 0.4s;
+    transform: translateY(0);
+}
+
+.hvr-lift-up a {
+    opacity: 0;
+}
+
+.hvr-lift-up:hover a {
+    opacity: 1;
+}
+
+.hvr-lift-up:hover > * {
+    transform: translateY(-20px);
+}
+
+
+.hvr-zoom-out,
+.hvr-zoom-out img,
+.hvr-zoom-out a,
+.hvr-zoom-out span,
+.hvr-zoom-out h3 {
+    transition: all ease 0.4s;
+    transform: translateY(0) scale(1);
+}
+
+.hvr-zoom-out a{
+    opacity: 0;
+}
+
+.hvr-zoom-out:hover h3,
+.hvr-zoom-out:hover span {
+    transform: translateY(-10px) scale(1);
+}
+
+.hvr-zoom-out:hover img {
+    transform: translateY(0) scale(0.9);
+}
+
+.hvr-zoom-out:hover a {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+}

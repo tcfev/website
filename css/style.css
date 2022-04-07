@@ -1,0 +1,464 @@
+/****************** VARS *********************/
+.main-cl-1 {
+  color: #d9ed92;
+}
+
+.main-cl-2 {
+  color: #99d98c;
+}
+
+.main-cl-3 {
+  color: #52b69a;
+}
+
+.main-cl-4 {
+  color: #34a0a4;
+}
+
+.main-cl-5 {
+  color: #168aad;
+}
+
+.main-cl-6 {
+  color: #1a759f;
+}
+
+.main-cl-7 {
+  color: #1e6091;
+}
+
+.main-bg-1 {
+  background-color: #d9ed92;
+}
+
+.main-bg-2 {
+  background-color: #99d98c;
+}
+
+.main-bg-3 {
+  background-color: #52b69a;
+}
+
+.main-bg-4 {
+  background-color: #34a0a4;
+}
+
+.main-bg-5 {
+  background-color: #168aad;
+}
+
+.main-bg-6 {
+  background-color: #1a759f;
+}
+
+.main-bg-7 {
+  background-color: #1e6091;
+}
+
+/****************** STYLING ********************/
+* {
+  font-family: 'Comfortaa', cursive;
+}
+
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 3px;
+  background-clip: padding-box;
+  background-color: #34a0a4;
+  border-radius: 2.5px;
+  cursor: pointer;
+}
+
+.not-loaded {
+  overflow: hidden;
+}
+
+.fade-circle {
+  position: absolute;
+  width: 0%;
+  padding-top: 0%;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all ease 1.2s;
+  transition: all ease 1.2s;
+}
+
+.fade-circle.covering {
+  width: 650%;
+  padding-top: 650%;
+}
+
+#borders {
+  background-color: #fff;
+  opacity: 1;
+  position: fixed;
+  z-index: 1005;
+  left: 0;
+  top: 0;
+  -webkit-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+}
+
+#borders.hidden {
+  opacity: 0;
+}
+
+.main-bg {
+  background: #1e6091;
+  background: linear-gradient(35deg, #d9ed92 0%, #34a0a4 51%, #1e6091 100%);
+}
+
+.light nav.menu {
+  position: relative;
+  z-index: 999;
+}
+
+.light nav.menu ul {
+  list-style: none;
+}
+
+.light nav.menu ul a {
+  text-align: center;
+  color: #fff;
+  -webkit-transition: color ease 0.2s;
+  transition: color ease 0.2s;
+}
+
+.light nav.menu ul a:hover {
+  color: #aaa;
+}
+
+.light nav.menu ul select {
+  border: 0.5px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.light nav.menu ul select option {
+  color: #000;
+}
+
+.dark nav.menu {
+  position: relative;
+  z-index: 999;
+}
+
+.dark nav.menu ul {
+  list-style: none;
+}
+
+.dark nav.menu ul a {
+  text-align: center;
+  color: #000;
+  -webkit-transition: color ease 0.2s;
+  transition: color ease 0.2s;
+}
+
+.dark nav.menu ul a:hover {
+  color: #444;
+}
+
+.dark nav.menu ul select {
+  border: 0.5px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+
+.dark nav.menu ul select option {
+  color: #000;
+}
+
+.project-gallery {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.project-gallery::-webkit-scrollbar {
+  height: 0;
+}
+
+.project-gallery::-webkit-scrollbar-track {
+  margin: 8vh;
+}
+
+.more-btn {
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(50%, black), color-stop(50%, white), to(white));
+  background: linear-gradient(90deg, black 0%, black 50%, white 50%, white 100%);
+  background-size: 200%;
+  background-position: 100% 50%;
+  -webkit-transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+  transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+}
+
+.more-btn:hover {
+  padding-left: 30px !important;
+  background-position: 0% 50%;
+  color: #fff;
+}
+
+.join-btn-1 {
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#34a0a4), color-stop(33%, #34a0a4), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
+  background: linear-gradient(90deg, #34a0a4 0%, #34a0a4 33%, black 33%, black 66%, white 66%, white 100%);
+  background-size: 303%;
+  background-position: 100% 50%;
+  -webkit-transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+  transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+}
+
+.join-btn-1:hover {
+  padding-left: 30px !important;
+  background-position: 0% 50%;
+  color: #fff;
+}
+
+.join-btn-1 {
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#1e6091), color-stop(33%, #1e6091), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
+  background: linear-gradient(90deg, #1e6091 0%, #1e6091 33%, black 33%, black 66%, white 66%, white 100%);
+  background-size: 303%;
+  background-position: 100% 50%;
+  -webkit-transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+  transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+}
+
+.join-btn-1:hover {
+  padding-left: 30px !important;
+  background-position: 0% 50%;
+  color: #fff;
+}
+
+.join-btn-2 {
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#34a0a4), color-stop(33%, #34a0a4), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
+  background: linear-gradient(90deg, #34a0a4 0%, #34a0a4 33%, black 33%, black 66%, white 66%, white 100%);
+  background-size: 303%;
+  background-position: 100% 50%;
+  -webkit-transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+  transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+}
+
+.join-btn-2:hover {
+  padding-left: 30px !important;
+  background-position: 0% 50%;
+  color: #fff;
+}
+
+.join-btn-3 {
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#d9ed92), color-stop(33%, #d9ed92), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
+  background: linear-gradient(90deg, #d9ed92 0%, #d9ed92 33%, black 33%, black 66%, white 66%, white 100%);
+  background-size: 303%;
+  background-position: 100% 50%;
+  -webkit-transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+  transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+}
+
+.join-btn-3:hover {
+  padding-left: 30px !important;
+  background-position: 0% 50%;
+}
+
+#fly-loading {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all ease 250ms;
+  transition: all ease 250ms;
+}
+
+#fly-loading.show {
+  display: block;
+}
+
+#fly-loading.show.ready {
+  opacity: 1;
+}
+
+.resizable {
+  -webkit-transition: max-height ease 0.6s;
+  transition: max-height ease 0.6s;
+  max-height: 1000px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.minimized {
+  max-height: 60px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.transition {
+  width: 330%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1002;
+  left: -330%;
+  height: 100%;
+  top: 0;
+}
+
+.transition div {
+  width: 100%;
+  height: 33.4%;
+  -webkit-transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
+  transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
+  transition: transform ease 1.5s,  background-color ease 0.7s;
+  transition: transform ease 1.5s,  background-color ease 0.7s,  -webkit-transform ease 1.5s;
+}
+
+.transition.animated #tr-1 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.transition.animated #tr-2 {
+  -webkit-transform: translateX(65.2%);
+          transform: translateX(65.2%);
+}
+
+.transition.animated #tr-3 {
+  -webkit-transform: translateX(33.5%);
+          transform: translateX(33.5%);
+}
+
+.transition-pre {
+  width: 330%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  pointer-events: none;
+  z-index: 1002;
+  left: -115%;
+  height: 100%;
+  top: 0;
+}
+
+.transition-pre div {
+  width: 100%;
+  height: 33.4%;
+  -webkit-transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
+  transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
+  transition: transform ease 1.5s,  background-color ease 0.7s;
+  transition: transform ease 1.5s,  background-color ease 0.7s,  -webkit-transform ease 1.5s;
+}
+
+.transition-pre.animated #tr-1 {
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+}
+
+.transition-pre.animated #tr-2 {
+  -webkit-transform: translateX(90%);
+          transform: translateX(90%);
+}
+
+.transition-pre.animated #tr-3 {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+}
+
+.header-top-border {
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  left: 5%;
+  top: 2px;
+  background-color: #52b69a;
+  -webkit-transition: all ease 1.3s;
+  transition: all ease 1.3s;
+}
+
+.header-side-border {
+  width: 1px;
+  height: 0vh;
+  position: absolute;
+  left: 93%;
+  top: -10vh;
+  background-color: #52b69a;
+  -webkit-transition: all ease 1.3s;
+  transition: all ease 1.3s;
+}
+
+.header-title {
+  margin-top: 5vh;
+  width: 65%;
+  text-align: center;
+  margin-left: 5%;
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+.active .header-top-border {
+  width: 93%;
+}
+
+.active .header-side-border {
+  height: 125vh;
+}
+
+.active .header-title {
+  opacity: 1;
+}
+
+.fancy-text {
+  display: inline-block;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  opacity: 0;
+}
+
+.fancy-text.done {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,988 @@
+.cl-blue-1 {
+    color: $blue-1;
+}
+
+.cl-blue-2 {
+    color: $blue-2;
+}
+
+.cl-blue-3 {
+    color: $blue-3;
+}
+
+.cl-blue-4 {
+    color: $blue-4;
+}
+
+.cl-blue-5 {
+    color: $blue-5;
+}
+
+.cl-blue-6 {
+    color: $blue-6;
+}
+
+.cl-blue-7 {
+    color: $blue-7;
+}
+
+.cl-blue-8 {
+    color: $blue-8;
+}
+
+.cl-blue-9 {
+    color: $blue-9;
+}
+
+.cl-bright-blue-1 {
+    color: $bright-blue-1;
+}
+
+.cl-bright-blue-2 {
+    color: $bright-blue-2;
+}
+
+.cl-bright-blue-3 {
+    color: $bright-blue-3;
+}
+
+.cl-bright-blue-4 {
+    color: $bright-blue-4;
+}
+
+.cl-bright-blue-5 {
+    color: $bright-blue-5;
+}
+
+.cl-bright-blue-6 {
+    color: $bright-blue-6;
+}
+
+.cl-bright-blue-7 {
+    color: $bright-blue-7;
+}
+
+.cl-bright-blue-8 {
+    color: $bright-blue-8;
+}
+
+.cl-bright-blue-9 {
+    color: $bright-blue-9;
+}
+
+.cl-red-1 {
+    color: $red-1;
+}
+
+.cl-red-2 {
+    color: $red-2;
+}
+
+.cl-red-3 {
+    color: $red-3;
+}
+
+.cl-red-4 {
+    color: $red-4;
+}
+
+.cl-red-5 {
+    color: $red-5;
+}
+
+.cl-red-6 {
+    color: $red-6;
+}
+
+.cl-red-7 {
+    color: $red-7;
+}
+
+.cl-red-8 {
+    color: $red-8;
+}
+
+.cl-red-9 {
+    color: $red-9;
+}
+
+.cl-yellow-1 {
+    color: $yellow-1;
+}
+
+.cl-yellow-2 {
+    color: $yellow-2;
+}
+
+.cl-yellow-3 {
+    color: $yellow-3;
+}
+
+.cl-yellow-4 {
+    color: $yellow-4;
+}
+
+.cl-yellow-5 {
+    color: $yellow-5;
+}
+
+.cl-yellow-6 {
+    color: $yellow-6;
+}
+
+.cl-yellow-7 {
+    color: $yellow-7;
+}
+
+.cl-yellow-8 {
+    color: $yellow-8;
+}
+
+.cl-yellow-9 {
+    color: $yellow-9;
+}
+
+.cl-green-1 {
+    color: $green-1;
+}
+
+.cl-green-2 {
+    color: $green-2;
+}
+
+.cl-green-3 {
+    color: $green-3;
+}
+
+.cl-green-4 {
+    color: $green-4;
+}
+
+.cl-green-5 {
+    color: $green-5;
+}
+
+.cl-green-6 {
+    color: $green-6;
+}
+
+.cl-green-7 {
+    color: $green-7;
+}
+
+.cl-green-8 {
+    color: $green-8;
+}
+
+.cl-green-9 {
+    color: $green-9;
+}
+
+.cl-bright-green-1 {
+    color: $bright-green-1;
+}
+
+.cl-bright-green-2 {
+    color: $bright-green-2;
+}
+
+.cl-bright-green-3 {
+    color: $bright-green-3;
+}
+
+.cl-bright-green-4 {
+    color: $bright-green-4;
+}
+
+.cl-bright-green-5 {
+    color: $bright-green-5;
+}
+
+.cl-bright-green-6 {
+    color: $bright-green-6;
+}
+
+.cl-bright-green-7 {
+    color: $bright-green-7;
+}
+
+.cl-bright-green-8 {
+    color: $bright-green-8;
+}
+
+.cl-bright-green-9 {
+    color: $bright-green-9;
+}
+
+.cl-grey-1 {
+    color: $grey-1;
+}
+
+.cl-grey-2 {
+    color: $grey-2;
+}
+
+.cl-grey-3 {
+    color: $grey-3;
+}
+
+.cl-grey-4 {
+    color: $grey-4;
+}
+
+.cl-grey-5 {
+    color: $grey-5;
+}
+
+.cl-grey-6 {
+    color: $grey-6;
+}
+
+.cl-grey-7 {
+    color: $grey-7;
+}
+
+.cl-grey-8 {
+    color: $grey-8;
+}
+
+.cl-grey-9 {
+    color: $grey-9;
+}
+
+.cl-orange-1 {
+    color: $orange-1;
+}
+
+.cl-orange-2 {
+    color: $orange-2;
+}
+
+.cl-orange-3 {
+    color: $orange-3;
+}
+
+.cl-orange-4 {
+    color: $orange-4;
+}
+
+.cl-orange-5 {
+    color: $orange-5;
+}
+
+.cl-orange-6 {
+    color: $orange-6;
+}
+
+.cl-orange-7 {
+    color: $orange-7;
+}
+
+.cl-orange-8 {
+    color: $orange-8;
+}
+
+.cl-orange-9 {
+    color: $orange-9;
+}
+
+.cl-black {
+    color: $black;
+}
+
+.cl-white {
+    color: $white;
+}
+
+.cl-light {
+    color: $light;
+}
+
+.cl-light-2 {
+    color: $light-2;
+}
+
+
+.hvr-cl-blue-1:hover {
+    color: $blue-1;
+    transition: ease-in-out 0.2s;
+    
+    & > * {
+        @extend .hvr-cl-blue-1:hover;
+    }
+}
+
+.hvr-cl-blue-2:hover {
+    color: $blue-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-2:hover;
+    }
+}
+
+.hvr-cl-blue-3:hover {
+    color: $blue-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-3:hover;
+    }
+}
+
+.hvr-cl-blue-4:hover {
+    color: $blue-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-4:hover;
+    }
+}
+
+.hvr-cl-blue-5:hover {
+    color: $blue-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-5:hover;
+    }
+}
+
+.hvr-cl-blue-6:hover {
+    color: $blue-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-6:hover;
+    }
+}
+
+.hvr-cl-blue-7:hover {
+    color: $blue-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-7:hover;
+    }
+}
+
+.hvr-cl-blue-8:hover {
+    color: $blue-8;
+    transition: ease-in-out 0.2s;
+    
+    & > * {
+        @extend .hvr-cl-blue-8:hover;
+    }
+}
+
+.hvr-cl-blue-9:hover {
+    color: $blue-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-blue-9:hover;
+    }
+}
+
+.hvr-cl-bright-blue-1:hover {
+    color: $bright-blue-1;
+    transition: ease-in-out 0.2s;
+    
+    & > * {
+        @extend .hvr-cl-bright-blue-1:hover;
+    }
+}
+
+.hvr-cl-bright-blue-2:hover {
+    color: $bright-blue-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-2:hover;
+    }
+}
+
+.hvr-cl-bright-blue-3:hover {
+    color: $bright-blue-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-3:hover;
+    }
+}
+
+.hvr-cl-bright-blue-4:hover {
+    color: $bright-blue-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-4:hover;
+    }
+}
+
+.hvr-cl-bright-blue-5:hover {
+    color: $bright-blue-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-5:hover;
+    }
+}
+
+.hvr-cl-bright-blue-6:hover {
+    color: $bright-blue-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-6:hover;
+    }
+}
+
+.hvr-cl-bright-blue-7:hover {
+    color: $bright-blue-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-7:hover;
+    }
+}
+
+.hvr-cl-bright-blue-8:hover {
+    color: $bright-blue-8;
+    transition: ease-in-out 0.2s;
+    
+    & > * {
+        @extend .hvr-cl-bright-blue-8:hover;
+    }
+}
+
+.hvr-cl-bright-blue-9:hover {
+    color: $bright-blue-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-blue-9:hover;
+    }
+}
+
+.hvr-cl-red-1:hover {
+    color: $red-1;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-1:hover;
+    }
+}
+
+.hvr-cl-red-2:hover {
+    color: $red-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-2:hover;
+    }
+}
+
+.hvr-cl-red-3:hover {
+    color: $red-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-3:hover;
+    }
+}
+
+.hvr-cl-red-4:hover {
+    color: $red-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-4:hover;
+    }
+}
+
+.hvr-cl-red-5:hover {
+    color: $red-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-5:hover;
+    }
+}
+
+.hvr-cl-red-6:hover {
+    color: $red-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-6:hover;
+    }
+}
+
+.hvr-cl-red-7:hover {
+    color: $red-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-7:hover;
+    }
+}
+
+.hvr-cl-red-8:hover {
+    color: $red-8;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-8:hover;
+    }
+}
+
+.hvr-cl-red-9:hover {
+    color: $red-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-red-9:hover;
+    }
+}
+
+.hvr-cl-yellow-1:hover {
+    color: $yellow-1;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-1:hover;
+    }
+}
+
+.hvr-cl-yellow-2:hover {
+    color: $yellow-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-2:hover;
+    }
+}
+
+.hvr-cl-yellow-3:hover {
+    color: $yellow-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-3:hover;
+    }
+}
+
+.hvr-cl-yellow-4:hover {
+    color: $yellow-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-4:hover;
+    }
+}
+
+.hvr-cl-yellow-5:hover {
+    color: $yellow-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-5:hover;
+    }
+}
+
+.hvr-cl-yellow-6:hover {
+    color: $yellow-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-6:hover;
+    }
+}
+
+.hvr-cl-yellow-7:hover {
+    color: $yellow-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-7:hover;
+    }
+}
+
+.hvr-cl-yellow-8:hover {
+    color: $yellow-8;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-8:hover;
+    }
+}
+
+.hvr-cl-yellow-9:hover {
+    color: $yellow-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-yellow-9:hover;
+    }
+}
+
+.hvr-cl-green-1:hover {
+    color: $green-1;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-1:hover;
+    }
+}
+
+.hvr-cl-green-2:hover {
+    color: $green-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-2:hover;
+    }
+}
+
+.hvr-cl-green-3:hover {
+    color: $green-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-3:hover;
+    }
+}
+
+.hvr-cl-green-4:hover {
+    color: $green-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-4:hover;
+    }
+}
+
+.hvr-cl-green-5:hover {
+    color: $green-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-5:hover;
+    }
+}
+
+.hvr-cl-green-6:hover {
+    color: $green-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-6:hover;
+    }
+}
+
+.hvr-cl-green-7:hover {
+    color: $green-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-7:hover;
+    }
+}
+
+.hvr-cl-green-8:hover {
+    color: $green-8;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-8:hover;
+    }
+}
+
+.hvr-cl-green-9:hover {
+    color: $green-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-green-9:hover;
+    }
+}
+
+.hvr-cl-bright-green-1:hover {
+    color: $bright-green-1;
+    transition: ease-in-out 0.2s;
+    
+    & > * {
+        @extend .hvr-cl-bright-green-1:hover;
+    }
+}
+
+.hvr-cl-bright-green-2:hover {
+    color: $bright-green-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-2:hover;
+    }
+}
+
+.hvr-cl-bright-green-3:hover {
+    color: $bright-green-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-3:hover;
+    }
+}
+
+.hvr-cl-bright-green-4:hover {
+    color: $bright-green-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-4:hover;
+    }
+}
+
+.hvr-cl-bright-green-5:hover {
+    color: $bright-green-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-5:hover;
+    }
+}
+
+.hvr-cl-bright-green-6:hover {
+    color: $bright-green-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-6:hover;
+    }
+}
+
+.hvr-cl-bright-green-7:hover {
+    color: $bright-green-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-7:hover;
+    }
+}
+
+.hvr-cl-bright-green-8:hover {
+    color: $bright-green-8;
+    transition: ease-in-out 0.2s;
+    
+    & > * {
+        @extend .hvr-cl-bright-green-8:hover;
+    }
+}
+
+.hvr-cl-bright-green-9:hover {
+    color: $bright-green-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-bright-green-9:hover;
+    }
+}
+
+.hvr-cl-grey-1:hover {
+    color: $grey-1;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-1:hover;
+    }
+}
+
+.hvr-cl-grey-2:hover {
+    color: $grey-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-2:hover;
+    }
+}
+
+.hvr-cl-grey-3:hover {
+    color: $grey-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-3:hover;
+    }
+}
+
+.hvr-cl-grey-4:hover {
+    color: $grey-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-4:hover;
+    }
+}
+
+.hvr-cl-grey-5:hover {
+    color: $grey-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-5:hover;
+    }
+}
+
+.hvr-cl-grey-6:hover {
+    color: $grey-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-6:hover;
+    }
+}
+
+.hvr-cl-grey-7:hover {
+    color: $grey-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-7:hover;
+    }
+}
+
+.hvr-cl-grey-8:hover {
+    color: $grey-8;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-8:hover;
+    }
+}
+
+.hvr-cl-grey-9:hover {
+    color: $grey-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-grey-9:hover;
+    }
+}
+
+.hvr-cl-orange-1:hover {
+    color: $orange-1;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-1:hover;
+    }
+}
+
+.hvr-cl-orange-2:hover {
+    color: $orange-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-2:hover;
+    }
+}
+
+.hvr-cl-orange-3:hover {
+    color: $orange-3;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-3:hover;
+    }
+}
+
+.hvr-cl-orange-4:hover {
+    color: $orange-4;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-4:hover;
+    }
+}
+
+.hvr-cl-orange-5:hover {
+    color: $orange-5;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-5:hover;
+    }
+}
+
+.hvr-cl-orange-6:hover {
+    color: $orange-6;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-6:hover;
+    }
+}
+
+.hvr-cl-orange-7:hover {
+    color: $orange-7;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-7:hover;
+    }
+}
+
+.hvr-cl-orange-8:hover {
+    color: $orange-8;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-8:hover;
+    }
+}
+
+.hvr-cl-orange-9:hover {
+    color: $orange-9;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-orange-9:hover;
+    }
+}
+
+.hvr-cl-black:hover {
+    color: $black;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-black:hover;
+    }
+}
+
+.hvr-cl-white:hover {
+    color: $white;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-white:hover;
+    }
+}
+
+.hvr-cl-light:hover {
+    color: $light;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-light:hover;
+    }
+}
+
+.hvr-cl-light-2:hover {
+    color: $light-2;
+    transition: ease-in-out 0.2s;
+
+    & > * {
+        @extend .hvr-cl-light-2:hover;
+    }
+}

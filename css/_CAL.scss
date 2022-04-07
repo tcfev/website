@@ -1,0 +1,228 @@
+.karaco-calendar{
+    padding-left: 30px;
+  }
+  
+  .calendar-table{
+    width: auto;
+    margin: 0 auto;
+    border: none;
+  }
+  
+  .calendar-btn{
+    display: block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em !important;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    color: #444;
+    transition: all ease 0.2s;
+  }
+  
+  .calendar-btn:hover{
+    color: #00BCD4;
+  }
+  
+  .calendar-table .cal-days{
+    cursor: pointer;
+    transition: solid 0.5s;
+    /* color: rgb(94,53,177); */
+  }
+  
+  .calendar-table thead tr{
+    height: 40px;
+    color: #fff;
+    background-color: rgb(229,57,53);
+  }
+  
+  .calendar-table thead th{
+    // border-radius: 7px;
+    border: 2px solid #fff;
+  }
+  
+  
+  .calendar-table tbody td{
+    border: 2px solid #fff;
+    background-color: #efefef;
+    height: 40px;
+    width: 70px;
+    // border-radius: 7px;
+  }
+  
+  .calendar-table .cal-friday{
+    background-color: rgb(229,115,115);
+    color: #fff !important;
+  }
+  
+  .calendar-table .cal-days:hover{
+    background-color: $grey-2;
+    color: #fff;
+    transition: all linear 0.1s;
+  }
+  
+  .calendar-table .cal-today{
+    background-color: rgb(38,166,154) !important;
+  }
+  
+  .calendar-table .cal-today span{
+    color: #fff;
+  }
+  
+  .calendar-table .cal-days:hover{
+    background-color: $grey-6 !important;
+    transition: all linear 0.1s;
+  }
+  
+  .calendar-table .calendar-operator:hover{
+    background-color: rgb(255,205,210);
+    transition: all linear 0.1s;
+  }
+  
+  .calendar-table .selected-day{
+    color: rgb(251,192,45) !important;
+  }
+  
+  .calendar-table .reserved-day{
+    background-color: rgb(244,143,177) !important;
+  }
+  
+  .calendar-table .reserved-day-mine{
+    background-color: rgb(187,222,251) !important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .calendar-table-small{
+    width: auto;
+    margin: 0 auto;
+    border: none;
+  }
+  
+  .calendar-table-small .cal-days{
+    cursor: pointer;
+    transition: solid 0.5s;
+    /* color: rgb(94,53,177); */
+    border-radius: 0.25em;
+  }
+  
+  .calendar-table-small thead tr{
+    height: 40px;
+    color: $blue-5;
+  }
+
+  #time-holder h4{
+    height: 40px;
+    color: $blue-5;
+  }
+  
+  #time-holder input{
+    background-color: $grey-6;
+    color: $white;
+  }
+
+  .calendar-table-small thead th{
+    // border-radius: 7px;
+    /* border: 2px solid #999; */
+  }
+  
+  
+  
+  .calendar-table-small tbody td{
+    /* border: 2px solid #999; */
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    color: $grey-8;
+    text-align: center;
+    // border-radius: 50%;
+  }
+  
+  .calendar-table-small .cal-friday span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: .25em;
+    background-color: $red-2 !important;
+    color: #fff !important;
+  }
+  
+  .calendar-table-small .cal-days:hover{
+    background-color: $grey-6;
+    color: #fff;
+    transition: all linear 0.1s;
+  }
+  
+  
+  .calendar-table-small .cal-today span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: .25em;
+    background-color: $green-3 !important;
+    color: #fff !important;
+  }
+  
+  .calendar-table-small .cal-days:hover{
+    background-color: $grey-6 !important;
+    transition: all linear 0.1s;
+  }
+  
+  .calendar-table-small .calendar-operator:hover{
+    color: #0f0326;
+    transition: all linear 0.1s;
+  }
+  
+  /* .calendar-table-small .selected-day{
+  
+    color: #fff !important;
+  } */
+  
+  .calendar-table-small .selected-day span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: 0.25em;
+    background-color: #42A5F5 !important;
+    color: #fff !important;
+  }
+  
+  .calendar-table-small .reserved-day span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: .25em;
+    background-color: $red-1 !important;
+    color: #fff !important;
+  }
+  
+  .calendar-table-small .reserved-day-mine{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: .25em;
+    background-color: rgb(187,222,251) !important;
+    color: #fff !important;
+  }
+  

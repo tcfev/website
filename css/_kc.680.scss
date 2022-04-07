@@ -1,0 +1,168 @@
+@media (min-width: 480px) and (max-width: 680px) {
+
+    /******************* HOLDERS ************************/
+
+    .f-holder-2,.f-holder-3 {
+        width: 100%;
+    }
+
+    .f-holder-4, .f-holder-5  {
+        width: 50%;
+    }
+
+    .f-holder-6, .f-holder-7 {
+        width: (100% / 3);
+    }
+
+    .f-m-holder-1 {
+        min-width: 100%;
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+    }
+      
+    .f-m-holder-2 {
+        min-width: 50%;
+        width: 50%;
+        position: relative;
+        padding: 1rem;
+    }
+      
+    .f-m-holder-3 {
+        min-width: (100% / 3);
+        width: (100% / 3);
+        position: relative;
+        padding: 1rem;
+    }
+      
+    .f-m-holder-4 {
+        min-width: 25%;
+        width: 25%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+      
+    .f-m-holder-5 {
+        min-width: 20%;
+        width: 20%;
+        position: relative;
+        padding: 1rem;
+    }
+      
+    .f-m-holder-6 {
+        min-width: (100% / 6);
+        width: (100% / 6);
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .s-m-holder-2 {
+        width: 34%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .s-m-holder-3 {
+        width: 26%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .s-m-holder-4 {
+        width: 21%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .s-m-holder-5 {
+        width: 17%;
+        flex-grow: 1;
+        position: relative;
+        padding: 1rem;
+    }
+
+
+
+    /********************* CONTAINERS *******************/
+
+    .container-9 {
+        width: 100%;
+    }
+
+    .container-8 {
+        width: 90%;
+    }
+
+    .container-7 {
+        width: 80%;
+    }
+
+    .container-6 {
+        width: 70%;
+    }
+
+    .container-5 {
+        width: 60%;
+    }
+
+
+
+    /********************** TILES ***********************/
+
+    .tile-m-3-2 {
+        width: (100% / 3 * 2);
+        min-width: (100% / 3 * 2);
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .tile-m-4-3 {
+        width: 75%;
+        min-width: 75%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .tile-m-5-2 {
+        width: 40%;
+        min-width: 40%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .tile-m-5-3 {
+        width: 60%;
+        min-width: 60%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .tile-m-5-4 {
+        width: 80%;
+        min-width: 80%;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .tile-m-6-4 {
+        width: (100% / 3 * 2);
+        min-width: (100% / 3 * 2);
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .tile-m-6-5 {
+        width: (100% / 6 * 5);
+        min-width: (100% / 6 * 5);
+        position: relative;
+        padding: 1rem;
+    }
+
+    .tile-3-2, .tile-4-3, .tile-m-5-3 {
+        width: 100%;
+    }
+}

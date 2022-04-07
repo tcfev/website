@@ -1,0 +1,192 @@
+.fs-3xl {
+    font-size: 10.5em;
+}
+
+.fs-xxl {
+    font-size: 6.5em;
+}
+
+.fs-xl {
+    font-size: 4em;
+}
+
+.fs-l {
+    font-size: 2.5em;
+}
+
+.fs-xm {
+    font-size: 1.5em;
+}
+
+.fs-m {
+    font-size: 1em;
+}
+
+.fs-mx {
+    font-size: 0.9em;
+}
+
+.fs-s {
+    font-size: 0.75em;
+}
+
+.fs-xs {
+    font-size: 0.5em;
+}
+
+
+/******************** TEXT_ALIGN ********************/
+
+.txt-c {
+    text-align: center;
+}
+
+.txt-r {
+    text-align: right;
+}
+
+.txt-l {
+    text-align: left;
+}
+
+.txt-j {
+    text-align: justify;
+}
+
+
+
+// ************** FONT_WEIGHT *******************
+
+.fw-b {
+    font-weight: bold;
+}
+
+.fw-br {
+    font-weight: bolder;
+}
+
+.fw-n {
+    font-weight: normal;
+}
+
+.fw-l {
+    font-weight: lighter;
+}
+
+// ******************* DECOR ********************
+
+.txt-underline {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 1280px) {
+    .fs-l-3xl {
+        font-size: 10.5em;
+    }
+    
+    .fs-l-xxl {
+        font-size: 6.5em;
+    }
+    
+    
+    .fs-l-xl {
+        font-size: 4em;
+    }
+    
+    .fs-l-l {
+        font-size: 2.5em;
+    }
+    
+    .fs-l-xm {
+        font-size: 1.5em;
+    }
+    
+    .fs-l-m {
+        font-size: 1em;
+    }
+    
+    .fs-l-s {
+        font-size: 0.75em;
+    }
+    
+    .fs-l-xs {
+        font-size: 0.5em;
+    }
+}
+
+
+
+@media (max-width: 720px) {
+    .fs-m-3xl {
+        font-size: 10.5em;
+    }
+    
+    .fs-m-xxl {
+        font-size: 6.5em;
+    }
+    
+    
+    .fs-m-xl {
+        font-size: 4em;
+    }
+    
+    .fs-m-l {
+        font-size: 2.5em;
+    }
+    
+    .fs-m-xm {
+        font-size: 1.5em;
+    }
+    
+    .fs-m-m {
+        font-size: 1em;
+    }
+    
+    .fs-m-s {
+        font-size: 0.75em;
+    }
+    
+    .fs-m-xs {
+        font-size: 0.5em;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .fs-s-3xl {
+        font-size: 10.5em;
+    }
+    
+    .fs-s-xxl {
+        font-size: 6.5em;
+    }
+    
+    
+    .fs-s-xl {
+        font-size: 3em;
+    }
+    
+    .fs-s-l {
+        font-size: 2.5em;
+    }
+    
+    .fs-s-xm {
+        font-size: 1.5em;
+    }
+    
+    .fs-s-m {
+        font-size: 1em;
+    }
+    
+    .fs-s-s {
+        font-size: 0.75em;
+    }
+    
+    .fs-s-xs {
+        font-size: 0.5em;
+    }
+}

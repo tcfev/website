@@ -1,0 +1,82 @@
+.btn {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.rect-btn {
+    border-radius: 0;
+}
+
+.bx-btn {
+    border-radius: 0.25em;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.fake-input {
+    display: inline-block;
+    width: 90%;
+    margin: auto;
+
+    & .fake {
+        display: flex;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    & input[type="file"] {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        cursor: pointer !important;
+        height: 35px;
+    }
+
+    & button {
+        padding: 0 1em;
+        height: 35px;
+        text-align: center;
+        border: none;
+    }
+
+    & .label {
+        flex-grow: 1;
+        border: 1px solid $grey-2;
+        padding: 0 0.5em;
+    }
+
+    &.rounded .label {
+        border-top-left-radius: 0.25em;
+        border-bottom-left-radius: 0.25em;
+    }
+
+    &.rounded button {
+        border-top-right-radius: 0.25em;
+        border-bottom-right-radius: 0.25em;
+    }
+}
+
+.password {
+    position: relative;
+    width: fit-content;
+
+    & .show {
+        cursor: pointer;
+        position: absolute;
+        right: 0.5em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

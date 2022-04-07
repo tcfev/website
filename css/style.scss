@@ -1,0 +1,414 @@
+/****************** VARS *********************/
+
+$main-c-1 : #d9ed92;
+$main-c-2 : #99d98c;
+$main-c-3 : #52b69a;
+$main-c-4 : #34a0a4;
+$main-c-5 : #168aad;
+$main-c-6 : #1a759f;
+$main-c-7 : #1e6091;
+
+.main-cl-1 {
+    color: $main-c-1;
+}
+
+.main-cl-2 {
+    color: $main-c-2;
+}
+
+.main-cl-3 {
+    color: $main-c-3;
+}
+
+.main-cl-4 {
+    color: $main-c-4;
+}
+
+.main-cl-5 {
+    color: $main-c-5;
+}
+
+.main-cl-6 {
+    color: $main-c-6;
+}
+
+.main-cl-7 {
+    color: $main-c-7;
+}
+
+.main-bg-1 {
+    background-color: $main-c-1;
+}
+
+.main-bg-2 {
+    background-color: $main-c-2;
+}
+
+.main-bg-3 {
+    background-color: $main-c-3;
+}
+
+.main-bg-4 {
+    background-color: $main-c-4;
+}
+
+.main-bg-5 {
+    background-color: $main-c-5;
+}
+
+.main-bg-6 {
+    background-color: $main-c-6;
+}
+
+.main-bg-7 {
+    background-color: $main-c-7;
+}
+
+
+/****************** STYLING ********************/
+
+* {
+    // font-family: 'Assistant', sans-serif;
+    font-family: 'Comfortaa', cursive;
+}
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 3px;
+    background-clip: padding-box;
+    background-color: $main-c-4;
+    // box-shadow: inset 0 0 1px rgba(0,0,0,0.05);
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+.not-loaded {
+    overflow: hidden;
+}
+
+.fade-circle {
+    position: absolute;
+    width: 0%;
+    padding-top: 0%;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    border-radius:50%;
+    transform: translate(-50%, -50%);
+    transition: all ease 1.2s;
+    &.covering {
+        width: 650%;
+        padding-top: 650%;
+    }
+}
+
+#borders {
+    background-color: #fff;
+    opacity: 1;
+    position: fixed;
+    z-index: 1005;
+    left: 0;
+    top: 0;
+    transition: all ease 0.7s;
+    &.hidden {
+        opacity: 0;
+    }
+}
+
+.main-bg {
+    background: rgb(30,96,145);
+    background: linear-gradient(35deg, rgba(217,237,146,1) 0%, rgba(52,160,164,1) 51%, rgba(30,96,145,1) 100%);
+}
+
+.light nav.menu {
+    position: relative;
+    z-index: 999;
+    & ul {
+    list-style: none;
+        & a {
+            text-align: center;
+            color: #fff;
+            transition: color ease 0.2s;
+            &:hover {
+                color : #aaa;
+            }
+        }
+        & select {
+            border: 0.5px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            & option {
+                color: #000;
+            }
+        }
+    }
+}
+
+.dark nav.menu {
+    position: relative;
+    z-index: 999;
+    & ul {
+    list-style: none;
+        & a {
+            text-align: center;
+            color: #000;
+            transition: color ease 0.2s;
+            &:hover {
+                color : #444;
+            }
+        }
+        & select {
+            border: 0.5px solid #000;
+            background-color: transparent;
+            color: #000;
+            & option {
+                color: #000;
+            }
+        }
+    }
+}
+
+.project-gallery {
+    transition: all ease 0.5s;
+    &::-webkit-scrollbar {
+        height: 0;
+    }
+    &::-webkit-scrollbar-track {
+        margin: 8vh;
+    }
+}
+
+.more-btn {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background-size: 200%;
+    background-position: 100% 50%;
+    transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+    &:hover {
+        padding-left: 30px !important;
+        background-position: 0% 50%;
+        color: #fff;
+    }
+}
+
+.join-btn-1 {
+    background: #fff;
+    background: linear-gradient(90deg, rgba(52,160,164,1) 0%, rgba(52,160,164,1) 33%, rgba(0,0,0,1) 33%, rgba(0,0,0,1) 66%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 100%);
+    background-size: 303%;
+    background-position: 100% 50%;
+    transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+    &:hover {
+        padding-left: 30px !important;
+        background-position: 0% 50%;
+        color: #fff;
+    }
+}
+
+.join-btn-1 {
+    background: #fff;
+    background: linear-gradient(90deg, rgba(30,96,145,1) 0%, rgba(30,96,145,1) 33%, rgba(0,0,0,1) 33%, rgba(0,0,0,1) 66%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 100%);
+    background-size: 303%;
+    background-position: 100% 50%;
+    transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+    &:hover {
+        padding-left: 30px !important;
+        background-position: 0% 50%;
+        color: #fff;
+    }
+}
+
+.join-btn-2 {
+    background: #fff;
+    background: linear-gradient(90deg, rgba(52,160,164,1) 0%, rgba(52,160,164,1) 33%, rgba(0,0,0,1) 33%, rgba(0,0,0,1) 66%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 100%);
+    background-size: 303%;
+    background-position: 100% 50%;
+    transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+    &:hover {
+        padding-left: 30px !important;
+        background-position: 0% 50%;
+        color: #fff;
+    }
+}
+
+.join-btn-3 {
+    background: #fff;
+    background: linear-gradient(90deg, rgba(217,237,146,1) 0%, rgba(217,237,146,1) 33%, rgba(0,0,0,1) 33%, rgba(0,0,0,1) 66%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 100%);
+    background-size: 303%;
+    background-position: 100% 50%;
+    transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
+    &:hover {
+        padding-left: 30px !important;
+        background-position: 0% 50%;
+    }
+}
+
+#fly-loading {
+    display: none;
+    opacity: 0;
+    transition: all ease 250ms;
+    &.show {
+        display: block;
+        &.ready {
+            opacity: 1;
+        }
+    }
+}
+
+.resizable {
+    transition: max-height ease 0.6s;
+    max-height: 1000px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.minimized {
+    max-height: 60px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+}
+
+.transition {
+    width: 330%;
+    position: fixed;
+    display: flex;
+    pointer-events: none;
+    flex-direction: column;
+    z-index: 1002;
+    left: -330%;
+    height: 100%;
+    top: 0;
+    & div {
+        width: 100%;
+        height: 33.4%;
+        transition: transform ease 1.5s,  background-color ease 0.7s;
+    }
+
+    &.animated {
+        & #tr-1 {
+            transform: translateX(100%);
+        }
+        & #tr-2 {
+            transform: translateX(65.2%);
+        }
+        & #tr-3 {
+            transform: translateX(33.5%);
+        }
+    }
+}
+
+.transition-pre {
+    width: 330%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: 1002;
+    left: -115%;
+    height: 100%;
+    top: 0;
+    & div {
+        width: 100%;
+        height: 33.4%;
+        transition: transform ease 1.5s,  background-color ease 0.7s;
+    }
+
+    &.animated {
+        & #tr-1 {
+            transform: translateX(110%);
+        }
+        & #tr-2 {
+            transform: translateX(90%);
+        }
+        & #tr-3 {
+            transform: translateX(70%);
+        }
+    }
+}
+
+
+.header-top-border{
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    left: 5%;
+    top: 2px;
+    background-color: #52b69a;
+    transition: all ease 1.3s;
+}
+
+.header-side-border{
+    width: 1px;
+    height: 0vh;
+    position: absolute;
+    left: 93%;
+    top: -10vh;
+    background-color: #52b69a;
+    transition: all ease 1.3s;
+}
+
+.header-title {
+    margin-top: 5vh;
+    width: 65%;
+    text-align: center;
+    margin-left: 5%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 1.2s;
+}
+
+.active .header-top-border {
+    width: 93%;
+}
+
+.active .header-side-border {
+    height: 125vh;
+}
+
+.active .header-title {
+    opacity: 1;
+}
+
+.fancy-text {
+    display: inline-block;
+    transition: all ease-out 0.2s;
+    transform: translateX(-50px);
+    opacity: 0;
+    &.done {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    // #lang {
+    //     top: 1.5em;
+    //     right: 1.75em;
+    //     position: absolute;
+    // }
+}

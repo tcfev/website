@@ -1,0 +1,51 @@
+<IfModule mod_headers.c>
+    # YEAR
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+
+    # YEAR
+    <FilesMatch "\.(js|css|swf)$">
+        Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ http://localhost/tcf/en/ [L,R=301]
+RewriteRule ^about http://localhost/tcf/en/about [L,R=301]
+RewriteRule ^contact http://localhost/tcf/en/contact [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^hu [NC]
+RewriteRule ^$ http://localhost/tcf/hu/ [L,R=301]
+RewriteRule ^about http://localhost/tcf/hu/about [L,R=301]
+RewriteRule ^contact http://localhost/tcf/hu/contact [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^fa [NC]
+RewriteRule ^$ http://localhost/tcf/fa/ [L,R=301]
+RewriteRule ^about http://localhost/tcf/fa/about [L,R=301]
+RewriteRule ^contact http://localhost/tcf/fa/contact [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(en|hu|nl|fr|fa)/?$ index.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/project/([A-Za-z0-9]+) pg/project.php?lang=$1&p=$2 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/blog/([A-Za-z0-9]+) pg/blogpost.php?lang=$1&n=$2 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/contact pg/contact.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/about pg/about.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/news-archive pg/news.all.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/investors pg/investors.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/services pg/services.php?lang=$1 [QSA,NC,L]
+
+RewriteRule ^panel/landingpage pg/dashboard.landing.php [L,NC]
+RewriteRule ^panel/blogs pg/dashboard.blogs.php [L,NC]
+RewriteRule ^panel/projects pg/dashboard.projects.php [L,NC]
+RewriteRule ^panel/preferences pg/dashboard.settings.php [L,NC]
+RewriteRule ^panel/members pg/dashboard.members.php [L,NC]
+RewriteRule ^panel pg/dashboard.php [L,NC]
+RewriteRule ^login pg/login.php [L,NC]

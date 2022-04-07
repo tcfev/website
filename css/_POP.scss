@@ -1,0 +1,145 @@
+.popup {
+    display: none;
+  }
+  
+  
+  .popup-holder{
+    width: 100%;
+    display: block;
+    visibility: hidden;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    z-index: 20000;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    padding-bottom: 70px;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .popup-holder.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup-container{
+    border-radius: 7px;
+    position: relative;
+    margin: 30px auto;
+    background-color: #efefef;
+    color: #666;
+    text-align: center;
+    padding: 60px 2.5%;
+    z-index: 10001;
+    transform: translateY(-110px) scale(0.7);
+    transition: all ease-in-out 0.4s;
+    opacity: 0;
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+  }
+  
+  .popup-container.sm {
+    width: 90%;
+    max-width: 300px;
+  }
+  
+  .popup-container.md {
+    width: 90%;
+    max-width: 480px;
+  }
+  
+  .popup-container.lg {
+    width: 90%;
+    max-width: 720px;
+  }
+  
+  .popup-container.xl {
+    width: 90%;
+    max-width: 900px;
+  }
+  
+  .popup-container.xxl {
+    width: 90%;
+  }
+  
+  .popup-holder.show .popup-container {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  .popup-container .exit{
+    position: absolute;
+    color: #fff;
+    line-height: 25px !important;
+    border-radius: 4px !important;
+    width: 25px !important;
+    height: 25px !important;
+    background-color: #444;
+    cursor: pointer;
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+  }
+  
+  .popup-holder .overal{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .popup-holder .yes-btn,
+  .popup-holder .no-btn {
+    width: 4em;
+    padding: 0.5em 1em;
+    margin: 3em 1.5em 1em 1.5em ;
+    border: none;
+    border-radius: 0.25em;
+    color: #fff;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  .popup-holder .yes-btn {
+    background-color: #EF6C8F;
+  }
+  
+  .popup-holder .yes-btn:hover {
+    background-color: #F391AB;
+  }
+  
+  .popup-holder .no-btn {
+    background-color: #5FAB7D;
+  }
+  
+  .popup-holder .no-btn:hover {
+    background-color: #79B993;
+  }
+  
+  .pop-ok-btn {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05), 0 3px 5px 0 rgba(0,0,0,.2);
+    background-color: #1BA1DA;
+    margin-top: 3rem;
+    transition: all ease 0.1s;
+  }
+  
+  .pop-ok-btn:hover {
+    background-color: #1686B6;
+  }
+  
+  .popup-container form {
+    text-align: left;
+    margin: auto;
+    width: fit-content;
+  }
+  
