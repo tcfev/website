@@ -1,5 +1,5 @@
 <div id="borders" class="container h-100p aic ov-a f-d-col" style="display:flex">
-    <div class="f-row p-9 p-s-6">
+    <div class="f-row p-x-9 p-y-2 p-s-6">
         <select name="lang" id="" class="p-x-2 p-y-1">
             <option value="en">En</option>
             <option value="de">De</option>

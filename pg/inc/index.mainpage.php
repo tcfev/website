@@ -1,8 +1,8 @@
-<div class="container h-100v main-bg light f-d-col jcb dsp-f p-b-7">
+<div class="container h-100v main-bg light jcb dsp-f p-b-7">
     <?php include_once phproot.'pg/inc/menu.php' ?>
     <div class="f-row">
         <div class="tile-3-2 p-x-5">
-            <img src="<?php echo root; ?>content/img/tcf_typog.svg" alt="">
+            <img class="w-90p" style="display:inherit" src="<?php echo root; ?>content/img/tcf_typog.svg" alt="">
         </div>
     </div>
     <div class="f-row jca dsp-f">

@@ -1,11 +1,15 @@
-<?php include_once 'cal/var.php'; ?>
+<?php
+    include_once 'cal/session.header.php';
+    include_once 'cal/cheader.cal.php';
+    include_once 'inc/blog.datafetch.php';
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $l; ?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogpost</title>
+    <title><?php echo $blog['title']; ?></title>
     <?php include_once phproot.'pg/inc/head.php'; ?>
 </head>
 <body>
@@ -20,8 +24,8 @@
         <article>
             <div class="container h-100v pos-f" style="top:0;left:0;z-index:1">
                 <div class="f-row jcc aic h-100v">
-                    <h1 class="fs-3xl" id="title">
-                        BlogPost Title
+                    <h1 class="fs-3xl fs-s-xl" id="title">
+                        <?php echo $blog['title']; ?>
                     </h1>
                 </div>
             </div>
@@ -32,11 +36,9 @@
         <section>
             <article>
                 <div class="container-6 m-x-a p-y-10">
-                    <p class="txt-j cl-grey-7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, beatae magnam fuga aliquid iste perspiciatis veniam dolorum libero quae error cupiditate vero? Laudantium veritatis cum impedit ratione expedita, officiis minus?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus illum quas, odio voluptatum ipsa molestiae reiciendis est dolores deserunt ad porro alias ipsam explicabo nisi quae cupiditate omnis veniam consequuntur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, repellat porro! Tempora quia illo et consequatur alias saepe maiores illum veniam minima architecto facere perferendis modi cupiditate voluptate, quidem totam?
-                    </p>
+                    <div class="txt-j cl-grey-7 p-s-4">
+                        <?php echo $blog['body']; ?>
+                    </div>
                 </div>
             </article>
         </section>

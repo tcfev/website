@@ -35,7 +35,7 @@ RewriteCond %{REQUEST_FILENAME} !-l
 
 RewriteRule ^(en|hu|nl|fr|fa)/?$ index.php?lang=$1 [QSA,NC,L]
 RewriteRule ^(en|hu|nl|fr|fa)/project/([A-Za-z0-9]+) pg/project.php?lang=$1&p=$2 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/blog/([A-Za-z0-9]+) pg/blogpost.php?lang=$1&n=$2 [QSA,NC,L]
+RewriteRule ^(en|hu|nl|fr|fa)/blog/([A-Za-z0-9]+) pg/blogpost.php?lang=$1&b=$2 [QSA,NC,L]
 RewriteRule ^(en|hu|nl|fr|fa)/contact pg/contact.php?lang=$1 [QSA,NC,L]
 RewriteRule ^(en|hu|nl|fr|fa)/about pg/about.php?lang=$1 [QSA,NC,L]
 RewriteRule ^(en|hu|nl|fr|fa)/news-archive pg/news.all.php?lang=$1 [QSA,NC,L]

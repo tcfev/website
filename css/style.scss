@@ -67,9 +67,19 @@ $main-c-7 : #1e6091;
 
 /****************** STYLING ********************/
 
+// font-family: 'Bangers', cursive;
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Montserrat Alternates', sans-serif;
+// font-family: 'Permanent Marker', cursive;
+// font-family: 'Righteous', cursive;
+
 * {
     // font-family: 'Assistant', sans-serif;
     font-family: 'Comfortaa', cursive;
+}
+
+.righteous {
+    font-family: 'Righteous', cursive;
 }
 
 html {
@@ -83,8 +93,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 2px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -94,9 +104,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    height: 3px;
+    height: 4px;
     background-clip: padding-box;
-    background-color: $main-c-4;
+    background-color: $main-c-2;
     // box-shadow: inset 0 0 1px rgba(0,0,0,0.05);
     border-radius: 2.5px;
     cursor: pointer;
@@ -405,10 +415,81 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    // #lang {
-    //     top: 1.5em;
-    //     right: 1.75em;
-    //     position: absolute;
-    // }
+.blog-frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & iframe {
+        width: 100%;
+        height: 250%;
+        transform: scale(0.5) translate(0, -50%);
+        transition: all ease 0.7s;
+    }
+}
+
+.blur {
+    height: 100%;
+    // background-color: rgba(255,255,255, 0.2);
+    background: rgb(255,255,255);
+    background: radial-gradient(closest-side, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,1) 100%);
+    backdrop-filter: blur(10px);
+    transition: all ease 0.2s;
+    & a {
+        border-radius: 25px;
+        opacity: 0;
+        transform: translateY(0);
+        transition: all ease 0.4s;
+    }
+    & .blur-p {
+        opacity: 1;
+        transition: all ease 0.4s;
+    }
+    &:hover {
+        backdrop-filter: blur(1px);
+        & a {
+            opacity: 1;
+            transform: translateY(-50px);
+        }
+        & .blur-p {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+}
+
+.blog {
+    & .blog-content, & .blog-title {
+        transition: transform 0.7s ease, opacity 0.1s 0.7s ease;
+        opacity: 1;
+    }
+    & .blog-frame {
+        transition: transform 0.7s ease;
+    }
+    
+    &.active {
+        & .blur {
+            backdrop-filter: blur(0);
+            background: unset;
+        }
+        & .blog-content {
+            transform: scale(9) translateY(40%);
+            opacity: 0;
+        }
+        & .blog-title {
+            transform: scale(9) translateY(-40%);;
+            opacity: 0;
+        }
+        & .blog-frame iframe {
+            transform: scale(1);
+        }
+        & .blog-frame {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
 }

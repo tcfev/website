@@ -1,7 +1,7 @@
 <?php
     if (session_status() == PHP_SESSION_NONE)
         session_start();
-    if (!$_SESSION['lang'])
+    if (!isset($_SESSION['lang']))
         $_SESSION['lang'] = "en";
     $l = $_SESSION['lang'];
 ?>

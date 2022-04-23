@@ -3,14 +3,14 @@
     include_once 'pg/cal/cheader.cal.php';
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $l; ?>">
+<html lang="<?php echo $l; ?>" style="overflow: hidden">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCF</title>
     <?php include_once phproot.'pg/inc/head.php'; ?>
-    <?php include_once phproot.'pg/inc/datafetch.php'; ?>
+    <?php include_once phproot.'pg/inc/index.datafetch.php'; ?>
 </head>
 <body class="not-loaded">
     <section class="bg-white pos-r" id="top-part" style="z-index:4">
@@ -20,6 +20,7 @@
         include_once phproot.'pg/inc/index.mainpage.php';
         include_once phproot.'pg/inc/index.article.php';
         include_once phproot.'pg/inc/index.projects.php';
+        include_once phproot.'pg/inc/index.blogs.php';
     ?>
     </section>
     <section class="h-100v ov-x-h" id="join">
@@ -27,7 +28,7 @@
         include_once phproot.'pg/inc/index.join.php';
     ?>
     </section>
-    <section class="container p-t-9 pos-r bg-grey-8 cl-white" style="z-index:3" id="bottom-part">
+    <section class="container p-t-9 pos-r main-bg-7 cl-white" style="z-index:3" id="bottom-part">
     <?php
         include_once phproot.'pg/inc/index.members.php';
         include_once phproot.'pg/inc/index.footer.php';
@@ -78,6 +79,8 @@
                 setTimeout(() => {
                     borders.style.display = 'none';
                     document.body.classList.remove("not-loaded");
+                    document.documentElement.style.overflow = 'unset';
+                    document.documentElement.style.overflowX = 'hidden';
                 }, 800);
             }, 900)
         })

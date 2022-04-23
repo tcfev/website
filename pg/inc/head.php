@@ -4,4 +4,4 @@
 <link rel="mask-icon" href="<?php echo root; ?>favicon.svg" color="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400&family=Comfortaa:wght@300&family=Noto+Sans+Arabic:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comfortaa&family=Montserrat+Alternates:wght@200&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet">

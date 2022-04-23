@@ -9,7 +9,7 @@
                 <span >65209/77790</span>
             </div>
             <div class="f-holder-2 dsp-f jcr jcc-s aic">
-                <img src="<?php echo root; ?>content/img/tcf_7.svg" class="w-100p" style="max-width:120px" alt="">
+                <img src="<?php echo root; ?>content/img/tcf_light.svg" class="w-100p" style="max-width:120px" alt="">
             </div>
         </div>
     </div>
