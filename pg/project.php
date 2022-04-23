@@ -17,7 +17,7 @@
     <section id="header">
         <article class="container dark">
             <?php include_once phproot.'pg/inc/menu.php' ?>
-            <div class="f-row jcc aic h-100v">
+            <div class="f-row jcc aic h-100v" id="header-title">
                 <div class="container-8 m-x-a dsp-f">
                     <div class="header-top-border"></div>
                     <div class="header-title">
@@ -65,9 +65,10 @@
     <script src="<?php echo root; ?>js/kc.observer.js"></script>
 
     <script>
-        const mainpage = document.querySelector('#header .f-row');
+        const mainpage = document.querySelector('#header-title');
         const par = document.querySelector('.transition-pre');
         setTimeout(() => {
+            console.log(mainpage);
             par.classList.add('animated');
             setTimeout(() => {
                 mainpage.classList.add('active');
