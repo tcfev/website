@@ -342,8 +342,8 @@ body {
 
 .transition div {
   width: 100%;
-  padding: 2px 0;
-  margin-top: -2px;
+  padding: 0.1px 0;
+  margin-top: -0.1px;
   height: 33.4%;
   -webkit-transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
   transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
@@ -385,8 +385,8 @@ body {
 
 .transition-pre div {
   width: 100%;
-  padding: 2px 0;
-  margin-top: -2px;
+  padding: 0.1px 0;
+  margin-top: -0.1px;
   height: 33.4%;
   -webkit-transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
   transition: background-color ease 0.7s,  -webkit-transform ease 1.5s;
@@ -416,24 +416,24 @@ body {
   left: 5%;
   top: 2px;
   background-color: #52b69a;
-  -webkit-transition: all ease 1.3s;
-  transition: all ease 1.3s;
+  -webkit-transition: all ease 2s;
+  transition: all ease 2s;
 }
 
 .header-side-border {
-  width: 1px;
+  width: 2px;
   height: 0vh;
   position: absolute;
   left: 93%;
   top: -10vh;
   background-color: #52b69a;
-  -webkit-transition: all ease 1.3s;
-  transition: all ease 1.3s;
+  -webkit-transition: all ease 10s;
+  transition: all ease 10s;
 }
 
 .header-title {
-  margin-top: 5vh;
-  width: 65%;
+  margin-top: 0vh;
+  width: 85%;
   text-align: center;
   margin-left: 5%;
   opacity: 0;
@@ -448,7 +448,7 @@ body {
 }
 
 .active .header-side-border {
-  height: 125vh;
+  height: 150vh;
 }
 
 .active .header-title {
@@ -492,14 +492,13 @@ body {
   height: 100%;
   background: white;
   background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 75%, white 100%);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
-.blur a {
-  border-radius: 25px;
+.blur .blur-a {
   opacity: 0;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -508,24 +507,24 @@ body {
 }
 
 .blur .blur-p {
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
 }
 
 .blur:hover {
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
-.blur:hover a {
+.blur:hover .blur-a {
   opacity: 1;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
 }
 
 .blur:hover .blur-p {
-  opacity: 0;
+  opacity: 1;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
 }
@@ -551,6 +550,10 @@ body {
   background: unset;
 }
 
+.blog.active .blur .blur-p {
+  opacity: 0;
+}
+
 .blog.active .blog-content {
   -webkit-transform: scale(9) translateY(40%);
           transform: scale(9) translateY(40%);
@@ -573,5 +576,98 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.scroll-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  top: calc(100vh - 80px);
+  border: none;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  -webkit-transform: translate(-50%, 0) rotate(-45deg);
+          transform: translate(-50%, 0) rotate(-45deg);
+  -webkit-animation: scroll-icon-anim 4s ease 1s infinite normal;
+          animation: scroll-icon-anim 4s ease 1s infinite normal;
+}
+
+@-webkit-keyframes scroll-icon-anim {
+  0% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  7.5% {
+    -webkit-transform: translate(-50%, 25px) rotate(-45deg);
+            transform: translate(-50%, 25px) rotate(-45deg);
+  }
+  23% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  27% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  34.5% {
+    -webkit-transform: translate(-50%, 25px) rotate(-45deg);
+            transform: translate(-50%, 25px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  51% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-icon-anim {
+  0% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  7.5% {
+    -webkit-transform: translate(-50%, 25px) rotate(-45deg);
+            transform: translate(-50%, 25px) rotate(-45deg);
+  }
+  23% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  27% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  34.5% {
+    -webkit-transform: translate(-50%, 25px) rotate(-45deg);
+            transform: translate(-50%, 25px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  51% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

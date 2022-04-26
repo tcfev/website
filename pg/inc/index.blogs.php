@@ -4,23 +4,24 @@
         <h3 class="fs-xm cl-black righteous">Here are our blog posts</h3>
     </div>
 </div>
-<div class="container p-y-8">
+<div class="container p-y-8 shdw-b">
     <?php $i = -1;while (++$i < count($blogs)) { ?>
     <div class="f-row pos-r blog">
         <div class="f-holder-1 txt-c bg-white blog-title">
-            <!-- <h1 class="fs-xl"><?php echo $blogs[$i]['title']; ?></h1> -->
         </div>
         <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:400px">
             <div class="blog-frame bg-white">
                 <iframe src="blog/<?php echo $blogs[$i]['ID']; ?>" frameborder="0"></iframe>
             </div>
-            <div class="container blur dsp-f jcc f-d-col aic blog-content">
+            <div class="container blur dsp-f aic f-d-col blog-content">
                 <div class="cl-grey-7 container-6 txt-j p-2 blur-p">
                     <?php echo $blogs[$i]['body']; ?>
                 </div>
-                <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="blog-link p-1 bg-white shdw-2 dsp-f">
-                    <img src="<?php echo root;?>content/img/play-svg.svg" class="w-50x pointer" alt="">
-                </a>
+                <div class="container-6 blur-a">
+                    <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="blog-link p-1 main-cl-6">
+                        See more
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -14,14 +14,14 @@
 </head>
 <body>
     <?php include_once phproot.'pg/inc/transition.pre.php'; ?>
-    <section id="header">
+    <section id="header" class="pos-r h-100v">
         <article class="container dark">
             <?php include_once phproot.'pg/inc/menu.php' ?>
-            <div class="f-row jcc aic h-100v" id="header-title">
+            <div class="f-row jcc m-t-9 pos-r" id="header-title">
                 <div class="container-8 m-x-a dsp-f">
                     <div class="header-top-border"></div>
                     <div class="header-title">
-                        <h1 class="fs-3xl fs-s-xxl">
+                        <h1 class="fs-3xl fs-l-3xsl fs-s-xxl">
                             <?php echo $project['title']; ?>
                         </h1>
                     </div>
@@ -29,6 +29,7 @@
                 </div>
             </div>
         </article>
+        <div class="scroll-icon"></div>
     </section>
 
     <section id="body">
@@ -68,7 +69,6 @@
         const mainpage = document.querySelector('#header-title');
         const par = document.querySelector('.transition-pre');
         setTimeout(() => {
-            console.log(mainpage);
             par.classList.add('animated');
             setTimeout(() => {
                 mainpage.classList.add('active');

@@ -4315,6 +4315,10 @@ a {
   font-size: 10.5em;
 }
 
+.fs-3xsl {
+  font-size: 8em;
+}
+
 .fs-xxl {
   font-size: 6.5em;
 }
@@ -4388,6 +4392,9 @@ a {
   .fs-l-3xl {
     font-size: 10.5em;
   }
+  .fs-l-3xsl {
+    font-size: 8em;
+  }
   .fs-l-xxl {
     font-size: 6.5em;
   }
@@ -4415,6 +4422,9 @@ a {
   .fs-m-3xl {
     font-size: 10.5em;
   }
+  .fs-m-3xsl {
+    font-size: 8em;
+  }
   .fs-m-xxl {
     font-size: 6.5em;
   }
@@ -4441,6 +4451,9 @@ a {
 @media (max-width: 480px) {
   .fs-s-3xl {
     font-size: 10.5em;
+  }
+  .fs-s-3xsl {
+    font-size: 8em;
   }
   .fs-s-xxl {
     font-size: 6.5em;
@@ -4535,6 +4548,18 @@ a {
 .shdw-3 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.shdw-b {
+  box-shadow: 0px 10px 15px -7px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 10px 15px -7px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0px 10px 15px -7px rgba(0, 0, 0, 0.55);
+}
+
+.shdw-t {
+  box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.55);
 }
 
 /*********************** BORDERS ************************/

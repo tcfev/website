@@ -1,5 +1,5 @@
 
-<div class="container p-y-8 target pos-f" style="left:0;top:0;">
+<div class="container p-y-8 target bg-light pos-f" style="left:0;top:0;">
     <div class="container-6 m-x-a h-100v dsp-f aic">
         <div class="f-row f-d-col scroll-effect-fade p-4">
             <h2 class="fs-xxl fs-s-l"><span class="main-cl-6">J</span>oin Us</h2>

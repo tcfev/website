@@ -2,6 +2,10 @@
     font-size: 10.5em;
 }
 
+.fs-3xsl {
+    font-size: 8em;
+}
+
 .fs-xxl {
     font-size: 6.5em;
 }
@@ -85,6 +89,10 @@
     .fs-l-3xl {
         font-size: 10.5em;
     }
+
+    .fs-l-3xsl {
+        font-size: 8em;
+    }
     
     .fs-l-xxl {
         font-size: 6.5em;
@@ -121,6 +129,10 @@
 @media (max-width: 720px) {
     .fs-m-3xl {
         font-size: 10.5em;
+    }
+
+    .fs-m-3xsl {
+        font-size: 8em;
     }
     
     .fs-m-xxl {
@@ -159,6 +171,10 @@
 @media (max-width: 480px) {
     .fs-s-3xl {
         font-size: 10.5em;
+    }
+
+    .fs-s-3xsl {
+        font-size: 8em;
     }
     
     .fs-s-xxl {

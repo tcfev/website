@@ -13,7 +13,7 @@
     <?php include_once phproot.'pg/inc/head.php'; ?>
 </head>
 <body>
-    <section id="header">
+    <section id="header" class="pos-r h-100vh">
         <article class="dark">
         <?php include_once phproot.'pg/inc/menu.php' ?>
         </article>
@@ -21,7 +21,7 @@
             <div class="container h-100v">
             </div>
         </article>
-        <article>
+        <article class="pos-r">
             <div class="container h-100v pos-f" style="top:0;left:0;z-index:1">
                 <div class="f-row jcc aic h-100v">
                     <h1 class="fs-3xl fs-s-xl" id="title">
@@ -30,6 +30,7 @@
                 </div>
             </div>
         </article>
+        <div class="scroll-icon"></div>
     </section>
 
     <section class="bg-white pos-r" style="z-index:2">

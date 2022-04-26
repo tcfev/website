@@ -315,8 +315,8 @@ body {
     top: 0;
     & div {
         width: 100%;
-        padding: 2px 0;
-        margin-top: -2px;
+        padding: 0.1px 0;
+        margin-top: -0.1px;
         height: 33.4%;
         transition: transform ease 1.5s,  background-color ease 0.7s;
     }
@@ -346,8 +346,8 @@ body {
     top: 0;
     & div {
         width: 100%;
-        padding: 2px 0;
-        margin-top: -2px;
+        padding: 0.1px 0;
+        margin-top: -0.1px;
         height: 33.4%;
         transition: transform ease 1.5s,  background-color ease 0.7s;
     }
@@ -373,22 +373,22 @@ body {
     left: 5%;
     top: 2px;
     background-color: #52b69a;
-    transition: all ease 1.3s;
+    transition: all ease 2s;
 }
 
 .header-side-border{
-    width: 1px;
+    width: 2px;
     height: 0vh;
     position: absolute;
     left: 93%;
     top: -10vh;
     background-color: #52b69a;
-    transition: all ease 1.3s;
+    transition: all ease 10s;
 }
 
 .header-title {
-    margin-top: 5vh;
-    width: 65%;
+    margin-top: 0vh;
+    width: 85%;
     text-align: center;
     margin-left: 5%;
     opacity: 0;
@@ -401,7 +401,7 @@ body {
 }
 
 .active .header-side-border {
-    height: 125vh;
+    height: 150vh;
 }
 
 .active .header-title {
@@ -436,29 +436,27 @@ body {
 
 .blur {
     height: 100%;
-    // background-color: rgba(255,255,255, 0.2);
     background: rgb(255,255,255);
     background: radial-gradient(closest-side, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,1) 100%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(1px);
     transition: all ease 0.2s;
-    & a {
-        border-radius: 25px;
+    & .blur-a {
         opacity: 0;
         transform: translateY(0);
         transition: all ease 0.4s;
     }
     & .blur-p {
-        opacity: 1;
+        opacity: 0;
         transition: all ease 0.4s;
     }
     &:hover {
-        backdrop-filter: blur(1px);
-        & a {
+        backdrop-filter: blur(10px);
+        & .blur-a {
             opacity: 1;
             transform: translateY(-50px);
         }
         & .blur-p {
-            opacity: 0;
+            opacity: 1;
             transform: translateY(-50px);
         }
     }
@@ -477,6 +475,9 @@ body {
         & .blur {
             backdrop-filter: blur(0);
             background: unset;
+            & .blur-p {
+                opacity: 0;
+            }
         }
         & .blog-content {
             transform: scale(9) translateY(40%);
@@ -496,4 +497,30 @@ body {
             left: 0;
         }
     }
+}
+
+.scroll-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    top: calc(100vh - 80px);
+    border: none;
+    border-bottom: 3px solid #000;
+    border-left: 3px solid #000;
+    transform: translate(-50%, 0) rotate(-45deg);
+    animation: scroll-icon-anim 4s ease 1s infinite normal;
+}
+
+@keyframes scroll-icon-anim {
+    0% {transform: translate(-50%, 0) rotate(-45deg);}
+    7.5% {transform: translate(-50%, 25px) rotate(-45deg);}
+    23% {transform: translate(-50%, 0) rotate(-45deg);}
+    27% {transform: translate(-50%, 0) rotate(-45deg);}
+    34.5% {transform: translate(-50%, 25px) rotate(-45deg);}
+    50% {transform: translate(-50%, 0) rotate(-45deg);}
+    51% {opacity: 1;}
+    55% {opacity: 0;}
+    96% {opacity: 0;}
+    100% {opacity: 1;}
 }
