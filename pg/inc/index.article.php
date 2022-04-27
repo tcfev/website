@@ -47,8 +47,7 @@
                 else
                     y < 0 ? y = 0 : y = y;
                 r > 1 ? o = 1 : o = r;
-                o < 0.03 ? o = 0 : o = o;
-                console.log(sc, x, y);
+                o < 0.11 ? o = 0 : o = o;
                 elm.s.style.transform = 'scale(' + sc + ') translate(' + x + 'px, ' + y + 'px)';
                 elm.s.style.opacity = o;
             })
