@@ -259,4 +259,50 @@ function deleteMember() {
     $stmt->bind_param("i", $id);
     $stmt->execute();
 }
+
+function loadAboutUs() {
+    global $con;
+    $l = $_SESSION['lang'];
+    $row = $con->query("SELECT (SELECT Value FROM settings WHERE key_name = 'about_us' AND lang = '$l') AS about_us")->fetch_all(MYSQLI_ASSOC);
+
+    echo json_encode($row);
+}
+
+function loadAboutUss() {
+    global $con;
+
+    $row = $con->query("SELECT s1.Value AS about_us, s1.lang FROM
+    (SELECT Value, lang FROM settings WHERE key_name = 'about') s1")->fetch_all(MYSQLI_ASSOC);
+
+    echo json_encode($row);
+}
+
+function aboutUsDescr() {
+    global $con;
+    $descr = $_POST['d'];
+    $lang = $_POST['lang'];
+    $err = array();    
+
+    if (mb_strlen($descr) < 100) {
+        array_push($err, 'Text must be at least 100 characters');
+    }
+
+    if (count($err) > 0) {
+        $msg['err'] = $err;
+        $msg['res'] = 2;
+    } else {
+        $stmt = $con->prepare("UPDATE settings SET Value = ? WHERE key_name = 'about_us' AND lang = ?");
+        $stmt->bind_param("ss", $descr, $lang);
+    
+        if (!$stmt->execute()) {
+            $msg['msg'] = 'Error: Something went - code: PMx002';
+            $msg['res'] = 0;
+        } else {
+            $msg['msg'] = 'About Us text updated successfully';
+            $msg['res'] = 1;
+        }
+    }
+    
+    echo json_encode($msg);
+}
 ?>

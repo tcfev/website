@@ -26,5 +26,6 @@ $members = $con->query("SELECT m.ID, m.avatar, m.link, md.post, md.info, IF(m.ac
     m.email, CONCAT(md.first_name, ' ', md.last_name) AS Name FROM
     members m INNER JOIN (SELECT * FROM member_detail WHERE lang = '$l') md ON m.ID = md.member_id ORDER BY m.ID DESC")->fetch_all(MYSQLI_ASSOC);
 
+$aboutInfo = $con->query("SELECT value AS about_us FROM settings WHERE key_name = 'about_us' AND lang = '$l'")->fetch_assoc();
 
 ?>

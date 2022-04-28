@@ -28,7 +28,7 @@
         include_once phproot.'pg/inc/index.join.php';
     ?>
     </section>
-    <section class="container p-t-9 pos-r main-bg-7 cl-white shdw-t" style="z-index:3" id="bottom-part">
+    <section class="container-8 brr-2 m-x-a m-b-6 p-t-9 pos-r main-bg-7 cl-white shdw-t" style="z-index:3" id="bottom-part">
     <?php
         include_once phproot.'pg/inc/index.members.php';
         include_once phproot.'pg/inc/index.footer.php';

@@ -662,6 +662,112 @@ function deleteProjectVideo(id) {
 
 // *************** MEMBERS **************
 
+function loadAboutUs(fn) {
+    let page = root + 'pg/cal/member.php';
+    let f = new FormData();
+    f.append('f', 'loadAboutUs');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            fn(data);
+        }
+    };
+}
+
+function loadAboutUss(fn) {
+    let page = root + 'pg/cal/member.php';
+    let f = new FormData();
+    f.append('f', 'loadAboutUss');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            fn(data);
+        }
+    };
+}
+
+function setAboutUs(data) {
+    innerDom('about-us', data, 'abu');
+}
+
+function startAboutUsDescr(obj) {
+    loadAboutUss(aboutUsDescrDialog);
+}
+
+function aboutUsDescrDialog(data) {
+    innerDom('about-us-descr-dialog-holder', data, 'aud');
+
+    let fn = function() {
+        kdsArray.push(DivSlider.create('about-us-descr-dialog-popup'));
+        kdsArray[kdsArray.length -1].initialize();
+        kdsArray[kdsArray.length -1].update();
+        let eds = document.getElementById('about-us-descr-dialog-popup').querySelectorAll('.editor');
+        for (let i = 0; i < eds.length; i++) {
+            var toolbarOptions = [
+                ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+                ['blockquote', 'code-block'],
+              
+                [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+              
+                [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+              ];
+            var options = {
+                modules: {
+                  toolbar: toolbarOptions
+                },
+                readOnly: false,
+                theme: 'snow'
+            };
+            let ed = eds[i];
+            let editor = new Quill(ed, options);
+
+            editor.on('text-change', function(delta, oldDelta, source) {
+                let cont = ed.querySelector('p').parentElement.innerHTML;
+                document.getElementById('about-us-descr-dialog-popup').querySelectorAll('input[name="d"]')[i].value = cont;
+            });
+        }
+    }
+    let pm = new popup({
+        id:'pmsg',
+        target:'about-us-descr-dialog',
+        type:'steady',
+        cb: fn,
+        size: 'lg'
+    })
+}
+
+function aboutUsDescr(obj) {
+    let page = root + 'pg/cal/member.php';
+    let f = new FormData(obj);
+    f.append('f', 'aboutUsDescr');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            handleErr(data, function(){loadAboutUs(setAboutUs);}, null, false, '', '', 'timer');
+        }
+    };
+}
+
 function addMember() {
     let page = root + 'pg/cal/member.php';
     let f = new FormData();

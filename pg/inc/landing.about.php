@@ -1,4 +1,5 @@
-<div class="f-row m-t-9 m-b-5" id="about">
+<span class="fs-xm cl-bright-blue-6 dsp-ib m-t-9">Intro text</span>
+<div class="f-row m-b-4 m-t-4" id="about">
     <div class="f-holder-1 bg-white shdw-3 brr-2 karaco-sample-dom">
         <div class="over-menu-holder">
             <span class="fs-l">[[title]]</span>

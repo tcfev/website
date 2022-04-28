@@ -1,4 +1,9 @@
-<div class="container-6 m-x-a p-y-7" id="members">
+<div class="container-7 m-x-a p-y-7" id="members">
+    <div class="f-row m-b-6">
+        <div class="txt-j cl-light">
+            <?php echo $aboutInfo['about_us']; ?>
+        </div>
+    </div>
     <div class="f-row">
         <?php $i = 0; while ($i < count($members)) { ?>
         <div class="f-holder-1 dsp-f scroll-effect-left">

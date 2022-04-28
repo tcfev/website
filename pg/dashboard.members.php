@@ -42,7 +42,9 @@
             
             <?php
             include_once phproot.'pg/inc/changelang.php';
-            include_once phproot.'pg/inc/members.1.php'; 
+            include_once phproot.'pg/inc/members.info.php'; 
+            include_once phproot.'pg/inc/members.user.php'; 
+            include_once phproot.'pg/inc/members.user.edit.php'; 
             ?>
         </div>
     </div>
@@ -50,9 +52,17 @@
     <script src="<?php echo root; ?>js/var.js?v=<?php echo ver; ?>"></script>
     <script src="<?php echo root; ?>js/kc.normal.js?v=<?php echo ver; ?>"></script>
     <script src="<?php echo root; ?>js/app.js?v=<?php echo ver; ?>"></script>
+    <!-- Main Quill library -->
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+    <!-- Theme included stylesheets -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
 
     <script>
-        loadMembers(setMembers)
+        loadMembers(setMembers);
+        loadAboutUs(setAboutUs);
     </script>
 </body>
 </html>
