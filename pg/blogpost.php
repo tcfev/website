@@ -74,6 +74,7 @@
     <script src="<?php echo root; ?>js/app.js"></script>
     <script src="<?php echo root; ?>js/kc.normal.js"></script>
     <script src="<?php echo root; ?>js/kc.observer.js"></script>
+    <script src="<?php echo root; ?>js/scroll.vertical.js"></script>
     <script>
         const title = document.querySelector('#title');
         let elms = document.querySelectorAll('.project-gallery');

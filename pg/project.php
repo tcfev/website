@@ -66,12 +66,13 @@
     <script src="<?php echo root; ?>js/app.js"></script>
     <script src="<?php echo root; ?>js/kc.normal.js"></script>
     <script src="<?php echo root; ?>js/kc.observer.js"></script>
+    <script src="<?php echo root; ?>js/scroll.vertical.js"></script>
 
     <script>
         const mainpage = document.querySelector('#header-title');
         const par = document.querySelector('.transition-pre');
         let elms = document.querySelectorAll('.project-gallery');
-        
+
         setTimeout(() => {
             par.classList.add('animated');
             setTimeout(() => {
