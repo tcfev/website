@@ -71,6 +71,7 @@
     </section>
     
     <script src="<?php echo root; ?>js/var.js"></script>
+    <script src="<?php echo root; ?>js/app.js"></script>
     <script src="<?php echo root; ?>js/kc.normal.js"></script>
     <script src="<?php echo root; ?>js/kc.observer.js"></script>
     <script>
