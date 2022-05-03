@@ -70,12 +70,19 @@
     <script>
         const mainpage = document.querySelector('#header-title');
         const par = document.querySelector('.transition-pre');
+        let elms = document.querySelectorAll('.project-gallery');
+        
         setTimeout(() => {
             par.classList.add('animated');
             setTimeout(() => {
                 mainpage.classList.add('active');
             }, 1200);
         }, 700);
+
+        Array.from(elms).forEach((elm)=>{
+            let scl = new VerticalScroll({target:elm});
+            scl.init();
+        })
     </script>
     
 </body>

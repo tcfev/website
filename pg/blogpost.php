@@ -76,7 +76,9 @@
     <script src="<?php echo root; ?>js/kc.observer.js"></script>
     <script>
         const title = document.querySelector('#title');
+        let elms = document.querySelectorAll('.project-gallery');
         let text = title.innerText;
+
         title.innerHTML = "";
         title.style.display = 'block';
         Array.from(text).forEach((elm) => {
@@ -103,6 +105,11 @@
             scale = 1 + window.pageYOffset / 400;
             scale > 3.5 ? scale = 3.5 : scale = scale;
             title.style.transform = 'scale(' + scale + ')';
+        })
+        
+        Array.from(elms).forEach((elm)=>{
+            let scl = new VerticalScroll({target:elm});
+            scl.init();
         })
     </script>
 </body>
