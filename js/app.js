@@ -1,3 +1,19 @@
+function changeURL() {
+    let str=window.location.href;
+    let location = str;
+    langs.forEach(lang => {
+        location = location.replace('/'+lang+'/', '/'+this.options[this.selectedIndex].value+'/');
+    })
+    // if (location[location.length - 4] == '/') {
+    //     let check = location.substring(location.length - 3, location.length - 1);
+    //     if (langs.includes(check)) {
+    //         location = location.substring(0, location.length - 3) + '/' + this.options[this.selectedIndex].value;
+    //     }
+    // }
+
+    window.location = location;
+}
+
 function login(obj){
     var page = root + 'pg/cal/signin.php';
     var f = new FormData(obj);

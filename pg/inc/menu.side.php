@@ -1,6 +1,6 @@
 <div class="side-bar fs-mx side-bar-left bg-blue-7 cl-white" id="side-bar">
     <ul>
-        <a href="<?php echo root.$_SESSION['lang']; ?>">
+        <a href="<?php echo root.$_SESSION['lang']; ?>/">
             <li class="hvr-bg-blue-6"><span class="icon icon-home"></span><label class="label">Website</label></li>
         </a>
         <a href="<?php echo root; ?>panel/landingpage">

@@ -51,7 +51,7 @@
                 'investext' => ''
             ),
             'de' => array(
-                'lang' => 'hu',
+                'lang' => 'de',
                 'dir' => 'ltr',
                 'tit' => 'DID HOMEPAGE',
                 'key' => 'investment, develope, DID',
@@ -149,7 +149,7 @@
                 'selected' => array('en' => '', 'fa' => 'selected', 'de' => '', 'ku' => '', 'ar' => '')
             ),
             'ku' => array(
-                'lang' => 'fa',
+                'lang' => 'ku',
                 'dir' => 'rtl',
                 'tit' => 'وبسایت دپارتمان توسعه و سرمایه گذاری',
                 'key' => 'سرمایه گذاری, توسعه, DID',
@@ -198,7 +198,7 @@
                 'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => 'selected', 'ar' => '')
             ),
             'ar' => array(
-                'lang' => 'fa',
+                'lang' => 'ar',
                 'dir' => 'rtl',
                 'tit' => 'وبسایت دپارتمان توسعه و سرمایه گذاری',
                 'key' => 'سرمایه گذاری, توسعه, DID',

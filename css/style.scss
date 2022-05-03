@@ -83,7 +83,7 @@ $main-c-7 : #1e6091;
 }
 
 html {
-    font-size: 20px;
+    // font-size: 20px;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -419,6 +419,10 @@ body {
     }
 }
 
+.blog {
+    width: 70vw;
+}
+
 .blog-frame {
     position: absolute;
     left: 0;
@@ -429,35 +433,36 @@ body {
     & iframe {
         width: 100%;
         height: 250%;
-        transform: scale(0.5) translate(0, -50%);
+        transform: scale(0.6) translate(0, -15%);
         transition: all ease 0.7s;
     }
 }
 
 .blur {
     height: 100%;
-    background: rgb(255,255,255);
+    // background: rgb(255,255,255);
     background: radial-gradient(closest-side, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,1) 100%);
     backdrop-filter: blur(1px);
     transition: all ease 0.2s;
     & .blur-a {
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(20px);
         transition: all ease 0.4s;
     }
     & .blur-p {
         opacity: 0;
+        transform: translateY(20px);
         transition: all ease 0.4s;
     }
     &:hover {
         backdrop-filter: blur(10px);
         & .blur-a {
             opacity: 1;
-            transform: translateY(-50px);
+            transform: translateY(0px);
         }
         & .blur-p {
             opacity: 1;
-            transform: translateY(-50px);
+            transform: translateY(0px);
         }
     }
 }
@@ -472,6 +477,7 @@ body {
     }
     
     &.active {
+        z-index: 100;
         & .blur {
             backdrop-filter: blur(0);
             background: unset;

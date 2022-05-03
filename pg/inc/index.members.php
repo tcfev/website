@@ -1,4 +1,4 @@
-<div class="container-7 m-x-a p-y-7" id="members">
+<div class="container-7 m-x-a p-y-7 p-x-4" id="members">
     <div class="f-row m-b-6">
         <div class="txt-j cl-light">
             <?php echo $aboutInfo['about_us']; ?>

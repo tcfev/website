@@ -1,6 +1,7 @@
 <?php
     include_once 'cal/session.header.php';
     include_once 'cal/cheader.cal.php';
+    include_once phproot.'pg/cal/lang.php';
     include_once 'inc/blog.datafetch.php';
 ?>
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
         <article class="pos-r">
             <div class="container h-100v pos-f" style="top:0;left:0;z-index:1">
                 <div class="f-row jcc aic h-100v">
-                    <h1 class="fs-3xl fs-s-xl" id="title">
+                    <h1 class="fs-3xl fs-s-xl p-4" id="title" style="display:none">
                         <?php echo $blog['title']; ?>
                     </h1>
                 </div>
@@ -76,6 +77,7 @@
         const title = document.querySelector('#title');
         let text = title.innerText;
         title.innerHTML = "";
+        title.style.display = 'block';
         Array.from(text).forEach((elm) => {
             let s = document.createElement('span');
             s.classList.add('fancy-text');
@@ -86,7 +88,7 @@
         let counter = 0;
         setTimeout(() => {
             fancy(counter);
-        }, 500);
+        }, 0);
         function fancy(counter) {
             spanArray[counter].classList.add('done');
             counter++;

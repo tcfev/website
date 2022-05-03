@@ -1,31 +1,33 @@
-<div class="container p-y-8 bg-white">
+<div class="container p-t-8 bg-white">
     <div class="container-6 m-x-a p-s-4">
         <h2 class="fs-xl main-cl-6 righteous">Want to know more?</h2>
         <h3 class="fs-xm cl-black righteous">Here are our blog posts</h3>
     </div>
 </div>
-<div class="container p-y-8 shdw-b">
-    <?php $i = -1;while (++$i < count($blogs)) { ?>
-    <div class="f-row pos-r blog">
-        <div class="f-holder-1 txt-c bg-white blog-title">
-        </div>
-        <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:400px">
-            <div class="blog-frame bg-white">
-                <iframe src="blog/<?php echo $blogs[$i]['ID']; ?>" frameborder="0"></iframe>
-            </div>
-            <div class="container blur dsp-f aic f-d-col blog-content">
-                <div class="cl-grey-7 container-6 txt-j p-2 blur-p">
-                    <?php echo $blogs[$i]['body']; ?>
+<div class="container p-b-8 p-t-3 p-x-6 p-s-x-1 shdw-b project-gallery ov-x-a">
+    <div class="w-max dsp-f">
+        <?php $i = -1;while (++$i < count($blogs)) { ?>
+        <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="pos-r blog m-3 brd-1 brd-grey-2 p-y-4">
+            <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="dsp-f">
+                <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:300px">
+                    <div class="blog-frame bg-white">
+                        <iframe loading="lazy" src="blog/<?php echo $blogs[$i]['ID']; ?>" frameborder="0"></iframe>
+                    </div>
+                    <div class="container blur dsp-f aic jcc blog-content">
+                        <div class="cl-grey-7 container-8 txt-j p-2 blur-p">
+                            <?php echo substr($blogs[$i]['body'], 0, 230)."..."; ?>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-6 blur-a">
-                    <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="blog-link p-1 main-cl-6">
-                        See more
-                    </a>
-                </div>
+        </div>
+            <div class="container-9 blur-a m-x-a txt-r m-t-4">
+                <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="blog-link p-4 main-cl-6">
+                    See more
+                </a>
             </div>
         </div>
+        <?php } ?>
     </div>
-    <?php } ?>
 </div>
 
 <script>

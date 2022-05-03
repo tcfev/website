@@ -16,31 +16,41 @@ RewriteEngine On
 
 RewriteCond %{HTTP:Accept-Language} ^en [NC]
 RewriteRule ^$ http://localhost/tcf/en/ [L,R=301]
-RewriteRule ^about http://localhost/tcf/en/about [L,R=301]
-RewriteRule ^contact http://localhost/tcf/en/contact [L,R=301]
+RewriteRule ^blog http://localhost/tcf/en/blog [L,R=301]
+RewriteRule ^project http://localhost/tcf/en/project [L,R=301]
 
-RewriteCond %{HTTP:Accept-Language} ^hu [NC]
-RewriteRule ^$ http://localhost/tcf/hu/ [L,R=301]
-RewriteRule ^about http://localhost/tcf/hu/about [L,R=301]
-RewriteRule ^contact http://localhost/tcf/hu/contact [L,R=301]
+RewriteCond %{HTTP:Accept-Language} ^de [NC]
+RewriteRule ^$ http://localhost/tcf/de/ [L,R=301]
+RewriteRule ^blog http://localhost/tcf/de/blog [L,R=301]
+RewriteRule ^project http://localhost/tcf/de/project [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^ar [NC]
+RewriteRule ^$ http://localhost/tcf/ar/ [L,R=301]
+RewriteRule ^blog http://localhost/tcf/ar/blog [L,R=301]
+RewriteRule ^project http://localhost/tcf/ar/project [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^ku [NC]
+RewriteRule ^$ http://localhost/tcf/ku/ [L,R=301]
+RewriteRule ^blog http://localhost/tcf/ku/blog [L,R=301]
+RewriteRule ^project http://localhost/tcf/ku/project [L,R=301]
 
 RewriteCond %{HTTP:Accept-Language} ^fa [NC]
 RewriteRule ^$ http://localhost/tcf/fa/ [L,R=301]
-RewriteRule ^about http://localhost/tcf/fa/about [L,R=301]
-RewriteRule ^contact http://localhost/tcf/fa/contact [L,R=301]
+RewriteRule ^blog http://localhost/tcf/fa/blog [L,R=301]
+RewriteRule ^project http://localhost/tcf/fa/project [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 
-RewriteRule ^(en|hu|nl|fr|fa)/?$ index.php?lang=$1 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/project/([A-Za-z0-9]+) pg/project.php?lang=$1&p=$2 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/blog/([A-Za-z0-9]+) pg/blogpost.php?lang=$1&b=$2 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/contact pg/contact.php?lang=$1 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/about pg/about.php?lang=$1 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/news-archive pg/news.all.php?lang=$1 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/investors pg/investors.php?lang=$1 [QSA,NC,L]
-RewriteRule ^(en|hu|nl|fr|fa)/services pg/services.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/?$ index.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/project/([A-Za-z0-9]+) pg/project.php?lang=$1&p=$2 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/blog/([A-Za-z0-9]+) pg/blogpost.php?lang=$1&b=$2 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/contact pg/contact.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/about pg/about.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/news-archive pg/news.all.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/investors pg/investors.php?lang=$1 [QSA,NC,L]
+RewriteRule ^(en|de|ku|ar|fa)/services pg/services.php?lang=$1 [QSA,NC,L]
 
 RewriteRule ^panel/landingpage pg/dashboard.landing.php [L,NC]
 RewriteRule ^panel/blogs pg/dashboard.blogs.php [L,NC]

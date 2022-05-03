@@ -1,9 +1,10 @@
 <?php
     include_once 'pg/cal/session.header.php';
     include_once 'pg/cal/cheader.cal.php';
+    include_once phproot.'pg/cal/lang.php';
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $l; ?>" style="overflow: hidden">
+<html lang="<?php echo $l; ?>" <?php if (!isset($_COOKIE['is_seen']) || $_COOKIE['is_seen'] != "true") {?>style="overflow: hidden"<?php } ?>>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +13,12 @@
     <?php include_once phproot.'pg/inc/head.php'; ?>
     <?php include_once phproot.'pg/inc/index.datafetch.php'; ?>
 </head>
-<body class="not-loaded">
+<body  <?php if (!isset($_COOKIE['is_seen']) || $_COOKIE['is_seen'] != "true") {?>class="not-loaded"<?php } ?>>
     <section class="bg-white pos-r" id="top-part" style="z-index:4">
     <?php
         include_once phproot.'pg/inc/transition.post.php';
-        include_once phproot.'pg/inc/index.simple.php';
+        if (!isset($_COOKIE['is_seen']) || $_COOKIE['is_seen'] != "true")
+            include_once phproot.'pg/inc/index.simple.php';
         include_once phproot.'pg/inc/index.mainpage.php';
         include_once phproot.'pg/inc/index.article.php';
         include_once phproot.'pg/inc/index.projects.php';
@@ -42,15 +44,31 @@
     <script src="<?php echo root; ?>js/scroll.vertical.js"></script>
 
     <script>
-        const borders = document.getElementById('borders');
+        if (getCookie("is_seen") == "") {
+            const borders = document.getElementById('borders');
+            const btn = document.querySelector('#fade');
+            const fader = document.querySelector('#fade-circle');
+
+            btn.addEventListener('click', ()=>{
+            fader.classList.add('covering');
+            setCookie("is_seen", "true", 90);
+            setTimeout(()=>{
+                borders.classList.add('hidden');
+                setTimeout(() => {
+                    borders.style.display = 'none';
+                    document.body.classList.remove("not-loaded");
+                    document.documentElement.style.overflow = 'unset';
+                    document.documentElement.style.overflowX = 'hidden';
+                }, 800);
+            }, 900)
+        })
+        }
         const text_h1 = document.querySelector('#texts h1');
         const text_p = document.querySelector('#texts p');
-        const btn = document.querySelector('#fade');
-        const fader = document.querySelector('#fade-circle');
         let elms = document.querySelectorAll('.project-gallery');
         let translinks = document.querySelectorAll('.trans-link');
         let timer;
-
+    
         Array.from(translinks).forEach((tran) => {
             tran.addEventListener('click', function(e){
                 e.preventDefault();
@@ -71,19 +89,6 @@
                 window.location = link;
             }, 1500);
         }
-
-        btn.addEventListener('click', ()=>{
-            fader.classList.add('covering');
-            setTimeout(()=>{
-                borders.classList.add('hidden');
-                setTimeout(() => {
-                    borders.style.display = 'none';
-                    document.body.classList.remove("not-loaded");
-                    document.documentElement.style.overflow = 'unset';
-                    document.documentElement.style.overflowX = 'hidden';
-                }, 800);
-            }, 900)
-        })
         
         Array.from(elms).forEach((elm)=>{
             let scl = new VerticalScroll({target:elm});

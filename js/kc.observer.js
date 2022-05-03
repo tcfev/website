@@ -18,7 +18,7 @@ scrollers.forEach(scroller => {
 
 const specialScroller = document.querySelectorAll('[class*="scroll-special-"');
 const specialScrollOptions = {
-    threshold: 0.95,
+    threshold: 0.98,
     rootMargin: "0px 0px 0px 0px"
 }
 const specialScrollObserver = new IntersectionObserver(function(entries, specialScrollObserver){

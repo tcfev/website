@@ -65,7 +65,6 @@
 }
 
 html {
-  font-size: 20px;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -470,6 +469,10 @@ body {
   opacity: 1;
 }
 
+.blog {
+  width: 70vw;
+}
+
 .blog-frame {
   position: absolute;
   left: 0;
@@ -482,15 +485,14 @@ body {
 .blog-frame iframe {
   width: 100%;
   height: 250%;
-  -webkit-transform: scale(0.5) translate(0, -50%);
-          transform: scale(0.5) translate(0, -50%);
+  -webkit-transform: scale(0.6) translate(0, -15%);
+          transform: scale(0.6) translate(0, -15%);
   -webkit-transition: all ease 0.7s;
   transition: all ease 0.7s;
 }
 
 .blur {
   height: 100%;
-  background: white;
   background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 75%, white 100%);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
@@ -500,14 +502,16 @@ body {
 
 .blur .blur-a {
   opacity: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
 }
 
 .blur .blur-p {
   opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
 }
@@ -519,14 +523,14 @@ body {
 
 .blur:hover .blur-a {
   opacity: 1;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .blur:hover .blur-p {
   opacity: 1;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .blog .blog-content, .blog .blog-title {
@@ -542,6 +546,10 @@ body {
   transition: -webkit-transform 0.7s ease;
   transition: transform 0.7s ease;
   transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+}
+
+.blog.active {
+  z-index: 100;
 }
 
 .blog.active .blur {
