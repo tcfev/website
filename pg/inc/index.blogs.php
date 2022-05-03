@@ -7,7 +7,7 @@
 <div class="container p-b-8 p-t-3 p-x-6 p-s-x-1 shdw-b project-gallery ov-x-a">
     <div class="w-max dsp-f">
         <?php $i = -1;while (++$i < count($blogs)) { ?>
-        <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="pos-r blog m-3 brd-1 brd-grey-2 p-y-4">
+        <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="pos-r blog m-3 brd-2 brr-2 brd-grey-2 p-y-4">
             <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="dsp-f">
                 <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:300px">
                     <div class="blog-frame bg-white">
