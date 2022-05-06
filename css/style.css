@@ -469,8 +469,20 @@ body {
   opacity: 1;
 }
 
+#scroll-point {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 1px;
+  height: 1px;
+}
+
 .blog {
   width: 70vw;
+  max-width: 1000px;
+  -webkit-box-shadow: inset 0px 0px 30px 3px #6668;
+          box-shadow: inset 0px 0px 30px 3px #6668;
+  border: 1px solid #8888;
 }
 
 .blog-frame {
@@ -485,8 +497,8 @@ body {
 .blog-frame iframe {
   width: 100%;
   height: 250%;
-  -webkit-transform: scale(0.6) translate(0, -15%);
-          transform: scale(0.6) translate(0, -15%);
+  -webkit-transform: scale(0.6) translate(0, -35%);
+          transform: scale(0.6) translate(0, -35%);
   -webkit-transition: all ease 0.7s;
   transition: all ease 0.7s;
 }
@@ -559,6 +571,12 @@ body {
 }
 
 .blog.active .blur .blur-p {
+  opacity: 0;
+}
+
+.blog.active .blur-a {
+  -webkit-transform: scale(9) translateY(40%);
+          transform: scale(9) translateY(40%);
   opacity: 0;
 }
 

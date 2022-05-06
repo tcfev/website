@@ -31,6 +31,7 @@
                 </div>
             </div>
         </article>
+        <div id="scroll-point"></div>
         <div class="scroll-icon"></div>
     </section>
 
