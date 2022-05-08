@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
             <div class="container-9 blur-a m-x-a txt-r m-t-4">
                 <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="blog-link p-4 main-cl-6">
                     See more

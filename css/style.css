@@ -117,6 +117,7 @@ body {
 
 #borders {
   background-color: #fff;
+  overflow-x: hidden;
   opacity: 1;
   position: fixed;
   z-index: 1005;
@@ -193,6 +194,43 @@ body {
 
 .dark nav.menu ul select option {
   color: #000;
+}
+
+.tcf-main {
+  width: 90%;
+  max-width: 1100px;
+}
+
+.project-link {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 0;
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  border-radius: 2px;
+  bottom: 3px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: plink-animation 7s ease-in-out 1s infinite normal;
+          animation: plink-animation 7s ease-in-out 1s infinite normal;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.project-link:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  height: 2px;
+  background-color: #000;
+  -webkit-animation: none;
+          animation: none;
 }
 
 .project-gallery {
@@ -694,6 +732,52 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes plink-animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  12.5% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  17.5% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes plink-animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  12.5% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  17.5% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
