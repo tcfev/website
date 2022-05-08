@@ -9,7 +9,7 @@
             </p>
             <div class="f-row m-t-8">
                 <div class="tile-3-2 f-l-holder-1 f-s-d-col dsp-f jcb p-0">
-                    <a class="dps-f aic jcc brd-1 brd-grey-8 p-x-3 p-y-1 pointer join-btn-1 trans-link" kc-color="1e6091">become a member</a>
+                    <a href="https://cloud.transcf.org/index.php/apps/forms/HDWd8mMreQbpQWEL" class="dps-f aic jcc brd-1 brd-grey-8 p-x-3 p-y-1 pointer join-btn-1 trans-link" kc-color="1e6091">become a member</a>
                     <a class="dps-f aic jcc brd-1 brd-grey-8 p-x-3 p-y-1 pointer join-btn-2 trans-link" kc-color="34a0a4">donate</a>
                     <a class="dps-f aic jcc brd-1 brd-grey-8 p-x-3 p-y-1 pointer join-btn-3 trans-link" kc-color="d9ed92">contact us</a>
                 </div>

@@ -453,7 +453,7 @@ body {
 #scroll-point {
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 80px;
     width: 1px;
     height: 1px;
 }
@@ -566,6 +566,24 @@ body {
     animation: scroll-icon-anim 4s ease 1s infinite normal;
 }
 
+.pullup-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    border: none;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: translate(-50%, 0) rotate(135deg);
+    animation: pullup-icon-anim 4s ease 1s infinite normal;
+}
+
+#hidden-part {
+    transition: transform ease 0.5s;
+    transform: translateY(calc(100vh - 55px));
+}
+
 @keyframes scroll-icon-anim {
     0% {transform: translate(-50%, 0) rotate(-45deg);}
     7.5% {transform: translate(-50%, 25px) rotate(-45deg);}
@@ -573,6 +591,19 @@ body {
     27% {transform: translate(-50%, 0) rotate(-45deg);}
     34.5% {transform: translate(-50%, 25px) rotate(-45deg);}
     50% {transform: translate(-50%, 0) rotate(-45deg);}
+    51% {opacity: 1;}
+    55% {opacity: 0;}
+    96% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes pullup-icon-anim {
+    0% {transform: translate(-50%, 0) rotate(135deg);}
+    7.5% {transform: translate(-50%, -15px) rotate(135deg);}
+    23% {transform: translate(-50%, 0) rotate(135deg);}
+    27% {transform: translate(-50%, 0) rotate(135deg);}
+    34.5% {transform: translate(-50%, -15px) rotate(135deg);}
+    50% {transform: translate(-50%, 0) rotate(135deg);}
     51% {opacity: 1;}
     55% {opacity: 0;}
     96% {opacity: 0;}

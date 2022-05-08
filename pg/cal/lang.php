@@ -1,400 +1,77 @@
 <?php
     $langs = array(
+        'menu' => array(
+            'en' => array(
+                'about' => 'About Us',
+                'membership' => 'Membership',
+                'forms' => 'Our Forms'
+            ),
+            'de' => array(
+                'about' => 'About Us',
+                'membership' => 'Membership',
+                'forms' => 'Our Forms'
+            ),
+            'fa' => array(
+                'about' => 'درباره ما',
+                'membership' => 'عضویت',
+                'forms' => 'فرم‌ها'
+            ),
+            'ar' => array(
+                'about' => 'درباره ما',
+                'membership' => 'عضویت',
+                'forms' => 'فرم‌ها'
+            ),
+            'ku' => array(
+                'about' => 'سه باره ت',
+                'membership' => 'ناونووسی',
+                'forms' => 'فورمه‌کان'
+            ),
+        ),
         'ind' => array(
             'en' => array(
                 'lang' => 'en',
                 'dir' => 'ltr',
-                'tit' => 'DID HOMEPAGE',
-                'key' => 'investment, develope, DID',
-                'des' => 'did is a place for investors',
-                'intr' => 'I\'m intrested',
+                'tit' => 'TCF HOMEPAGE',
+                'key' => 'refugee, develope, tcf',
+                'des' => 'about what tcf does',
                 'more' => 'more',
-                'home' => 'Home',
-                'project' => 'Project',
-                'projects' => 'Projects',
-                'projects2' => 'Projects',
-                'pre-gallery' => 'Projects',
-                'about' => 'About',
-                'contact' => 'Contact Us',
-                'group' => 'Group',
-                'our' => 'Our',
-                'gallery' => 'Gallery',
-                'videos' => 'Videos',
-                'how' => 'How to',
-                'invest' => 'Invest',
-                'investors' => 'Investors',
-                'meet' => 'Meet other',
-                'info' => 'Project Info',
-                'why' => 'Why this project?',
-                'aboutP' => 'About project',
-                'timeline' => 'Timeline',
-                'adv' => 'Advantages',
-                'ser' => 'DID Services',
-                'services' => 'Services',
-                'welcome' => 'welcome',
-                'analyze' => 'Getting things ready...',
-                'latest' => 'Latest',
-                'news' => 'News',
-                'updated' => 'Get updated',
-                'insta' => 'instagram',
-                'youtube' => 'youtube',
-                'twitter' => 'twitter',
-                'facebook' => 'facebook',
-                'lang-sel' => 'Select language:',
-                'subscribe' => 'Subscribe',
-                'wait' => 'Processing request...',
-                'copy' => 'copyright &copy 2021. All rights reserved',
-                'dwnAtlas' => 'Download Atlas project catalog',
-                'dwnGeneral' => 'Download DID projects catalog',
-                'dep' => 'Department of</br> Investment and</br> Development',
-                'selected' => array('en' => 'selected', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => ''),
-                'investext' => ''
+                'selected' => array('en' => 'selected', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => '')
             ),
             'de' => array(
                 'lang' => 'de',
                 'dir' => 'ltr',
-                'tit' => 'DID HOMEPAGE',
-                'key' => 'investment, develope, DID',
-                'des' => 'did is a place for investors',
-                'intr' => 'I\'m intrested',
+                'tit' => 'TCF HOMEPAGE',
+                'key' => 'refugee, develope, tcf',
+                'des' => 'about what tcf does',
                 'more' => 'more',
-                'home' => 'Home',
-                'project' => 'Project',
-                'projects' => 'Projects',
-                'projects2' => 'Projects',
-                'pre-gallery' => 'Projects',
-                'about' => 'About DID',
-                'contact' => 'Contact Us',
-                'group' => 'Group',
-                'our' => 'Our',
-                'gallery' => 'Gallery',
-                'videos' => 'Videos',
-                'how' => 'How to',
-                'invest' => 'Invest',
-                'investors' => 'Investors',
-                'meet' => 'Meet other',
-                'info' => 'Project Info',
-                'aboutP' => 'About project',
-                'timeline' => 'Timeline',
-                'why' => 'Why this project?',
-                'adv' => 'Advantages',
-                'ser' => 'DID Services',
-                'services' => 'Services',
-                'welcome' => 'welcome',
-                'analyze' => 'Getting things ready...',
-                'latest' => 'Latest',
-                'news' => 'news',
-                'updated' => 'Get updated',
-                'insta' => 'instagram',
-                'youtube' => 'youtube',
-                'twitter' => 'twitter',
-                'facebook' => 'facebook',
-                'lang-sel' => 'Select language:',
-                'subscribe' => 'Subscribe',
-                'wait' => 'Processing request...',
-                'copy' => 'copyright &copy 2021. All rights reserved',
-                'dwnAtlas' => 'Download Atlas project catalog',
-                'dwnGeneral' => 'Download DID porhects catalog',
-                'dep' => 'Department of</br> Investment and</br> Development',
-                'selected' => array('en' => '', 'fa' => '', 'de' => 'selected', 'ku' => '', 'ar' => ''),
-                'investext' => ''
+                'selected' => array('en' => '', 'fa' => '', 'de' => 'selected', 'ku' => '', 'ar' => '')
             ),
             'fa' => array(
                 'lang' => 'fa',
                 'dir' => 'rtl',
-                'tit' => 'وبسایت دپارتمان توسعه و سرمایه گذاری',
-                'key' => 'سرمایه گذاری, توسعه, DID',
-                'des' => 'did is a place for investors',
-                'intr' => 'علاقه مند هستم',
+                'tit' => 'صفحه اصلی',
+                'key' => 'کلمات کلیدی',
+                'des' => 'توضیحات در مورد tcf',
                 'more' => 'بیشتر',
-                'home' => 'خانه',
-                'project' => 'پروژه',
-                'projects' => 'پروژه‌ها',
-                'projects2' => 'پروژه‌های',
-                'pre-gallery' => 'پروژه‌ها',
-                'about' => 'درباره ما',
-                'contact' => 'ارتباط با ما',
-                'group' => 'گروه',
-                'gallery' => 'تصاویر',
-                'videos' => 'فیلم‌ها',
-                'our' => 'ما',
-                'how' => 'روش',
-                'invest' => 'سرمایه‌گذاری',
-                'investors' => 'سرمایه‌گذاران',
-                'meet' => 'دیگر',
-                'info' => 'اطلاعات پروژه',
-                'aboutP' => 'درباره پروژه',
-                'timeline' => 'تاریخچه',
-                'why' => 'چرا این پروژه؟',
-                'adv' => 'امتیازات ویژه',
-                'ser' => 'خدمات DID',
-                'services' => 'خدمات',
-                'welcome' => 'خوش آمدید',
-                'analyze' => 'در حال آماده سازی...',
-                'latest' => 'آخرین',
-                'news' => 'اخبار',
-                'updated' => 'از اخرین اخبار مطلع شوید',
-                'dep' => 'دپارتمان تحقیق </br>و توسعه',
-                'insta' => 'اینستاگرام',
-                'youtube' => 'یوتیوب',
-                'twitter' => 'توییتر',
-                'facebook' => 'فیس بوک',
-                'lang-sel' => 'انتخاب زبان:',
-                'subscribe' => 'اشتراک',
-                'wait' => 'در حال پردازش درخواست...',
-                'copy' => 'کلیه حقوق این وبسایت مطعلق به کالج بین المللی اویسینا می‌باشد',
-                'investext' => 'بطور کلی، علاقمندان به سرمایه گذاری در پروژه های DID و اخذ اقامت تجاری شینگن مجارستان باید مراحل زیر را طی نمایند. سعی شده است که موارد زیر با ترتیب زمانی عنوان شود و دربرگیرنده کلیه مراحل و اقدامات باشد، با این حال این نکات و مراحل مورد به مورد برای هر سرمایه گذار به صورت جداگانه تعیین و توافق خواهد شد و آنچه در زیر اشاره می شود تنها جنبه اطلاع رسانی دارد.',
-                'dwnAtlas' => 'دانلود کاتالوگ پروژه اطلس',
-                'dwnGeneral' => 'دانلود کاتالوگ پروژه‌ها',
                 'selected' => array('en' => '', 'fa' => 'selected', 'de' => '', 'ku' => '', 'ar' => '')
             ),
             'ku' => array(
                 'lang' => 'ku',
                 'dir' => 'rtl',
-                'tit' => 'وبسایت دپارتمان توسعه و سرمایه گذاری',
-                'key' => 'سرمایه گذاری, توسعه, DID',
-                'des' => 'did is a place for investors',
-                'intr' => 'علاقه مند هستم',
-                'more' => 'بیشتر',
-                'home' => 'خانه',
-                'project' => 'پروژه',
-                'projects' => 'پروژه‌ها',
-                'projects2' => 'پروژه‌های',
-                'pre-gallery' => 'پروژه‌ها',
-                'about' => 'درباره ما',
-                'contact' => 'ارتباط با ما',
-                'group' => 'گروه',
-                'gallery' => 'تصاویر',
-                'videos' => 'فیلم‌ها',
-                'our' => 'ما',
-                'how' => 'روش',
-                'invest' => 'سرمایه‌گذاری',
-                'investors' => 'سرمایه‌گذاران',
-                'meet' => 'دیگر',
-                'info' => 'اطلاعات پروژه',
-                'aboutP' => 'درباره پروژه',
-                'timeline' => 'تاریخچه',
-                'why' => 'چرا این پروژه؟',
-                'adv' => 'امتیازات ویژه',
-                'ser' => 'خدمات DID',
-                'services' => 'خدمات',
-                'welcome' => 'خوش آمدید',
-                'analyze' => 'در حال آماده سازی...',
-                'latest' => 'آخرین',
-                'news' => 'اخبار',
-                'updated' => 'از اخرین اخبار مطلع شوید',
-                'dep' => 'دپارتمان تحقیق </br>و توسعه',
-                'insta' => 'اینستاگرام',
-                'youtube' => 'یوتیوب',
-                'twitter' => 'توییتر',
-                'facebook' => 'فیس بوک',
-                'lang-sel' => 'انتخاب زبان:',
-                'subscribe' => 'اشتراک',
-                'wait' => 'در حال پردازش درخواست...',
-                'copy' => 'کلیه حقوق این وبسایت مطعلق به کالج بین المللی اویسینا می‌باشد',
-                'investext' => 'بطور کلی، علاقمندان به سرمایه گذاری در پروژه های DID و اخذ اقامت تجاری شینگن مجارستان باید مراحل زیر را طی نمایند. سعی شده است که موارد زیر با ترتیب زمانی عنوان شود و دربرگیرنده کلیه مراحل و اقدامات باشد، با این حال این نکات و مراحل مورد به مورد برای هر سرمایه گذار به صورت جداگانه تعیین و توافق خواهد شد و آنچه در زیر اشاره می شود تنها جنبه اطلاع رسانی دارد.',
-                'dwnAtlas' => 'دانلود کاتالوگ پروژه اطلس',
-                'dwnGeneral' => 'دانلود کاتالوگ پروژه‌ها',
+                'tit' => 'صفحه اصلی',
+                'key' => 'کلمات کلیدی',
+                'des' => 'توضیحات در مورد tcf',
+                'more' => 'زیاتر',
                 'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => 'selected', 'ar' => '')
             ),
             'ar' => array(
                 'lang' => 'ar',
                 'dir' => 'rtl',
-                'tit' => 'وبسایت دپارتمان توسعه و سرمایه گذاری',
-                'key' => 'سرمایه گذاری, توسعه, DID',
-                'des' => 'did is a place for investors',
-                'intr' => 'علاقه مند هستم',
+                'tit' => 'صفحه اصلی',
+                'key' => 'کلمات کلیدی',
+                'des' => 'توضیحات در مورد tcf',
                 'more' => 'بیشتر',
-                'home' => 'خانه',
-                'project' => 'پروژه',
-                'projects' => 'پروژه‌ها',
-                'projects2' => 'پروژه‌های',
-                'pre-gallery' => 'پروژه‌ها',
-                'about' => 'درباره ما',
-                'contact' => 'ارتباط با ما',
-                'group' => 'گروه',
-                'gallery' => 'تصاویر',
-                'videos' => 'فیلم‌ها',
-                'our' => 'ما',
-                'how' => 'روش',
-                'invest' => 'سرمایه‌گذاری',
-                'investors' => 'سرمایه‌گذاران',
-                'meet' => 'دیگر',
-                'info' => 'اطلاعات پروژه',
-                'aboutP' => 'درباره پروژه',
-                'timeline' => 'تاریخچه',
-                'why' => 'چرا این پروژه؟',
-                'adv' => 'امتیازات ویژه',
-                'ser' => 'خدمات DID',
-                'services' => 'خدمات',
-                'welcome' => 'خوش آمدید',
-                'analyze' => 'در حال آماده سازی...',
-                'latest' => 'آخرین',
-                'news' => 'اخبار',
-                'updated' => 'از اخرین اخبار مطلع شوید',
-                'dep' => 'دپارتمان تحقیق </br>و توسعه',
-                'insta' => 'اینستاگرام',
-                'youtube' => 'یوتیوب',
-                'twitter' => 'توییتر',
-                'facebook' => 'فیس بوک',
-                'lang-sel' => 'انتخاب زبان:',
-                'subscribe' => 'اشتراک',
-                'wait' => 'در حال پردازش درخواست...',
-                'copy' => 'کلیه حقوق این وبسایت مطعلق به کالج بین المللی اویسینا می‌باشد',
-                'investext' => 'بطور کلی، علاقمندان به سرمایه گذاری در پروژه های DID و اخذ اقامت تجاری شینگن مجارستان باید مراحل زیر را طی نمایند. سعی شده است که موارد زیر با ترتیب زمانی عنوان شود و دربرگیرنده کلیه مراحل و اقدامات باشد، با این حال این نکات و مراحل مورد به مورد برای هر سرمایه گذار به صورت جداگانه تعیین و توافق خواهد شد و آنچه در زیر اشاره می شود تنها جنبه اطلاع رسانی دارد.',
-                'dwnAtlas' => 'دانلود کاتالوگ پروژه اطلس',
-                'dwnGeneral' => 'دانلود کاتالوگ پروژه‌ها',
                 'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => 'selected')
-            )
-        ),
-        'pro' => array(
-            'en' => array(
-                'key' => 'Project, DID, DID Group, Invest, Investment, Budapest, Income, Schengen, Residence',
-                'dir' => 'ltr',
-                'gallery' => 'gallery',
-                'pre-gallery' => 'Project'
-            ),
-            'hu' => array(
-                'key' => 'Project, DID, DID Group, Invest, Investment, Budapest, Income, Schengen, Residence',
-                'dir' => 'ltr',
-                'gallery' => 'gallery',
-                'pre-gallery' => 'Project'
-            ),
-            'fa' => array(
-                'key' => 'پروژه, DID, DID Group, سرمایه, سرمایه گذاری, بوداپست, درآمد, شنگن, اقامت',
-                'dir' => 'rtl',
-                'gallery' => 'گالری',
-                'pre-gallery' => 'پروژه'
-            )
-        ),
-        'new' => array(
-            'en' => array(
-                'key' => 'News, DID, DID Group, Invest, Investment, Budapest, Income, Schengen, Residence',
-                'dir' => 'ltr',
-                'gallery' => 'gallery',
-                'pre-gallery' => 'News'
-            ),
-            'hu' => array(
-                'key' => 'News, DID, DID Group, Invest, Investment, Budapest, Income, Schengen, Residence',
-                'dir' => 'ltr',
-                'gallery' => 'gallery',
-                'pre-gallery' => 'News'
-            ),
-            'fa' => array(
-                'key' => 'خبر, DID, DID Group, سرمایه, سرمایه گذاری, بوداپست, درآمد, شنگن, اقامت',
-                'dir' => 'rtl',
-                'gallery' => 'گالری',
-                'pre-gallery' => 'خبر'
-            )
-        ),
-        'abo' => array(
-            'en' => array(
-                'h1' => 'Department of investment and development',
-                't1' => 'Avicenna Internatioal College',
-                't2' => 'Investment Opportunities',
-                't3' => 'DID Services'
-            ),
-            'hu' => array(
-                'h1' => 'Department of investment and development',
-                't1' => 'Avicenna Internatioal College',
-                't2' => 'Investment Opportunities',
-                't3' => 'DID Services'
-            ),
-            'fa' => array(
-                'h1' => 'دپارتمان توسعه و سرمایه گذاری',
-                't1' => 'کالج بین‌المللی اویسینا',
-                't2' => 'مجارستان و فرصت‌های سرمایه گذاری',
-                't3' => 'خدمات دپارتمان سرمايه گذاري و توسعه DID'
-            )
-        ),
-        'con' => array(
-            'en' => array(
-                'h1' => 'Get in touch with DID Group',
-                't1' => 'Ask us your question',
-                'follow' => 'Follow us on social media',
-                'name' => 'your name',
-                'email' => 'your email',
-                'comment' => 'your comment',
-                'submit' => 'Submit'
-            ),
-            'hu' => array(
-                'h1' => 'Get in touch with DID Group',
-                't1' => 'Ask us your question',
-                'follow' => 'Follow us on social media',
-                'name' => 'your name',
-                'email' => 'your email',
-                'comment' => 'your comment',
-                'submit' => 'Submit'
-            ),
-            'fa' => array(
-                'h1' => 'با گروه DID در تماس باشید',
-                't1' => 'سوالات خود را از ما بپرسید',
-                'follow' => 'ما را در شبکه‌های اجتماعی دنبال کنید',
-                'name' => 'نام',
-                'email' => 'ایمیل',
-                'comment' => 'نظر',
-                'submit' => 'درج'
-            )
-        ),
-        'ans' => array(
-            'en' => array(
-                'tit' => 'DID Group news archive',
-                't1' => 'Latest news',
-                'des' => 'DID Group news archive, read about investment in Hungary',
-                'key' => 'did, did group, news, investment, developement, budapest, hungary, news, recent news'
-            ),
-            'hu' => array(
-                'tit' => 'DID Group news archive',
-                't1' => 'Latest news',
-                'des' => 'DID Group news archive, read about investment in Hungary',
-                'key' => 'did, did group, news, investment, developement, budapest, hungary, news, recent news'
-            ),
-            'fa' => array(
-                'tit' => 'آرشیو اخبار گروه DID',
-                't1' => 'آخرین خبرها',
-                'des' => 'آرشیو اخبار گروه DID, اخبار سرمایه گذاری در مجارستان',
-                'key' => 'did, گروه, بوداپست, اخبار, مجارستان, سرمایه‌گذاری, توسعه, به روز رسانی'
-            )
-        ),
-        'inv' => array(
-            'en' => array(
-                'tit' => 'DID Group investors',
-                't1' => 'Our investors',
-                'des' => 'DID Group investors, meet our investors all around the world',
-                'key' => 'did, did group, news, investment, developement, budapest, hungary, news, recent news'
-            ),
-            'hu' => array(
-                'tit' => 'DID Group investors',
-                't1' => 'Our investors',
-                'des' => 'DID Group investors, meet our investors all around the world',
-                'key' => 'did, did group, news, investment, developement, budapest, hungary, news, recent news'
-            ),
-            'fa' => array(
-                'tit' => 'سرمایه‌گذاران گروه DID',
-                't1' => 'سرمایه‌گذاران ما',
-                'des' => 'آرشیو سرمایه‌گذاران گروه DID از سرتاسر جهان',
-                'key' => 'did, گروه, بوداپست, اخبار, مجارستان, سرمایه‌گذاری, توسعه, به روز رسانی'
-            )
-        ),
-
-        'ser' => array(
-            'en' => array(
-                'tit' => 'DID Group services',
-                'des' => 'DID Group special services for investing in projects in Hungary.',
-                'key' => 'did, did group, news, investment, developement, budapest, hungary, services, special',
-                't1' => 'DID services table'
-            ),
-            'hu' => array(
-                'tit' => 'DID Group services',
-                'des' => 'DID Group special services for investing in projects in Hungary.',
-                'key' => 'did, did group, news, investment, developement, budapest, hungary, services, special',
-                't1' => 'DID services table'
-            ),
-            'fa' => array(
-                'tit' => 'خدمات ویژه گروه DID',
-                'des' => 'خدمات ویژه گروه DID به سرمایه گذاران در پروژه‌های مجارستان',
-                'key' => 'did, گروه, بوداپست, اخبار, مجارستان, سرمایه‌گذاری, توسعه, به روز رسانی, خدمات',
-                't1' => 'جدول خدمات DID'
             )
         ),
 
@@ -409,7 +86,7 @@
                 'e7' => 'Your comment must be at least 10 characters long',
                 'e8' => 'Your comment submitted succesfully'
             ),
-            'hu' => array(
+            'de' => array(
                 'e1' => 'Enter a valid email',
                 'e2' => 'This email is already registered',
                 'e3' => 'Error - Something went wrong. Try again later',
@@ -420,6 +97,26 @@
                 'e8' => 'Your comment submitted succesfully'
             ),
             'fa' => array(
+                'e1' => 'لطفا یک ایمیل معتبر وارد کنید',
+                'e2' => 'این ایمیل قبلا ثبت شده است',
+                'e3' => 'عملیات با خطا مواجه شد. لطفا دوباره تلاش کنید',
+                'e4' => 'ایمیل شما با موفقیت ثبت شد',
+                'e5' => 'نام خود را درج نمایید',
+                'e6' => 'ایمیل خود را درج نمایید',
+                'e7' => 'نظر شما حداقل باید 10 کاراکتر باشد',
+                'e8' => 'نظر شما با موفقیت ثبت شد'
+            ),
+            'ar' => array(
+                'e1' => 'لطفا یک ایمیل معتبر وارد کنید',
+                'e2' => 'این ایمیل قبلا ثبت شده است',
+                'e3' => 'عملیات با خطا مواجه شد. لطفا دوباره تلاش کنید',
+                'e4' => 'ایمیل شما با موفقیت ثبت شد',
+                'e5' => 'نام خود را درج نمایید',
+                'e6' => 'ایمیل خود را درج نمایید',
+                'e7' => 'نظر شما حداقل باید 10 کاراکتر باشد',
+                'e8' => 'نظر شما با موفقیت ثبت شد'
+            ),
+            'ku' => array(
                 'e1' => 'لطفا یک ایمیل معتبر وارد کنید',
                 'e2' => 'این ایمیل قبلا ثبت شده است',
                 'e3' => 'عملیات با خطا مواجه شد. لطفا دوباره تلاش کنید',

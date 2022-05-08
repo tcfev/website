@@ -25,17 +25,21 @@
         include_once phproot.'pg/inc/index.blogs.php';
     ?>
     </section>
-    <section class="h-100v ov-x-h" id="join">
+    <section class="ov-x-h" id="join">
     <?php
         include_once phproot.'pg/inc/index.join.php';
     ?>
     </section>
-    <section class="container-8 brr-2 m-x-a m-b-6 p-t-9 pos-r main-bg-7 cl-white shdw-t" style="z-index:3" id="bottom-part">
-    <?php
-        include_once phproot.'pg/inc/index.members.php';
-        include_once phproot.'pg/inc/index.footer.php';
-    ?>
+    <section class="container h-100v ov-h p-b-10" style="z-index:3" id="bottom-part">
+        <div class="container-8 brr-2 m-x-a m-b-6 p-t-8 pos-r main-bg-7 cl-white shdw-t" id="hidden-part">
+        <div class="pullup-icon"></div>
+        <?php
+            include_once phproot.'pg/inc/index.members.php';
+            include_once phproot.'pg/inc/index.footer.php';
+        ?>
+        </div>
     </section>
+    
 
     <script src="<?php echo root; ?>js/var.js"></script>
     <script src="<?php echo root; ?>js/app.js"></script>
@@ -94,52 +98,83 @@
             let scl = new VerticalScroll({target:elm});
             scl.init();
         })
-        let oldScroll = window.scrollY;
-        let isScrolling = false;
-        let dir = null, oldDir = null;
-        // window.addEventListener('wheel', (e)=>{
-        //     let yd;
-        //     // console.log(e.deltaY);
-        //     yd = e.deltaY / 5;
-        //     smoothYScroll(yd);
-        // })
 
-        window.addEventListener('scroll', (e)=>{
-            // let yd = 10;
-            // if (window.scrollY < oldScroll) {
-            //     yd *= -1;
-            //     dir = 'up';
-            // } else if (window.scrollY > oldScroll) {
-            //     dir = 'down';
-            // } else if (window.scrollY == oldScroll) {
-            //     yd = 0;
-            // }
-            // if (oldDir != dir && isScrolling) {
-            //     clearTimeout(timer);
-            //     isScrolling = false;
-            // }
-            // if (!isScrolling && yd != 0) {
-            //     isScrolling = true;
-            //     smoothYScroll(yd);
-            // }
-            // oldScroll = window.scrollY;
-            // oldDir = dir;
+        let yDown = null, yUp = null;
+        let wheel_count = 0, yDiff = 0;
+        const hidden_part = document.querySelector('#hidden-part');
+        let is_hidden = true;
+
+        window.addEventListener('wheel', (e)=>{
+            if (is_hidden) {
+                if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+                    wheel_count++;
+                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + wheel_count * 30)) + 'px)';
+                    if (wheel_count > 5) {
+                        hidden_part.style.transform = 'translateY(100px)';
+                        hidden_part.parentElement.style.height = 'auto';
+                        is_hidden = false;
+                    }
+                    setTimeout(()=>{
+                        if (wheel_count < 6)
+                        {
+                            hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+                            wheel_count = 0;
+                        }
+                    }, 200)
+                }
+            } else {
+                if (hidden_part.getBoundingClientRect().top > -400 && e.deltaY < 0)
+                {
+                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+                    hidden_part.parentElement.style.height = window.innerHeight + 'px';
+                    is_hidden = true;
+                    wheel_count = 0;
+                }
+            }
         })
 
-        function smoothYScroll(yd) {
-            let y = window.scrollY + yd;
-            window.scroll(0, y) ;
-            yd = yd / 1.04;
-            if (yd > 0.8 || yd < -0.8) {
-                timer = setTimeout(() => {
-                    smoothYScroll(yd);
-                }, 15);
-            } else {
-                setTimeout(() => {
-                    isScrolling = false;
-                }, 25);
+        window.addEventListener('touchmove', (e)=>{
+            if (!yDown) {
+                return;
             }
-        }
+            yUp = e.touches[0].clientY;
+        
+            yDiff = yDown - yUp;
+            
+            if (is_hidden) {
+                if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && yDiff > 0) {
+                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + yDiff * 3)) + 'px)';
+                    if (yDiff > 11) {
+                        hidden_part.style.transform = 'translateY(100px)';
+                        hidden_part.parentElement.style.height = 'auto';
+                        is_hidden = false;
+                    }
+                    setTimeout(()=>{
+                        if (yDiff < 12)
+                        {
+                            hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+                            yDiff = 0;
+                        }
+                    }, 200)
+                }
+            } else {
+                if (hidden_part.getBoundingClientRect().top > -400 && yDiff < 0)
+                {
+                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+                    hidden_part.parentElement.style.height = window.innerHeight + 'px';
+                    is_hidden = true;
+                    yDiff = 0;
+                }
+            }
+
+            yDown = null;
+        }, {passive: true});
+
+        window.addEventListener('touchstart', (e)=>{
+            const firstTouch = getTouches(e)[0];
+            yDown = firstTouch.clientY;
+        }, {passive: true})
+
     </script>
 </body>
 </html>
