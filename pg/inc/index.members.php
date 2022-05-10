@@ -26,7 +26,7 @@
                 </div>
                 <a class="cl-bright-blue-3" href="<?php echo $members[$i + 1]['link']; ?>">website</a>
             </div>
-            <img class="f-holder-2 m-s-2 m-t-n5" src="<?php echo root.$members[$i]['avatar']; ?>" alt="" srcset="">
+            <img class="f-holder-2 m-s-2 m-t-n5" src="<?php echo root.$members[$i + 1]['avatar']; ?>" alt="" srcset="">
         </div>
         <?php }$i += 2;} ?>
     </div>

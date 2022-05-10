@@ -45,8 +45,8 @@ function aboutTitle() {
     $lang = $_POST['lang'];
     $err = array();    
 
-    if (mb_strlen($title) < 5) {
-        array_push($err, 'Title must be at least 5 characters');
+    if (mb_strlen($title) < 3) {
+        array_push($err, 'Title must be at least 3 characters');
     }
 
     if (count($err) > 0) {
@@ -74,8 +74,8 @@ function mainTitle() {
     $lang = $_POST['lang'];
     $err = array();    
 
-    if (mb_strlen($title) < 5) {
-        array_push($err, 'Title must be at least 5 characters');
+    if (mb_strlen($title) < 3) {
+        array_push($err, 'Title must be at least 3 characters');
     }
 
     if (count($err) > 0) {

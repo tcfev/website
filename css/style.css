@@ -56,7 +56,7 @@
 }
 
 /****************** STYLING ********************/
-* {
+html {
   font-family: 'Comfortaa', cursive;
 }
 
@@ -640,6 +640,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+#article-h1 span {
+  font-family: inherit;
 }
 
 .scroll-icon {

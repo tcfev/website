@@ -73,7 +73,7 @@ $main-c-7 : #1e6091;
 // font-family: 'Permanent Marker', cursive;
 // font-family: 'Righteous', cursive;
 
-* {
+html {
     // font-family: 'Assistant', sans-serif;
     font-family: 'Comfortaa', cursive;
 }
@@ -550,6 +550,12 @@ body {
             top: 0;
             left: 0;
         }
+    }
+}
+
+#article-h1 {
+    & span {
+        font-family: inherit;
     }
 }
 

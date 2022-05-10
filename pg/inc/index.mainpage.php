@@ -9,7 +9,6 @@
         <?php $i = -1;while (++$i < 3 && $i < count($projects)) {
         ?>
         <a href="#p-<?php echo $projects[$i]['ID']; ?>" class="cl-white hvr-cl-black project-link"><?php echo $projects[$i]['title']; ?></a>
-        <a href="#p-<?php echo $projects[$i]['ID']; ?>" class="cl-white hvr-cl-black project-link"><?php echo $projects[$i]['title']; ?></a>
         <?php } ?>
     </div>
 </div>
