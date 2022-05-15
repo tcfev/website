@@ -778,27 +778,39 @@ a {
 /*********************** SHADOWS ************************/
 
 .shdw-1 {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .shdw-2 {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
 .shdw-3 {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.shdw-4 {
+    -webkit-box-shadow:  0px 10px 15px -3px rgba(0,0,0,0.3);
+    -moz-box-shadow:  0px 10px 15px -3px rgba(0,0,0,0.3);
+    box-shadow:  0px 10px 15px -3px rgba(0,0,0,0.3);
+}
+
 .shdw-b {
-    box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.55);
-    -webkit-box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.45);
 }
 
 .shdw-t {
-    box-shadow: 0px -10px 15px -7px rgba(0,0,0,0.55);
-    -webkit-box-shadow: 0px -10px 15px -7px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px -10px 15px -7px rgba(0,0,0,0.55);
+    box-shadow: 0px -10px 15px -7px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px -10px 15px -7px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px -10px 15px -7px rgba(0,0,0,0.45);
 }
 
 /*********************** BORDERS ************************/
@@ -829,7 +841,7 @@ a {
     }
 
     & a {
-        color: inherit;
+        color: inherit !important;
     }
 
     & li {

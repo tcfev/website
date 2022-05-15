@@ -1,7 +1,7 @@
 <?php
-    include_once 'cal/var.php';
+    include_once 'cal/session.header.php';
+    include_once 'cal/cheader.cal.php';
     include_once phproot.'pg/cal/lang.php';
-    include_once phproot.'pg/cal/cheader.cal.php';
     
     if (isset($_SESSION['u_upost'])) {
         if ($_SESSION['u_upost'] == 'admin') {

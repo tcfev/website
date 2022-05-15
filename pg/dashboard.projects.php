@@ -1,9 +1,7 @@
 <?php 
-    include_once 'inc/var.php';
+    include_once 'cal/session.header.php';
+    include_once 'cal/cheader.cal.php';
     include_once phproot.'pg/cal/lang.php';
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
     $sel = array(
         'landing' => '',
         'projects' => 'selected',

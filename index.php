@@ -14,7 +14,7 @@
     <?php include_once phproot.'pg/inc/index.datafetch.php'; ?>
 </head>
 <body  <?php if (!isset($_COOKIE['is_seen']) || $_COOKIE['is_seen'] != "true") {?>class="not-loaded"<?php } ?>>
-    <section class="bg-white pos-r" id="top-part" style="z-index:4">
+    <section class="bg-light pos-r" id="top-part" style="z-index:4">
     <?php
         include_once phproot.'pg/inc/transition.post.php';
         if (!isset($_COOKIE['is_seen']) || $_COOKIE['is_seen'] != "true")
@@ -25,18 +25,19 @@
         include_once phproot.'pg/inc/index.blogs.php';
     ?>
     </section>
+    
+    <section class="container h-100v ov-h p-b-10" style="z-index:0;" id="bottom-part">
     <section class="ov-x-h" id="join">
-    <?php
-        include_once phproot.'pg/inc/index.join.php';
-    ?>
-    </section>
-    <section class="container h-100v ov-h p-b-10" style="z-index:3" id="bottom-part">
-        <div class="container-8 brr-2 m-x-a m-b-6 p-t-8 pos-r main-bg-7 cl-white shdw-t" id="hidden-part">
-        <div class="pullup-icon"></div>
         <?php
-            include_once phproot.'pg/inc/index.members.php';
-            include_once phproot.'pg/inc/index.footer.php';
+            include_once phproot.'pg/inc/index.join.php';
         ?>
+        </section>
+        <div class="container-8 brr-2 pos-r m-x-a m-b-6 p-t-8 main-bg-7 cl-white shdw-t" style="pointer-events: all;z-index:2;" id="hidden-part">
+            <div class="pullup-icon"></div>
+            <?php
+                include_once phproot.'pg/inc/index.members.php';
+                include_once phproot.'pg/inc/index.footer.php';
+            ?>
         </div>
     </section>
     
@@ -102,28 +103,67 @@
         let yDown = null, yUp = null;
         let wheel_count = 0, yDiff = 0;
         const hidden_part = document.querySelector('#hidden-part');
-        let is_hidden = true;
-
-        window.addEventListener('wheel', (e)=>{
-            if (is_hidden) {
-                if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-                    wheel_count++;
-                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + wheel_count * 30)) + 'px)';
-                    if (wheel_count > 5) {
+        let isDrag = false;
+        let mousePos = {x:null, y:null};
+        let is_hidden = true;let deltaY = 0;
+        hidden_part.addEventListener("mousedown", (e)=>{
+            isDrag = true;
+            mousePos = {x:e.clientX, y:e.clientY};
+        })
+        window.addEventListener("mouseup", (e)=>{
+            isDrag = false;
+            mousePos = {x:null, y:null};
+        })
+        window.addEventListener("mousemove", (e)=>{
+            if (isDrag)
+            {
+                if (is_hidden) {
+                    deltaY = mousePos.y - e.clientY;
+                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + deltaY * 4)) + 'px)';
+                    if (deltaY > 300) {
                         hidden_part.style.transform = 'translateY(100px)';
                         hidden_part.parentElement.style.height = 'auto';
                         is_hidden = false;
+                        isDrag = false;
                     }
                     setTimeout(()=>{
-                        if (wheel_count < 6)
+                        if (deltaY < 301)
                         {
                             hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
-                            wheel_count = 0;
+                            deltaY = 0;
+                            isDrag = false;
                         }
-                    }, 200)
+                    }, 600)
                 }
+            }
+        })
+        hidden_part.addEventListener("click", ()=>{
+            hidden_part.style.transform = 'translateY(100px)';
+            console.log(hidden_part.parentElement);
+            hidden_part.parentElement.style.height = 'auto';
+            is_hidden = false;
+        })
+        window.addEventListener('wheel', (e)=>{
+            console.log();
+            if (is_hidden) {
+                // if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+                //     wheel_count += e.deltaY;
+                //     hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + wheel_count / 8)) + 'px)';
+                //     if (wheel_count > 500) {
+                //         hidden_part.style.transform = 'translateY(100px)';
+                //         hidden_part.parentElement.style.height = 'auto';
+                //         is_hidden = false;
+                //     }
+                //     setTimeout(()=>{
+                //         if (wheel_count < 600)
+                //         {
+                //             hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+                //             wheel_count = 0;
+                //         }
+                //     }, 200)
+                // }
             } else {
-                if (hidden_part.getBoundingClientRect().top > -400 && e.deltaY < 0)
+                if (e.deltaY < 0 && hidden_part.getBoundingClientRect().top > -400)
                 {
                     hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
                     hidden_part.parentElement.style.height = window.innerHeight + 'px';
@@ -142,21 +182,21 @@
             yDiff = yDown - yUp;
             
             if (is_hidden) {
-                if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && yDiff > 0) {
-                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + yDiff * 3)) + 'px)';
-                    if (yDiff > 11) {
-                        hidden_part.style.transform = 'translateY(100px)';
-                        hidden_part.parentElement.style.height = 'auto';
-                        is_hidden = false;
-                    }
-                    setTimeout(()=>{
-                        if (yDiff < 12)
-                        {
-                            hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
-                            yDiff = 0;
-                        }
-                    }, 200)
-                }
+                // if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && yDiff > 0) {
+                //     hidden_part.style.transform = 'translateY('+ (window.innerHeight - (55 + yDiff * 3)) + 'px)';
+                //     if (yDiff > 11) {
+                //         hidden_part.style.transform = 'translateY(100px)';
+                //         hidden_part.parentElement.style.height = 'auto';
+                //         is_hidden = false;
+                //     }
+                //     setTimeout(()=>{
+                //         if (yDiff < 12)
+                //         {
+                //             hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+                //             yDiff = 0;
+                //         }
+                //     }, 200)
+                // }
             } else {
                 if (hidden_part.getBoundingClientRect().top > -400 && yDiff < 0)
                 {

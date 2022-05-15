@@ -4,7 +4,7 @@ $article = $con->query("SELECT (SELECT Value FROM settings WHERE key_name = 'abo
 (SELECT Value FROM settings WHERE key_name = 'title' AND lang = '$l') AS title")->fetch_all(MYSQLI_ASSOC);
 
 $stmt = $con->prepare("SELECT p.*, pd.descr, pd.body, pd.title, IF(p.active = 1, 'checked', 'no') AS active FROM projects p INNER JOIN
-(SELECT * FROM project_detail WHERE lang = ?) pd ON p.ID = pd.project_id ORDER BY p.ID DESC");
+(SELECT * FROM project_detail WHERE lang = ?) pd ON p.ID = pd.project_id WHERE p.active = 1 ORDER BY p.ID DESC");
 $stmt->bind_param("s", $l);
 $stmt->execute();
 $projects = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);

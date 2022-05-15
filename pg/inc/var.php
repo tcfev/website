@@ -4,7 +4,7 @@
 
     define('phproot', $_SERVER['DOCUMENT_ROOT'].'/tcf/');
 
-    define('ver', '0.0.0.7');
+    define('ver', '0.0.0.9');
     
     define("maxUp", 40*1024*1024);
 

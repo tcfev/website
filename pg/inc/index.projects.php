@@ -9,17 +9,16 @@
                 <?php echo substr($projects[$i]['body'], 0, 250).'...'; ?>
             </div>
             <div class="container dsp-f">
-                <a href="project/<?php echo $projects[$i]['ID']; ?>" class="brd-1 brd-grey-6 cl-grey-7 p-x-2 p-y-1 m-y-3 pointer more-btn trans-link" kc-color="000000">more -></a>
+                <a href="project/<?php echo $projects[$i]['ID']; ?>" class="brd-1 brr-2 brd-grey-6 cl-grey-7 p-x-2 p-y-1 m-y-3 pointer more-btn trans-link" kc-color="000000">more -></a>
             </div>
         </div>
         <vr class="bg-grey-2 scroll-effect-expand-y"></vr>
         <div class="tile-3-2 f-l-holder-1 ov-x-s project-gallery">
             <div class="dsp-f w-max p-b-7 p-x-4">
-                <img loading="lazy" src="https://source.unsplash.com/random?sig=<?php echo $projects[$i]['ID']; ?>1" alt="" class="h-300x m-x-3 scroll-effect-right">
-                <img loading="lazy" src="https://source.unsplash.com/random?sig=<?php echo $projects[$i]['ID']; ?>2" alt="" class="h-300x m-x-3 scroll-effect-right">
-                <img loading="lazy" src="https://source.unsplash.com/random?sig=<?php echo $projects[$i]['ID']; ?>3" alt="" class="h-300x m-x-3 scroll-effect-right">
-                <img loading="lazy" src="https://source.unsplash.com/random?sig=<?php echo $projects[$i]['ID']; ?>4" alt="" class="h-300x m-x-3 scroll-effect-right">
-                <img loading="lazy" src="https://source.unsplash.com/random?sig=<?php echo $projects[$i]['ID']; ?>5" alt="" class="h-300x m-x-3 scroll-effect-right">
+                <?php
+                    $pg = $projects[$i]['gallery'];$j = -1;while(++$j < count($pg)) { ?>
+                        <img loading="lazy" src="<?php echo root.$pg[$j]['photo']; ?>" alt="" class="h-300x m-x-3 scroll-effect-right">
+                    <?php } ?>
             </div>
         </div>
     </div>

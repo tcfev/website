@@ -25,9 +25,7 @@
         <article class="pos-r">
             <div class="container h-100v pos-f" style="top:0;left:0;z-index:1">
                 <div class="f-row jcc aic h-100v">
-                    <h1 class="fs-3xl fs-s-xl p-4" id="title" style="display:none">
-                        <?php echo $blog['title']; ?>
-                    </h1>
+                    <h1 class="fs-3xl fs-s-xl p-x-2" id="title" style="display:none"><?php echo $blog['title']; ?></h1>
                 </div>
             </div>
         </article>
@@ -51,13 +49,9 @@
                 <div class="container-6 m-x-a p-y-8">
                     <div class="w-100p ov-x-s project-gallery">
                         <div class="dsp-f w-max">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=3" alt="" class="h-300x m-x-3 scroll-effect-right">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=4" alt="" class="h-300x m-x-3 scroll-effect-right">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=5" alt="" class="h-300x m-x-3 scroll-effect-right">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=6" alt="" class="h-300x m-x-3 scroll-effect-right">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=7" alt="" class="h-300x m-x-3 scroll-effect-right">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=8" alt="" class="h-300x m-x-3 scroll-effect-right">
-                            <img loading="lazy" src="https://source.unsplash.com/random?sig=9" alt="" class="h-300x m-x-3 scroll-effect-right">
+                            <?php $pg = $blog['gallery'];$j = -1;while(++$j < count($pg)) { ?>
+                                <img loading="lazy" src="<?php echo root.$pg[$j]['photo']; ?>" alt="" class="h-300x m-x-3 scroll-effect-right">
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -79,21 +73,23 @@
     <script>
         const title = document.querySelector('#title');
         let elms = document.querySelectorAll('.project-gallery');
-        let text = title.innerText;
+        let text = title.innerHTML;
 
         title.innerHTML = "";
-        title.style.display = 'block';
+        title.style.display = 'unset';
+        console.log(Array.from(text));
         Array.from(text).forEach((elm) => {
+            console.log(text);
             let s = document.createElement('span');
             s.classList.add('fancy-text');
+            s.innerText = elm;
             title.appendChild(s);
-            s.append(elm);
         })
         const spanArray = title.querySelectorAll('.fancy-text');
         let counter = 0;
         setTimeout(() => {
             fancy(counter);
-        }, 0);
+        }, 500);
         function fancy(counter) {
             spanArray[counter].classList.add('done');
             counter++;

@@ -264,22 +264,7 @@ body {
 
 .join-btn-1 {
   background: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#34a0a4), color-stop(33%, #34a0a4), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
-  background: linear-gradient(90deg, #34a0a4 0%, #34a0a4 33%, black 33%, black 66%, white 66%, white 100%);
-  background-size: 303%;
-  background-position: 100% 50%;
-  -webkit-transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
-  transition: padding ease 0.2s, background-position ease 0.4s, color 0.2s ease;
-}
-
-.join-btn-1:hover {
-  padding-left: 30px !important;
-  background-position: 0% 50%;
-  color: #fff;
-}
-
-.join-btn-1 {
-  background: #fff;
+  color: #000;
   background: -webkit-gradient(linear, left top, right top, from(#1e6091), color-stop(33%, #1e6091), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
   background: linear-gradient(90deg, #1e6091 0%, #1e6091 33%, black 33%, black 66%, white 66%, white 100%);
   background-size: 303%;
@@ -289,13 +274,13 @@ body {
 }
 
 .join-btn-1:hover {
-  padding-left: 30px !important;
   background-position: 0% 50%;
   color: #fff;
 }
 
 .join-btn-2 {
   background: #fff;
+  color: #000;
   background: -webkit-gradient(linear, left top, right top, from(#34a0a4), color-stop(33%, #34a0a4), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
   background: linear-gradient(90deg, #34a0a4 0%, #34a0a4 33%, black 33%, black 66%, white 66%, white 100%);
   background-size: 303%;
@@ -305,13 +290,13 @@ body {
 }
 
 .join-btn-2:hover {
-  padding-left: 30px !important;
   background-position: 0% 50%;
   color: #fff;
 }
 
 .join-btn-3 {
   background: #fff;
+  color: #000;
   background: -webkit-gradient(linear, left top, right top, from(#d9ed92), color-stop(33%, #d9ed92), color-stop(33%, black), color-stop(66%, black), color-stop(66%, white), to(white));
   background: linear-gradient(90deg, #d9ed92 0%, #d9ed92 33%, black 33%, black 66%, white 66%, white 100%);
   background-size: 303%;
@@ -321,7 +306,6 @@ body {
 }
 
 .join-btn-3:hover {
-  padding-left: 30px !important;
   background-position: 0% 50%;
 }
 
@@ -493,7 +477,6 @@ body {
 }
 
 .fancy-text {
-  display: inline-block;
   -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
   -webkit-transform: translateX(-50px);
@@ -517,10 +500,8 @@ body {
 
 .blog {
   width: 70vw;
-  max-width: 1000px;
-  -webkit-box-shadow: inset 0px 0px 30px 3px #6668;
-          box-shadow: inset 0px 0px 30px 3px #6668;
-  border: 1px solid #8888;
+  max-width: 800px;
+  border: 2px solid #ccc;
 }
 
 .blog-frame {
@@ -543,9 +524,8 @@ body {
 
 .blur {
   height: 100%;
-  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 75%, white 100%);
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
@@ -596,10 +576,6 @@ body {
   transition: -webkit-transform 0.7s ease;
   transition: transform 0.7s ease;
   transition: transform 0.7s ease, -webkit-transform 0.7s ease;
-}
-
-.blog.active {
-  z-index: 100;
 }
 
 .blog.active .blur {

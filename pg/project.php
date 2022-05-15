@@ -22,7 +22,7 @@
                 <div class="container-8 m-x-a dsp-f">
                     <div class="header-top-border"></div>
                     <div class="header-title">
-                        <h1 class="fs-3xl fs-l-3xsl fs-s-xxl">
+                        <h1 class="fs-3xl fs-l-3xsl fs-s-xl">
                             <?php echo $project['title']; ?>
                         </h1>
                     </div>
@@ -46,11 +46,9 @@
             <div class="container-6 m-x-a p-y-6">
                 <div class="w-100p ov-x-s project-gallery">
                     <div class="dsp-f w-max">
-                        <img loading="lazy" src="https://source.unsplash.com/random?sig=5" alt="" class="h-300x m-x-3 scroll-effect-right">
-                        <img loading="lazy" src="https://source.unsplash.com/random?sig=6" alt="" class="h-300x m-x-3 scroll-effect-right">
-                        <img loading="lazy" src="https://source.unsplash.com/random?sig=7" alt="" class="h-300x m-x-3 scroll-effect-right">
-                        <img loading="lazy" src="https://source.unsplash.com/random?sig=8" alt="" class="h-300x m-x-3 scroll-effect-right">
-                        <img loading="lazy" src="https://source.unsplash.com/random?sig=9" alt="" class="h-300x m-x-3 scroll-effect-right">
+                        <?php $pg = $project['gallery'];$j = -1;while(++$j < count($pg)) { ?>
+                            <img loading="lazy" src="<?php echo root.$pg[$j]['photo']; ?>" alt="" class="h-300x m-x-3 scroll-effect-right">
+                        <?php } ?>
                     </div>
                 </div>
             </div>

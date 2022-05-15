@@ -7,7 +7,7 @@
     </div>
     <div class="f-row">
         <?php $i = 0; while ($i < count($members)) { ?>
-        <div class="f-holder-1 dsp-f scroll-effect-left">
+        <div class="f-holder-1 p-10 p-s-1 p-m-5 dsp-f scroll-effect-left">
             <img class="f-holder-2" src="<?php echo root.$members[$i]['avatar']; ?>" alt="" srcset="">
             <div class="f-holder-2">
                 <span class="fs-xm m-t-3"><?php echo $members[$i]['Name']; ?></span>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <?php if (isset($members[$i + 1])) { ?>
-        <div class="f-holder-1 dsp-f scroll-effect-right">
+        <div class="f-holder-1 p-10 p-s-1 p-m-5 dsp-f scroll-effect-right">
             <div class="f-holder-2">
                 <span class="fs-xm m-t-3"><?php echo $members[$i + 1]['Name']; ?></span>
                 <div class="txt-j m-y-2 cl-grey-1">
