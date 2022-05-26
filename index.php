@@ -12,6 +12,12 @@
     <title>TCF</title>
     <?php include_once phproot.'pg/inc/head.php'; ?>
     <?php include_once phproot.'pg/inc/index.datafetch.php'; ?>
+    <style>
+        #tcf_typo svg path{
+            fill: #ddd !important;
+            stroke: #ddd !important;
+        }
+    </style>
 </head>
 <body  <?php if (!isset($_COOKIE['is_seen']) || $_COOKIE['is_seen'] != "true") {?>class="not-loaded"<?php } ?>>
     <section class="bg-light pos-r" id="top-part" style="z-index:4">
@@ -47,8 +53,21 @@
     <script src="<?php echo root; ?>js/kc.normal.js"></script>
     <script src="<?php echo root; ?>js/kc.observer.js"></script>
     <script src="<?php echo root; ?>js/scroll.vertical.js"></script>
+    <script src="<?php echo root; ?>js/side.anim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js" integrity="sha512-ilxj730331yM7NbrJAICVJcRmPFErDqQhXJcn+PLbkXdE031JJbcK87Wt4VbAK+YY6/67L+N8p7KdzGoaRjsTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('tcf_typo'),
+            path: root + 'content/json/tcf_typo.json',
+            renderer: 'svg',
+            loop: false,
+            autoplay: false
+        })
+        animation.setSpeed(1.8);
+        if (getCookie("is_seen") == "true")
+            animation.play();
+
         if (getCookie("is_seen") == "") {
             const borders = document.getElementById('borders');
             const btn = document.querySelector('#fade');
@@ -64,6 +83,7 @@
                     document.body.classList.remove("not-loaded");
                     document.documentElement.style.overflow = 'unset';
                     document.documentElement.style.overflowX = 'hidden';
+                    animation.play();
                 }, 800);
             }, 900)
         })
@@ -214,7 +234,6 @@
             const firstTouch = getTouches(e)[0];
             yDown = firstTouch.clientY;
         }, {passive: true})
-
     </script>
 </body>
 </html>
