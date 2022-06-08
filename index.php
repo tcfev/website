@@ -57,6 +57,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js" integrity="sha512-ilxj730331yM7NbrJAICVJcRmPFErDqQhXJcn+PLbkXdE031JJbcK87Wt4VbAK+YY6/67L+N8p7KdzGoaRjsTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+        window.addEventListener('hashchange',(e) => {
+            if (location.hash === '#bottom-part') {
+                hidden_part.style.transform = 'translateY(100px)';
+                hidden_part.parentElement.style.height = 'auto';
+                is_hidden = false;
+                isDrag = false;
+            }
+        })
         var animation = bodymovin.loadAnimation({
             container: document.getElementById('tcf_typo'),
             path: root + 'content/json/tcf_typo.json',
@@ -152,11 +160,15 @@
                             hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
                             deltaY = 0;
                             isDrag = false;
+                            removeHash();
                         }
                     }, 600)
                 }
             }
         })
+        function removeHash () { 
+            history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
         hidden_part.addEventListener("click", ()=>{
             hidden_part.style.transform = 'translateY(100px)';
             console.log(hidden_part.parentElement);
@@ -188,6 +200,7 @@
                     hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
                     hidden_part.parentElement.style.height = window.innerHeight + 'px';
                     is_hidden = true;
+                    removeHash();
                     wheel_count = 0;
                 }
             }
@@ -223,6 +236,7 @@
                     hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
                     hidden_part.parentElement.style.height = window.innerHeight + 'px';
                     is_hidden = true;
+                    removeHash();
                     yDiff = 0;
                 }
             }

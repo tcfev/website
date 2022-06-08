@@ -25,7 +25,7 @@
         <article class="pos-r">
             <div class="container h-100v pos-f" style="top:0;left:0;z-index:1">
                 <div class="f-row jcc aic h-100v">
-                    <h1 class="fs-3xl fs-s-xl p-x-2" id="title" style="display:none"><?php echo $blog['title']; ?></h1>
+                    <h1 class="fs-3xsl fs-m-xxl fs-s-xl p-x-2" id="title" style="display:none"><?php echo $blog['title']; ?></h1>
                 </div>
             </div>
         </article>
