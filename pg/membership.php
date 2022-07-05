@@ -10,10 +10,10 @@
 <head>
     <?php include_once phproot.'pg/inc/head.php'; ?>
     <meta name="description" content="">
-    <title>CPanel - login</title>
+    <title>Membership</title>
 </head>
-<body style="overflow-x:hidden">
-    <main class="main-bg h-100v">
+<body style="overflow-x:hidden bg-light">
+    <main class="main-bg p-b-6">
         <article class="light">
             <?php include_once phproot.'pg/inc/menu.php'; ?>
             <div class="container p-y-9" id="membership-container">
@@ -28,12 +28,23 @@
             </div>
         </article>
     </main>
+    <section id="form" class="m-b-9">
+        <div class="container-5 m-x-a m-t-n5">
+            <div class="f-row">
+                <div class="f-holder-1 brr-3 shdw-2 bg-white p-3 p-t-7 m-t-n5">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmE461F2fkwjmdshYj6JojQVkTTJW9-jhpegbIz8yzhzmvkg/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <?php 
+        include_once phproot.'pg/inc/index.footer.php';
+        ?>
+    </section>
 
     <script src="<?php echo root; ?>js/var.js"></script>
     <script src="<?php echo root; ?>js/kc.normal.js"></script>
     <script src="<?php echo root; ?>js/app.js"></script>
-
-    <script>
-    </script>
 </body>
 </html>
