@@ -68,15 +68,25 @@
 
     <script>
         const mainpage = document.querySelector('#header-title');
-        const par = document.querySelector('.transition-pre');
         let elms = document.querySelectorAll('.project-gallery');
-
-        setTimeout(() => {
-            par.classList.add('animated');
-            setTimeout(() => {
-                mainpage.classList.add('active');
-            }, 1200);
-        }, 700);
+		
+		let cl = getCookie("trans_color");
+		if (cl)
+		{
+			const par = document.querySelector('.transition-pre');
+			setTimeout(() => {
+				par.classList.add('animated');
+				setTimeout(() => {
+                	mainpage.classList.add('active');
+				}, 1200);
+			}, 700);
+			delCookie("trans_color");
+		}
+		else
+		{
+			mainpage.classList.add('active');
+		}
+        
 
         Array.from(elms).forEach((elm)=>{
             let scl = new VerticalScroll({target:elm});

@@ -11,7 +11,6 @@
             <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="dsp-f">
                 <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:300px">
                     <div class="blog-frame dsp-f p-2 jcc aic">
-                        <!-- <iframe scrolling="no" loading="lazy" src="blog/<?php echo $blogs[$i]['ID']; ?>" frameborder="0"></iframe> -->
                         <h3 class="fs-xxl fs-s-xm"><?php echo $blogs[$i]['title']; ?></h3>
                         <div class="cl-grey-7 mobile container-8 txt-j blur-p">
                             <span><?php echo substr($blogs[$i]['body'], 0, 200)."... "; ?></span><span class="fs-s cl-blue-5">read more</span>

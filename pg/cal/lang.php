@@ -4,27 +4,32 @@
             'en' => array(
                 'about' => 'About Us',
                 'membership' => 'Membership',
-                'forms' => 'Our Forms'
+                'forms' => 'Support Request',
+				'contact' => 'Contact us'
             ),
             'de' => array(
                 'about' => 'About Us',
                 'membership' => 'Membership',
-                'forms' => 'Our Forms'
+                'forms' => 'Support Request',
+				'contact' => 'Contact us'
             ),
             'fa' => array(
                 'about' => 'درباره ما',
                 'membership' => 'عضویت',
-                'forms' => 'فرم‌ها'
+                'forms' => 'درخواست پشتیبانی',
+				'contact' => 'ارتباط با ما'
             ),
             'ar' => array(
                 'about' => 'درباره ما',
                 'membership' => 'عضویت',
-                'forms' => 'فرم‌ها'
+                'forms' => 'فرم‌ها',
+				'contact' => 'ارتباط با ما'
             ),
             'ku' => array(
                 'about' => 'سه باره ت',
                 'membership' => 'ناونووسی',
-                'forms' => 'فورمه‌کان'
+                'forms' => 'داواکاری پال‌پشتی',
+				'contact' => 'پیوه‌ندی'
             ),
         ),
         'ind' => array(

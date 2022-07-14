@@ -12,8 +12,9 @@
     <meta name="description" content="">
     <title>CPanel - login</title>
 </head>
-<body style="overflow-x:hidden">
-    <main class="main-bg h-100v">
+<body style="overflow-x:hidden bg-light">
+	<?php include_once phproot.'pg/inc/transition.pre.php'; ?>
+    <main class="main-bg">
         <article class="light">
             <?php include_once phproot.'pg/inc/menu.php'; ?>
             <div class="container p-y-9" id="contact-container">
@@ -28,10 +29,37 @@
             </div>
         </article>
     </main>
+	<section id="form" class="m-b-9">
+        <div class="container-7 m-x-a m-t-n5">
+            <div class="f-row jcc">
+                <div class="f-holder-1 brr-3 shdw-2 bg-white p-3 p-t-7 m-t-n5">
+                    <?php echo $form[$l]; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <?php 
+        include_once phproot.'pg/inc/index.footer.php';
+        ?>
+    </section>
 
     <script src="<?php echo root; ?>js/var.js"></script>
     <script src="<?php echo root; ?>js/kc.normal.js"></script>
     <script src="<?php echo root; ?>js/app.js"></script>
+
+	<script>
+		let cl = getCookie("trans_color");
+		if (cl)
+		{
+			const par = document.querySelector('.transition-pre');
+
+			setTimeout(() => {
+				par.classList.add('animated');
+			}, 700);
+			delCookie("trans_color");
+		}
+    </script>
 
     <script>
     </script>

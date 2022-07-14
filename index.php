@@ -107,6 +107,7 @@
                 e.preventDefault();
                 let aa = this.href;
                 let cl = '#' + this.getAttribute('kc-color');
+				setCookie("trans_color", cl, 90);
                 trans(aa, cl);
             })
         });
