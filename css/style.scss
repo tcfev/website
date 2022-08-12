@@ -72,6 +72,24 @@ $main-c-7 : #1e6091;
 // font-family: 'Montserrat Alternates', sans-serif;
 // font-family: 'Permanent Marker', cursive;
 // font-family: 'Righteous', cursive;
+@font-face {
+	font-family: 'Vazirmatn';
+	src: url('../fonts/Vazirmatn-RD[wght].woff2') format('woff2 supports variations'),
+			url('../fonts/Vazirmatn-RD[wght].woff2') format('woff2-variations');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NYJ';
+	src: url("../fonts/YekanN.eot?#") format("eot"), url("../fonts/YekanN.woff") format("woff"), url("../fonts/YekanN.ttf") format("truetype");
+}
+
+html[lang="fa"] {
+    // font-family: 'Assistant', sans-serif;
+    font-family: 'NYJ', 'Vazirmatn', cursive;
+}
 
 html {
     // font-family: 'Assistant', sans-serif;
@@ -559,17 +577,28 @@ body {
     animation: scroll-icon-anim 4s ease 1s infinite normal;
 }
 
-.pullup-icon {
-    width: 20px;
-    height: 20px;
+.pullup {
+    width: 100px;
+	height: 50px;
     position: absolute;
     left: 50%;
-    top: 35px;
-    border: none;
-    border-bottom: 3px solid #fff;
-    border-left: 3px solid #fff;
-    transform: translate(-50%, 0) rotate(135deg);
-    animation: pullup-icon-anim 4s ease 1s infinite normal;
+    top: 5px;
+	cursor: pointer;
+	& .icon {
+		width: 20px;
+		height: 20px;
+		margin-top: 25px;
+		border: none;
+		border-bottom: 3px solid #fff;
+		border-left: 3px solid #fff;
+		transform: translate(-50%, 0) rotate(135deg);
+		animation: pullup-icon-anim 4s ease 1s infinite normal;
+		&.active {
+			transform: translate(-50%, -15px) rotate(-45deg);
+			animation: pulldown-icon-anim 4s ease 1s infinite normal;
+		}
+	}
+	
 }
 
 #hidden-part {
@@ -597,6 +626,19 @@ body {
     27% {transform: translate(-50%, 0) rotate(135deg);}
     34.5% {transform: translate(-50%, -15px) rotate(135deg);}
     50% {transform: translate(-50%, 0) rotate(135deg);}
+    51% {opacity: 1;}
+    55% {opacity: 0;}
+    96% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes pulldown-icon-anim {
+    0% {transform: translate(-50%, -15px) rotate(-45deg);}
+    7.5% {transform: translate(-50%, 0) rotate(-45deg);}
+    23% {transform: translate(-50%, -15px) rotate(-45deg);}
+    27% {transform: translate(-50%, -15px) rotate(-45deg);}
+    34.5% {transform: translate(-50%, 0) rotate(-45deg);}
+    50% {transform: translate(-50%, -15px) rotate(-45deg);}
     51% {opacity: 1;}
     55% {opacity: 0;}
     96% {opacity: 0;}

@@ -39,7 +39,11 @@
         ?>
         </section>
         <div class="container-8 brr-2 pos-r m-x-a m-b-6 p-t-8 main-bg-7 cl-white shdw-t" style="pointer-events: all;z-index:2;" id="hidden-part">
-            <div class="pullup-icon"></div>
+            <div class="pullup">
+				<div class="icon">
+
+				</div>
+			</div>
             <?php
                 include_once phproot.'pg/inc/index.members.php';
                 include_once phproot.'pg/inc/index.footer.php';
@@ -170,11 +174,11 @@
         function removeHash () { 
             history.pushState("", document.title, window.location.pathname + window.location.search);
         }
-        hidden_part.addEventListener("click", ()=>{
-            hidden_part.style.transform = 'translateY(100px)';
-            console.log(hidden_part.parentElement);
-            hidden_part.parentElement.style.height = 'auto';
-            is_hidden = false;
+        hidden_part.querySelector('.pullup').addEventListener("click", ()=>{
+            if (hidden_part.querySelector('.pullup .icon').classList.contains('active'))
+				hide_about();
+			else
+				show_about();
         })
         window.addEventListener('wheel', (e)=>{
             console.log();
@@ -198,11 +202,7 @@
             } else {
                 if (e.deltaY < 0 && hidden_part.getBoundingClientRect().top > -400)
                 {
-                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
-                    hidden_part.parentElement.style.height = window.innerHeight + 'px';
-                    is_hidden = true;
-                    removeHash();
-                    wheel_count = 0;
+                    hide_about();
                 }
             }
         })
@@ -234,16 +234,29 @@
             } else {
                 if (hidden_part.getBoundingClientRect().top > -400 && yDiff < 0)
                 {
-                    hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
-                    hidden_part.parentElement.style.height = window.innerHeight + 'px';
-                    is_hidden = true;
-                    removeHash();
-                    yDiff = 0;
+                    hide_about();
                 }
             }
 
             yDown = null;
         }, {passive: true});
+
+		function show_about() {
+			hidden_part.style.transform = 'translateY(100px)';
+            hidden_part.parentElement.style.height = 'auto';
+			hidden_part.querySelector('.pullup .icon').classList.add('active');
+            is_hidden = false;
+		}
+
+		function hide_about() {
+			hidden_part.style.transform = 'translateY('+ (window.innerHeight - 55) + 'px)';
+			hidden_part.parentElement.style.height = window.innerHeight + 'px';
+			hidden_part.querySelector('.pullup .icon').classList.remove('active');
+			is_hidden = true;
+			removeHash();
+			wheel_count = 0;
+			yDiff = 0;
+		}
 
         window.addEventListener('touchstart', (e)=>{
             const firstTouch = getTouches(e)[0];

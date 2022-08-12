@@ -56,6 +56,23 @@
 }
 
 /****************** STYLING ********************/
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url("../fonts/Vazirmatn-RD[wght].woff2") format("woff2 supports variations"), url("../fonts/Vazirmatn-RD[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NYJ';
+  src: url("../fonts/YekanN.eot?#") format("eot"), url("../fonts/YekanN.woff") format("woff"), url("../fonts/YekanN.ttf") format("truetype");
+}
+
+html[lang="fa"] {
+  font-family: 'NYJ', 'Vazirmatn', cursive;
+}
+
 html {
   font-family: 'Comfortaa', cursive;
 }
@@ -637,12 +654,19 @@ body {
           animation: scroll-icon-anim 4s ease 1s infinite normal;
 }
 
-.pullup-icon {
-  width: 20px;
-  height: 20px;
+.pullup {
+  width: 100px;
+  height: 50px;
   position: absolute;
   left: 50%;
-  top: 35px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.pullup .icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 25px;
   border: none;
   border-bottom: 3px solid #fff;
   border-left: 3px solid #fff;
@@ -650,6 +674,13 @@ body {
           transform: translate(-50%, 0) rotate(135deg);
   -webkit-animation: pullup-icon-anim 4s ease 1s infinite normal;
           animation: pullup-icon-anim 4s ease 1s infinite normal;
+}
+
+.pullup .icon.active {
+  -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+          transform: translate(-50%, -15px) rotate(-45deg);
+  -webkit-animation: pulldown-icon-anim 4s ease 1s infinite normal;
+          animation: pulldown-icon-anim 4s ease 1s infinite normal;
 }
 
 #hidden-part {
@@ -802,6 +833,84 @@ body {
   50% {
     -webkit-transform: translate(-50%, 0) rotate(135deg);
             transform: translate(-50%, 0) rotate(135deg);
+  }
+  51% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pulldown-icon-anim {
+  0% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  7.5% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  23% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  27% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  34.5% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  51% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulldown-icon-anim {
+  0% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  7.5% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  23% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  27% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
+  }
+  34.5% {
+    -webkit-transform: translate(-50%, 0) rotate(-45deg);
+            transform: translate(-50%, 0) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
+            transform: translate(-50%, -15px) rotate(-45deg);
   }
   51% {
     opacity: 1;

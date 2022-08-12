@@ -30,7 +30,7 @@
 	$form = array(
 		'en' => '<iframe style="width:100%" src="https://docs.google.com/forms/d/e/1FAIpQLSdD9_UEeGWXvaSNKIAgTYljidaPse0YpaKSmCebt7fODHKulA/viewform?embedded=true" width="640" height="2200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
 		'de' => '<iframe style="width:100%" src="https://docs.google.com/forms/d/e/1FAIpQLSdsZYrcUZjMcbi7ITStlNoMtwtyO8JICzdd4puC3hDhA_PmTw/viewform?embedded=true" width="640" height="2200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
-		'fa' => '<iframe style="width:100%; direction: rtl;" src="https://docs.google.com/forms/d/e/1FAIpQLSf42owecV2dkI929Mgwyz-dhTRvubOjl6Wa9I_pP_7pjDWq9w/viewform?embedded=true" width="640" height="2400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+		'fa' => '<iframe style="width:100%; direction:rtl;" src="https://docs.google.com/forms/d/e/1FAIpQLScXLmhui2OeWeU9lqos11hkGgo894TzGa3STLpQclYABtIrKQ/viewform?embedded=true" width="640" height="2200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
 		'ar' => '',
 		'ku' => ''
 	)
