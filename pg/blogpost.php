@@ -35,7 +35,7 @@
 
     <section class="bg-white pos-r" style="z-index:2">
         <section>
-            <article class="p-t-10">
+            <article class="p-t-10" style="min-height: 75vh">
                 <div class="container-6 m-x-a p-y-10">
                     <div class="txt-j cl-grey-7 p-s-4">
                         <?php echo $blog['body']; ?>
