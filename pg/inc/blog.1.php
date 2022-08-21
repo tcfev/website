@@ -15,6 +15,7 @@
             </div>
 
             <?php include_once 'blog.main.php'; ?>
+			<?php include_once 'blog.tags.php'; ?>
             <?php include_once 'blog.gallery.php'; ?>
             <?php include_once 'blog.video.php'; ?>
         </div>

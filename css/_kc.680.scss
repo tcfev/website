@@ -165,4 +165,50 @@
     .tile-3-2, .tile-4-3, .tile-m-5-3 {
         width: 100%;
     }
+
+	    /***************************** ALIGN *************************/
+ 
+		.aic-m {
+			align-items: center;
+		}
+	
+		.ais-m {
+			align-items: stretch;
+		}
+	
+		.aibl-m {
+			align-items: baseline;
+		}
+	
+		.aife-m {
+			align-items: flex-end;
+		}
+	
+		.jcb-m {
+			justify-content: space-between;
+		}
+	
+		.jcc-m {
+			justify-content: center;
+		}
+	
+		.jca-m {
+			justify-content: space-around;
+		}
+	
+		.jce-m {
+			justify-content: space-evenly;
+		}
+	
+		.jcr-m {
+			justify-content: flex-end;
+		}
+	
+		.jcl-m {
+			justify-content: flex-start;
+		}
+	
+	
 }
+
+

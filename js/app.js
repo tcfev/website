@@ -2249,6 +2249,31 @@ function deleteBlog(id) {
     };
 }
 
+function toggleProject(obj) {
+    let pid = obj.getAttribute('kc-pid');
+    let val = obj.getAttribute('kc-val');
+	let fn = val == 0 ? 'addBlogProject' : 'deleteBlogProject';
+		
+    let page = root + 'pg/cal/blog.php';
+    let f = new FormData();
+    f.append('f', fn);
+    f.append('pid', pid);
+    f.append('id', obj.getAttribute('kc-bid'));
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            // let data = JSON.parse(request.responseText);
+            // handleErr(data, null, null, true, '', '', 'timer');
+			loadBlogs(setBlogs);
+        }
+    };
+}
+
 
 
 

@@ -28,6 +28,14 @@
         include_once phproot.'pg/inc/index.mainpage.php';
         include_once phproot.'pg/inc/index.article.php';
         include_once phproot.'pg/inc/index.projects.php';
+	?>
+	<div class="container p-t-8 bg-light">
+		<div class="container-6 m-x-a p-s-4">
+			<h2 class="fs-xl main-cl-6 righteous">Want to know more?</h2>
+			<h3 class="fs-xm cl-black righteous">Here are our blog posts</h3>
+		</div>
+	</div>
+	<?php
         include_once phproot.'pg/inc/index.blogs.php';
     ?>
     </section>

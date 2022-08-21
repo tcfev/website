@@ -21,6 +21,10 @@ function loadBlogs() {
         $row[$i]['videos'] = $con->query("SELECT bv.ID, bv.blog_id AS pID, bvd.video, bvd.ID AS bvdID, bvd.title
         FROM (SELECT * FROM blog_video WHERE blog_id = '$id') bv 
         INNER JOIN (SELECT * FROM blog_video_detail WHERE lang = '$l') bvd ON bv.ID = bvd.blog_video_id")->fetch_all(MYSQLI_ASSOC);
+
+		$row[$i]['projects'] = $con->query("SELECT '$id' AS bID, p.ID, pd.title, IF(bp.ID, 1, 0) AS selected FROM projects p
+		INNER JOIN (SELECT * FROM project_detail WHERE lang = '$l') pd ON p.ID = pd.project_id
+		LEFT JOIN (SELECT * FROM blog_projects WHERE blog_id = '$id') bp ON p.ID = bp.project_id ORDER BY pd.title ASC, p.ID DESC")-> fetch_all(MYSQLI_ASSOC);
     }
 
     echo json_encode($row);
@@ -414,4 +418,26 @@ function deleteBlogVideo() {
     $stmt = $con->prepare("DELETE FROM blog_video WHERE ID = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
+}
+
+function addBlogProject() {
+	global $con;
+
+	$id = $_POST['id'];
+	$pid = $_POST['pid'];
+	$stmt = $con->prepare("INSERT INTO blog_projects(project_id, blog_id) VALUES(?,?)");
+	$stmt->bind_param("ii", $pid, $id);
+	$stmt->execute();
+
+	echo $stmt->error;
+}
+
+function deleteBlogProject() {
+	global $con;
+
+	$id = $_POST['id'];
+	$pid = $_POST['pid'];
+	$stmt = $con->prepare("DELETE FROM blog_projects WHERE project_id = ? AND blog_id = ?");
+	$stmt->bind_param("ii", $pid, $id);
+	$stmt->execute();
 }

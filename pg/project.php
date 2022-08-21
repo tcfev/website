@@ -53,6 +53,14 @@
                 </div>
             </div>
         </article>
+
+		<article>
+			<div class="container-6 m-x-a">
+				<?php
+					include_once phproot.'pg/inc/project.blogs.php';
+				?>
+			</div>
+		</article>
     </section>
 
     <section id="footer">

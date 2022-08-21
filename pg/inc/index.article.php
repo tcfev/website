@@ -15,6 +15,7 @@
     items.forEach((elm, i) => {
         let s = document.createElement('span');
         s.classList.add('dsp-ib');
+		s.style.pointerEvents = 'none';
         if (i == 0)
             s.classList.add('main-cl-5');
         let sc = (Math.random() * 4.5 + 1.5);

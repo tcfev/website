@@ -156,14 +156,135 @@ body {
 .light nav.menu {
   position: relative;
   z-index: 999;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.light nav.menu .nowrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 1em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.light nav.menu select {
+  border: 0.5px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.light nav.menu select option {
+  color: #000;
+}
+
+.light nav.menu .scroll-right-btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.light nav.menu .scroll-right-btn::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: #fff solid 2px;
+  border-right: #fff solid 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.light nav.menu .scroll-left-btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.light nav.menu .scroll-left-btn::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: #fff solid 2px;
+  border-right: #fff solid 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.light nav.menu .menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.light nav.menu .menu-items::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .light nav.menu ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.light nav.menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 1em;
 }
 
 .light nav.menu ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   text-align: center;
+  white-space: nowrap;
   color: #fff;
   -webkit-transition: color ease 0.2s;
   transition: color ease 0.2s;
@@ -173,27 +294,138 @@ body {
   color: #aaa;
 }
 
-.light nav.menu ul select {
-  border: 0.5px solid #fff;
-  background-color: transparent;
-  color: #fff;
-}
-
-.light nav.menu ul select option {
-  color: #000;
-}
-
 .dark nav.menu {
   position: relative;
   z-index: 999;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dark nav.menu .nowrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 1em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dark nav.menu select {
+  border: 0.5px solid #222;
+  background-color: transparent;
+  color: #222;
+  margin-left: 10px;
+}
+
+.dark nav.menu select option {
+  color: #000;
+}
+
+.dark nav.menu .scroll-right-btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dark nav.menu .scroll-right-btn::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: #222 solid 2px;
+  border-right: #222 solid 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.dark nav.menu .scroll-left-btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dark nav.menu .scroll-left-btn::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: #222 solid 2px;
+  border-right: #222 solid 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.dark nav.menu .menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.dark nav.menu .menu-items::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .dark nav.menu ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.dark nav.menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 1em;
 }
 
 .dark nav.menu ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   text-align: center;
+  white-space: nowrap;
   color: #000;
   -webkit-transition: color ease 0.2s;
   transition: color ease 0.2s;
@@ -211,6 +443,90 @@ body {
 
 .dark nav.menu ul select option {
   color: #000;
+}
+
+.project-link-scroll {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.project-link-scroll .project-link-holder {
+  width: calc(90% - 100px);
+  padding: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.project-link-scroll .project-link-holder::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.project-link-scroll .project-link-holder a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
+  margin: 0 1em;
+}
+
+.project-link-scroll .scroll-right-btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-link-scroll .scroll-right-btn::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: #fff solid 2px;
+  border-right: #fff solid 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.project-link-scroll .scroll-left-btn {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-link-scroll .scroll-left-btn::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: #fff solid 2px;
+  border-right: #fff solid 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
 }
 
 .tcf-main {
@@ -463,7 +779,7 @@ body {
   height: 0vh;
   position: absolute;
   left: 93%;
-  top: -10vh;
+  top: -5vh;
   background-color: #52b69a;
   -webkit-transition: all ease 10s;
   transition: all ease 10s;
@@ -518,6 +834,12 @@ body {
 .blog {
   width: 70vw;
   max-width: 800px;
+  border: 2px solid #ccc;
+}
+
+.project-blog {
+  width: 45vh;
+  max-width: 450px;
   border: 2px solid #ccc;
 }
 
@@ -690,6 +1012,14 @@ body {
   transition: transform ease 0.5s, -webkit-transform ease 0.5s;
   -webkit-transform: translateY(calc(100vh - 55px));
           transform: translateY(calc(100vh - 55px));
+}
+
+.selected-0 {
+  background-color: #999;
+}
+
+.selected-1 {
+  background-color: #168aad;
 }
 
 @-webkit-keyframes scroll-icon-anim {
