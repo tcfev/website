@@ -6,6 +6,7 @@
         'landing' => 'selected',
         'projects' => '',
         'members' => '',
+        'tags' => '',
         'blogs' => '',
         'preferences' => ''
     );

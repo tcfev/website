@@ -12,6 +12,9 @@
         <a href="<?php echo root; ?>panel/projects">
             <li class="hvr-bg-blue-6 <?php echo $sel['projects']; ?>"><span class="icon icon-columns"></span><label>Projects</label></li>
         </a>
+		<a href="<?php echo root; ?>panel/tags">
+            <li class="hvr-bg-blue-6 <?php echo $sel['tags']; ?>"><span class="icon icon-bookmark"></span><label>Tag labels</label></li>
+        </a>
         <a href="<?php echo root; ?>panel/members">
             <li class="hvr-bg-blue-6 <?php echo $sel['members']; ?>"><span class="icon icon-user"></span><label>Members</label></li>
         </a>

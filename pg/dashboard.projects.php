@@ -7,6 +7,7 @@
         'projects' => 'selected',
         'members' => '',
         'blogs' => '',
+        'tags' => '',
         'members' => '',
         'preferences' => ''
     );

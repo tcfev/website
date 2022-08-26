@@ -7,6 +7,7 @@
         'projects' => '',
         'investors' => '',
         'blogs' => '',
+        'tags' => '',
         'members' => '',
         'preferences' => 'selected'
     );

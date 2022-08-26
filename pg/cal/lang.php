@@ -40,7 +40,8 @@
                 'key' => 'refugee, develope, tcf',
                 'des' => 'about what tcf does',
                 'more' => 'more',
-                'selected' => array('en' => 'selected', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => '')
+                'selected' => array('en' => 'selected', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => ''),
+				'all' => 'All'
             ),
             'de' => array(
                 'lang' => 'de',
@@ -49,7 +50,8 @@
                 'key' => 'refugee, develope, tcf',
                 'des' => 'about what tcf does',
                 'more' => 'more',
-                'selected' => array('en' => '', 'fa' => '', 'de' => 'selected', 'ku' => '', 'ar' => '')
+                'selected' => array('en' => '', 'fa' => '', 'de' => 'selected', 'ku' => '', 'ar' => ''),
+				'all' => 'Alle'
             ),
             'fa' => array(
                 'lang' => 'fa',
@@ -58,7 +60,8 @@
                 'key' => 'کلمات کلیدی',
                 'des' => 'توضیحات در مورد tcf',
                 'more' => 'بیشتر',
-                'selected' => array('en' => '', 'fa' => 'selected', 'de' => '', 'ku' => '', 'ar' => '')
+                'selected' => array('en' => '', 'fa' => 'selected', 'de' => '', 'ku' => '', 'ar' => ''),
+				'all' => 'همه'
             ),
             'ku' => array(
                 'lang' => 'ku',
@@ -67,7 +70,8 @@
                 'key' => 'کلمات کلیدی',
                 'des' => 'توضیحات در مورد tcf',
                 'more' => 'زیاتر',
-                'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => 'selected', 'ar' => '')
+                'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => 'selected', 'ar' => ''),
+				'all' => 'همه‌موو'
             ),
             'ar' => array(
                 'lang' => 'ar',
@@ -76,7 +80,8 @@
                 'key' => 'کلمات کلیدی',
                 'des' => 'توضیحات در مورد tcf',
                 'more' => 'بیشتر',
-                'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => 'selected')
+                'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => 'selected'),
+				'all' => 'کل'
             )
         ),
 

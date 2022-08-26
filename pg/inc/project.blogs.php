@@ -1,8 +1,8 @@
 <div class="container p-b-8 p-t-3 p-s-x-1 m-t-7 project-gallery ov-x-a">
     <div class="w-max dsp-f">
         <?php $i = -1;while (++$i < count($blogs)) { ?>
-        <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="pos-r p-1 project-blog m-3 cl-grey-8 brr-3 bg-white">
-            <div href="blog/<?php echo $blogs[$i]['ID']; ?>" class="dsp-f">
+        <a href="<?php echo root.$l; ?>/blog/<?php echo $blogs[$i]['ID']; ?>" class="pos-r p-1 project-blog m-3 cl-grey-8 brr-3 bg-white">
+            <div href="<?php echo root.$l; ?>/blog/<?php echo $blogs[$i]['ID']; ?>" class="dsp-f">
                 <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:300px">
                     <div class="blog-frame dsp-f p-2 jcc aic">
                         <h3 class="fs-l txt-c fs-s-m"><?php echo $blogs[$i]['title']; ?></h3>

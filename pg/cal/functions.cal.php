@@ -381,14 +381,7 @@
     $img['h'] = $min_height;
     return $img;
   }
-
-  function loadTags(){
-    global $con;
-    $row = $con->query("SELECT * FROM tags ORDER BY Text ASC")->fetch_all(MYSQLI_ASSOC);
-
-    echo json_encode($row);
-  }
-
+  
   function tp($str){
     return $newStr = str_replace( array('0','1','2','3','4','5','6','7','8','9'),  array('۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'), $str);
   }

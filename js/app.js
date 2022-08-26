@@ -1130,8 +1130,140 @@ function deleteMember(id) {
 
 
 
+// ******************** TAGS *****************
 
-// ************** LANDING **************
+function loadTags(fn) {
+    let page = root + 'pg/cal/tag.php';
+    let f = new FormData();
+    f.append('f', 'loadTags');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            fn(data);
+        }
+    };
+}
+
+function setTags(data) {
+    innerDom('tags', data, 'tag');
+}
+
+function addTag() {
+    let page = root + 'pg/cal/tag.php';
+    let f = new FormData();
+    f.append('f', 'addTag');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            handleErr(data, function(){loadTags(setTags);}, null, true, '', '', 'timer');
+        }
+    };
+}
+
+function loadSingleTag(fn, id) {
+    let page = root + 'pg/cal/tag.php';
+    let f = new FormData();
+    f.append('f', 'loadSingleTag');
+    f.append('id', id);
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            fn(data);
+        }
+    };
+}
+
+function startTagLabel(obj) {
+    let id = obj.getAttribute('kc-id');
+    loadSingleTag(tagLabelDialog, id);
+}
+
+function tagLabelDialog(data) {
+    innerDom('tag-label-dialog-holder', data, 'tld');
+
+    let fn = function() {
+        kdsArray.push(DivSlider.create('tag-label-dialog-popup'));
+        kdsArray[kdsArray.length -1].initialize();
+        kdsArray[kdsArray.length -1].update();
+    }
+
+    let pm = new popup({
+        id:'pmsg',
+        target:'tag-label-dialog',
+        type:'steady',
+        cb: fn
+    })
+}
+
+function tagLabel(obj) {
+    let page = root + 'pg/cal/tag.php';
+    let f = new FormData(obj);
+    f.append('f', 'tagLabel');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            handleErr(data, function(){loadTags(setTags);}, null, false, '', '', 'timer');
+        }
+    };
+}
+
+function deleteTagDialog(obj) {
+    let id = obj.getAttribute("kc-id");
+    let pmsg = new popup({
+        id:'del-pop',
+        msg:'Do you want to proceed?',
+        type:'steady',
+        isYesNo: true,
+        yesFunction: function(){deleteTag(id);}
+    })
+}
+
+function deleteTag(id) {
+    let page = root + 'pg/cal/tag.php';
+    let f = new FormData();
+    f.append('f', 'deleteTag');
+    f.append("i", id);
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            loadTags(setTags);
+        }
+    };
+}
+
+
+
+
+// ***************** LANDING ******************
 
 function loadAbout(fn) {
     let page = root + 'pg/cal/landing.php';
@@ -2267,8 +2399,29 @@ function toggleProject(obj) {
 
     request.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
-            // let data = JSON.parse(request.responseText);
-            // handleErr(data, null, null, true, '', '', 'timer');
+			loadBlogs(setBlogs);
+        }
+    };
+}
+
+function toggleTag(obj) {
+    let pid = obj.getAttribute('kc-tid');
+    let val = obj.getAttribute('kc-val');
+	let fn = val == 0 ? 'addBlogTag' : 'deleteBlogTag';
+		
+    let page = root + 'pg/cal/blog.php';
+    let f = new FormData();
+    f.append('f', fn);
+    f.append('pid', pid);
+    f.append('id', obj.getAttribute('kc-bid'));
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
 			loadBlogs(setBlogs);
         }
     };
