@@ -8,6 +8,7 @@
 				<li><a href="<?php echo root.$l ?>/membership"><?php echo $langs['menu'][$l]['membership']; ?></a></li>
 				<li><a href="<?php echo root.$l ?>/contact"><?php echo $langs['menu'][$l]['contact']; ?></a></li>
 				<li><a href="<?php echo root.$l ?>/supprot-request"><?php echo $langs['menu'][$l]['forms']; ?></a></li>
+				<li><a href="<?php echo root.$l ?>/blog/28"><?php echo $langs['menu'][$l]['donation']; ?></a></li>
 			</ul>
 		</div>
 		<div class="dsp-f jcl jcc-s">

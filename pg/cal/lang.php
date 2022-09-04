@@ -5,30 +5,35 @@
                 'about' => 'About Us',
                 'membership' => 'Membership',
                 'forms' => 'Support Request',
+                'donation' => 'Donation',
 				'contact' => 'Contact us'
             ),
             'de' => array(
                 'about' => 'About Us',
                 'membership' => 'Membership',
                 'forms' => 'Support Request',
+                'donation' => 'Spenden',
 				'contact' => 'Contact us'
             ),
             'fa' => array(
                 'about' => 'درباره ما',
                 'membership' => 'عضویت',
                 'forms' => 'درخواست پشتیبانی',
+                'donation' => 'دَهِش',
 				'contact' => 'ارتباط با ما'
             ),
             'ar' => array(
                 'about' => 'درباره ما',
                 'membership' => 'عضویت',
                 'forms' => 'فرم‌ها',
+                'donation' => 'اعانه',
 				'contact' => 'ارتباط با ما'
             ),
             'ku' => array(
-                'about' => 'سه باره ت',
+                'about' => 'سه‌باره‌ت',
                 'membership' => 'ناونووسی',
                 'forms' => 'داواکاری پال‌پشتی',
+                'donation' => 'Donation',
 				'contact' => 'پیوه‌ندی'
             ),
         ),
