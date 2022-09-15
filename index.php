@@ -189,7 +189,6 @@
 				show_about();
         })
         window.addEventListener('wheel', (e)=>{
-            console.log();
             if (is_hidden) {
                 // if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
                 //     wheel_count += e.deltaY;

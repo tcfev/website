@@ -272,7 +272,7 @@ function loadAboutUss() {
     global $con;
 
     $row = $con->query("SELECT s1.Value AS about_us, s1.lang FROM
-    (SELECT Value, lang FROM settings WHERE key_name = 'about') s1")->fetch_all(MYSQLI_ASSOC);
+    (SELECT Value, lang FROM settings WHERE key_name = 'about_us') s1")->fetch_all(MYSQLI_ASSOC);
 
     echo json_encode($row);
 }

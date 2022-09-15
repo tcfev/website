@@ -97,7 +97,7 @@ html {
 }
 
 .righteous {
-    font-family: 'Righteous', cursive;
+    font-family: 'Vazirmatn', 'Righteous', cursive;
 }
 
 html {
@@ -872,7 +872,10 @@ body {
 	height: 50px;
     position: absolute;
     left: 50%;
+	transform: translate(-50%);
     top: 5px;
+	display: flex;
+	justify-content: center;
 	cursor: pointer;
 	& .icon {
 		width: 20px;
@@ -881,10 +884,10 @@ body {
 		border: none;
 		border-bottom: 3px solid #fff;
 		border-left: 3px solid #fff;
-		transform: translate(-50%, 0) rotate(135deg);
+		transform: translate(0, 0) rotate(135deg);
 		animation: pullup-icon-anim 4s ease 1s infinite normal;
 		&.active {
-			transform: translate(-50%, -15px) rotate(-45deg);
+			transform: translate(0, -15px) rotate(-45deg);
 			animation: pulldown-icon-anim 4s ease 1s infinite normal;
 		}
 	}
@@ -918,12 +921,12 @@ body {
 }
 
 @keyframes pullup-icon-anim {
-    0% {transform: translate(-50%, 0) rotate(135deg);}
-    7.5% {transform: translate(-50%, -15px) rotate(135deg);}
-    23% {transform: translate(-50%, 0) rotate(135deg);}
-    27% {transform: translate(-50%, 0) rotate(135deg);}
-    34.5% {transform: translate(-50%, -15px) rotate(135deg);}
-    50% {transform: translate(-50%, 0) rotate(135deg);}
+    0% {transform: translate(0, 0) rotate(135deg);}
+    7.5% {transform: translate(0, -15px) rotate(135deg);}
+    23% {transform: translate(0, 0) rotate(135deg);}
+    27% {transform: translate(0, 0) rotate(135deg);}
+    34.5% {transform: translate(0, -15px) rotate(135deg);}
+    50% {transform: translate(0, 0) rotate(135deg);}
     51% {opacity: 1;}
     55% {opacity: 0;}
     96% {opacity: 0;}
@@ -931,12 +934,12 @@ body {
 }
 
 @keyframes pulldown-icon-anim {
-    0% {transform: translate(-50%, -15px) rotate(-45deg);}
-    7.5% {transform: translate(-50%, 0) rotate(-45deg);}
-    23% {transform: translate(-50%, -15px) rotate(-45deg);}
-    27% {transform: translate(-50%, -15px) rotate(-45deg);}
-    34.5% {transform: translate(-50%, 0) rotate(-45deg);}
-    50% {transform: translate(-50%, -15px) rotate(-45deg);}
+    0% {transform: translate(0, -15px) rotate(-45deg);}
+    7.5% {transform: translate(0, 0) rotate(-45deg);}
+    23% {transform: translate(0, -15px) rotate(-45deg);}
+    27% {transform: translate(0, -15px) rotate(-45deg);}
+    34.5% {transform: translate(0, 0) rotate(-45deg);}
+    50% {transform: translate(0, -15px) rotate(-45deg);}
     51% {opacity: 1;}
     55% {opacity: 0;}
     96% {opacity: 0;}

@@ -45,6 +45,7 @@
                 'key' => 'refugee, develope, tcf',
                 'des' => 'about what tcf does',
                 'more' => 'more',
+				'read_more' => 'Read More',
                 'selected' => array('en' => 'selected', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => ''),
 				'all' => 'All'
             ),
@@ -55,6 +56,7 @@
                 'key' => 'refugee, develope, tcf',
                 'des' => 'about what tcf does',
                 'more' => 'more',
+				'read_more' => 'Read More',
                 'selected' => array('en' => '', 'fa' => '', 'de' => 'selected', 'ku' => '', 'ar' => ''),
 				'all' => 'Alle'
             ),
@@ -65,6 +67,7 @@
                 'key' => 'کلمات کلیدی',
                 'des' => 'توضیحات در مورد tcf',
                 'more' => 'بیشتر',
+				'read_more' => 'بیشتر بخوانید',
                 'selected' => array('en' => '', 'fa' => 'selected', 'de' => '', 'ku' => '', 'ar' => ''),
 				'all' => 'همه'
             ),
@@ -75,6 +78,7 @@
                 'key' => 'کلمات کلیدی',
                 'des' => 'توضیحات در مورد tcf',
                 'more' => 'زیاتر',
+				'read_more' => 'زیاتر بخوینن',
                 'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => 'selected', 'ar' => ''),
 				'all' => 'همه‌موو'
             ),
@@ -85,6 +89,7 @@
                 'key' => 'کلمات کلیدی',
                 'des' => 'توضیحات در مورد tcf',
                 'more' => 'بیشتر',
+				'read_more' => 'بیشتر بخوانید',
                 'selected' => array('en' => '', 'fa' => '', 'de' => '', 'ku' => '', 'ar' => 'selected'),
 				'all' => 'کل'
             )

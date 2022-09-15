@@ -1,7 +1,9 @@
 <?php
+$simple = $con->query("SELECT (SELECT Value FROM settings WHERE key_name = 'about' AND lang = '$l') AS about, 
+(SELECT Value FROM settings WHERE key_name = 'title' AND lang = '$l') AS title")->fetch_assoc();
 
-$article = $con->query("SELECT (SELECT Value FROM settings WHERE key_name = 'about' AND lang = '$l') AS about, 
-(SELECT Value FROM settings WHERE key_name = 'title' AND lang = '$l') AS title")->fetch_all(MYSQLI_ASSOC);
+$article = $con->query("SELECT (SELECT Value FROM settings WHERE key_name = 'descr' AND lang = '$l') AS about, 
+(SELECT Value FROM settings WHERE key_name = 'header' AND lang = '$l') AS title")->fetch_all(MYSQLI_ASSOC);
 
 $stmt = $con->prepare("SELECT p.*, pd.descr, pd.body, pd.title, IF(p.active = 1, 'checked', 'no') AS active FROM projects p INNER JOIN
 (SELECT * FROM project_detail WHERE lang = ?) pd ON p.ID = pd.project_id WHERE p.active = 1 ORDER BY p.ID DESC");

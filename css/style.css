@@ -78,7 +78,7 @@ html {
 }
 
 .righteous {
-  font-family: 'Righteous', cursive;
+  font-family: 'Vazirmatn', 'Righteous', cursive;
 }
 
 html {
@@ -1066,7 +1066,15 @@ body {
   height: 50px;
   position: absolute;
   left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 
@@ -1077,15 +1085,15 @@ body {
   border: none;
   border-bottom: 3px solid #fff;
   border-left: 3px solid #fff;
-  -webkit-transform: translate(-50%, 0) rotate(135deg);
-          transform: translate(-50%, 0) rotate(135deg);
+  -webkit-transform: translate(0, 0) rotate(135deg);
+          transform: translate(0, 0) rotate(135deg);
   -webkit-animation: pullup-icon-anim 4s ease 1s infinite normal;
           animation: pullup-icon-anim 4s ease 1s infinite normal;
 }
 
 .pullup .icon.active {
-  -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-          transform: translate(-50%, -15px) rotate(-45deg);
+  -webkit-transform: translate(0, -15px) rotate(-45deg);
+          transform: translate(0, -15px) rotate(-45deg);
   -webkit-animation: pulldown-icon-anim 4s ease 1s infinite normal;
           animation: pulldown-icon-anim 4s ease 1s infinite normal;
 }
@@ -1187,28 +1195,28 @@ body {
 
 @-webkit-keyframes pullup-icon-anim {
   0% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   7.5% {
-    -webkit-transform: translate(-50%, -15px) rotate(135deg);
-            transform: translate(-50%, -15px) rotate(135deg);
+    -webkit-transform: translate(0, -15px) rotate(135deg);
+            transform: translate(0, -15px) rotate(135deg);
   }
   23% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   27% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   34.5% {
-    -webkit-transform: translate(-50%, -15px) rotate(135deg);
-            transform: translate(-50%, -15px) rotate(135deg);
+    -webkit-transform: translate(0, -15px) rotate(135deg);
+            transform: translate(0, -15px) rotate(135deg);
   }
   50% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   51% {
     opacity: 1;
@@ -1226,28 +1234,28 @@ body {
 
 @keyframes pullup-icon-anim {
   0% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   7.5% {
-    -webkit-transform: translate(-50%, -15px) rotate(135deg);
-            transform: translate(-50%, -15px) rotate(135deg);
+    -webkit-transform: translate(0, -15px) rotate(135deg);
+            transform: translate(0, -15px) rotate(135deg);
   }
   23% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   27% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   34.5% {
-    -webkit-transform: translate(-50%, -15px) rotate(135deg);
-            transform: translate(-50%, -15px) rotate(135deg);
+    -webkit-transform: translate(0, -15px) rotate(135deg);
+            transform: translate(0, -15px) rotate(135deg);
   }
   50% {
-    -webkit-transform: translate(-50%, 0) rotate(135deg);
-            transform: translate(-50%, 0) rotate(135deg);
+    -webkit-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
   }
   51% {
     opacity: 1;
@@ -1265,28 +1273,28 @@ body {
 
 @-webkit-keyframes pulldown-icon-anim {
   0% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   7.5% {
-    -webkit-transform: translate(-50%, 0) rotate(-45deg);
-            transform: translate(-50%, 0) rotate(-45deg);
+    -webkit-transform: translate(0, 0) rotate(-45deg);
+            transform: translate(0, 0) rotate(-45deg);
   }
   23% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   27% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   34.5% {
-    -webkit-transform: translate(-50%, 0) rotate(-45deg);
-            transform: translate(-50%, 0) rotate(-45deg);
+    -webkit-transform: translate(0, 0) rotate(-45deg);
+            transform: translate(0, 0) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   51% {
     opacity: 1;
@@ -1304,28 +1312,28 @@ body {
 
 @keyframes pulldown-icon-anim {
   0% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   7.5% {
-    -webkit-transform: translate(-50%, 0) rotate(-45deg);
-            transform: translate(-50%, 0) rotate(-45deg);
+    -webkit-transform: translate(0, 0) rotate(-45deg);
+            transform: translate(0, 0) rotate(-45deg);
   }
   23% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   27% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   34.5% {
-    -webkit-transform: translate(-50%, 0) rotate(-45deg);
-            transform: translate(-50%, 0) rotate(-45deg);
+    -webkit-transform: translate(0, 0) rotate(-45deg);
+            transform: translate(0, 0) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translate(-50%, -15px) rotate(-45deg);
-            transform: translate(-50%, -15px) rotate(-45deg);
+    -webkit-transform: translate(0, -15px) rotate(-45deg);
+            transform: translate(0, -15px) rotate(-45deg);
   }
   51% {
     opacity: 1;
