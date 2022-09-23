@@ -39,13 +39,7 @@
         <?php include_once phproot.'pg/inc/menu.side.php'; ?>
 
         <div class="container-7 m-a p-y-8" style="direction: <?php echo $langs['ind'][$lang]['dir']; ?>">
-            <div class="f-row">
-                <select class="p-2 w-100x m-x-2" name="lang-select" id="top-lang-select" onchange="changeLang.call(this);">
-                    <option value="en" <?php echo $langs['ind'][$lang]['selected']['en'];?>>English</option>
-                    <option value="hu" <?php echo $langs['ind'][$lang]['selected']['hu'];?>>Magyar</option>
-                    <option value="fa" <?php echo $langs['ind'][$lang]['selected']['fa'];?>>Farsi</option>
-                </select>
-            </div>
+			<?php include_once phproot.'pg/inc/changelang.php'; ?>
             <div class="f-row m-t-9">
                 <?php include_once phproot.'pg/inc/settings.links.php'; ?>
                 <!-- <?php include_once phproot.'pg/inc/settings.social.php'; ?> -->

@@ -10,7 +10,7 @@
 <head>
     <?php include_once phproot.'pg/inc/head.php'; ?>
     <meta name="description" content="">
-    <title>CPanel - login</title>
+    <title>Contact Us</title>
 </head>
 <body style="overflow-x:hidden bg-light">
 	<?php include_once phproot.'pg/inc/transition.pre.php'; ?>
