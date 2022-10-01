@@ -1,9 +1,9 @@
 <div class="container-8 m-x-a p-b-2 p-t-8 dsp-f jca blog-tag-scroll">
 	<div class="scroll-left-btn"></div>
 	<div class="f-row jcl blog-tag-holder" id="blog-tag-holder">
-		<span class="m-x-3 dsp-f aic cl-bright-green-6 hvr-cl-bright-blue-3 pointer blog-tag" kc-mode="func-btn" kc-func="loadBlogsByTag" kc-id="0"><?php echo $langs['ind'][$l]['all'];?></span>
+		<span class="m-r-2 dsp-f aic main-bg-5 cl-white hvr-cl-bright-blue-3 pointer blog-tag p-x-3 p-y-1 brr-2" kc-mode="func-btn" kc-func="loadBlogsByTag" kc-id="0"><?php echo $langs['ind'][$l]['all'];?></span>
 		<?php for ($i = 0; $i < count($blogTags); $i++) { $bt = $blogTags[$i];?>
-			<span class="m-x-3 dsp-f aic hvr-cl-bright-blue-3 pointer blog-tag" kc-mode="func-btn" kc-func="loadBlogsByTag" kc-id="<?php echo $bt['ID']; ?>"><?php echo $bt['tag']; ?></span>
+			<span class="m-x-2 dsp-f aic hvr-cl-bright-blue-3 pointer blog-tag p-x-2 p-y-1 brr-2" kc-mode="func-btn" kc-func="loadBlogsByTag" kc-id="<?php echo $bt['ID']; ?>"><?php echo $bt['tag']; ?></span>
 		<?php } ?>
 	</div>
 	<div class="scroll-right-btn"></div>
@@ -86,7 +86,8 @@
 
 	function loadBlogsByTag(obj) {
 		resetTagActive();
-		obj.classList.add('cl-bright-green-6');
+		obj.classList.add('main-bg-5');
+		obj.classList.add('cl-white');
 		let id = obj.getAttribute('kc-id');
 		let page = root + 'pg/cal/blog.php';
 		let f = new FormData();
@@ -112,7 +113,8 @@
 
 	function resetTagActive() {
 		Array.from(blogTags).forEach(bt => {
-			bt.classList.remove('cl-bright-green-6');
+			bt.classList.remove('main-bg-5');
+			bt.classList.remove('cl-white');
 		})
 	}
 </script>

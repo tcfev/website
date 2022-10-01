@@ -19,7 +19,7 @@ for ($i=0; $i < count($projects); $i++) {
 }
 
 $stmt = $con->prepare("SELECT tg.ID, tgd.tag FROM tags tg INNER JOIN (SELECT * FROM tag_detail WHERE lang = ?) tgd
-ON tgd.tag_id = tg.ID INNER JOIN blog_tags btg ON tg.ID = btg.tag_id ORDER BY tgd.tag ASC, tg.ID ASC");
+ON tgd.tag_id = tg.ID INNER JOIN blog_tags btg ON tg.ID = btg.tag_id GROUP BY tg.ID ORDER BY tgd.tag ASC, tg.ID ASC");
 $stmt->bind_param("s", $l);
 $stmt->execute();
 $blogTags = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
