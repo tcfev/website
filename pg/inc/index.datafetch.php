@@ -25,7 +25,7 @@ $stmt->execute();
 $blogTags = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
 $stmt = $con->prepare("SELECT b.*, bd.title, bd.body, bd.descr FROM 
-blogs b INNER JOIN (SELECT * FROM blog_detail WHERE lang = ?) bd ON b.ID = bd.blog_id ORDER BY b.ID DESC");
+blogs b INNER JOIN (SELECT * FROM blog_detail WHERE lang = ?) bd ON b.ID = bd.blog_id GROUP BY b.ID ORDER BY b.ID DESC");
 $stmt->bind_param("s", $l);
 $stmt->execute();
 $blogs = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);

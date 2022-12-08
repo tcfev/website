@@ -1115,6 +1115,10 @@ body {
   background-color: #168aad;
 }
 
+.blog-body img {
+  max-width: 100% !important;
+}
+
 @-webkit-keyframes scroll-icon-anim {
   0% {
     -webkit-transform: translate(-50%, 0) rotate(-45deg);

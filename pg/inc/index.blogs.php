@@ -10,11 +10,11 @@
 </div>
 <div class="container p-b-8 p-x-6 p-s-x-1 m-t-4 shdw-b project-gallery ov-x-a">
     <div class="w-max dsp-f" id="blog-holder">
-		<a href="blog/[[ID]]" class="pos-r p-1 blog m-3 cl-grey-8 brr-3 bg-white karaco-sample-dom">
+		<a href="blog/[[link]]" class="pos-r p-1 blog m-3 cl-grey-8 brr-3 bg-white karaco-sample-dom">
             <div class="dsp-f">
                 <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:300px">
                     <div class="blog-frame dsp-f p-2 jcc aic">
-                        <h3 class="fs-xxl fs-s-xm">[[title]]</h3>
+                        <h3 class="fs-xl fs-s-m">[[title]]</h3>
                         <div class="cl-grey-7 mobile container-8 txt-j blur-p">
                             <span>[[body]]</span><span class="fs-s cl-blue-5">read more</span>
                         </div>
@@ -28,11 +28,11 @@
             </div>
         </a>
         <?php $i = -1;while (++$i < count($blogs)) { ?>
-        <a href="blog/<?php echo $blogs[$i]['ID']; ?>" class="pos-r p-1 blog m-3 cl-grey-8 brr-3 bg-white">
+        <a href="blog/<?php echo $blogs[$i]['link']; ?>" class="pos-r p-1 blog m-3 cl-grey-8 brr-3 bg-white">
             <div class="dsp-f">
                 <div class="f-holder-1 dsp-f f-d-col jcc p-0" style="min-height:300px">
                     <div class="blog-frame dsp-f p-2 jcc aic">
-                        <h3 class="fs-xxl fs-s-xm"><?php echo $blogs[$i]['title']; ?></h3>
+                        <h3 class="fs-l fs-s-m"><?php echo $blogs[$i]['title']; ?></h3>
                         <div class="cl-grey-7 mobile container-8 txt-j blur-p">
                             <span><?php echo substr($blogs[$i]['body'], 0, 200)."... "; ?></span><span class="fs-s cl-blue-5">read more</span>
                         </div>

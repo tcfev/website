@@ -1,5 +1,5 @@
 <?php
-	$phones = $con->query("SELECT value FROM settings WHERE key_name = 'phone'")->fetch_array();
+	$phones = $con->query("SELECT value FROM settings WHERE key_name = 'phone'")->fetch_array(MYSQLI_ASSOC);
 ?>
 <hr style="border-top:1px solid #52b69a" class="container-6 m-w-90p">
 <div class="container">

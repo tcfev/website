@@ -1898,7 +1898,6 @@ function startPhone(obj) {
 }
 
 function phoneDialog(data) {
-    console.log(data);
     document.getElementById('phone-dialog-holder').querySelector('input[name="i"]').value = data.ID;
     document.getElementById('phone-dialog-holder').querySelector('input[name="p"]').value = data.value;
     let pm = new popup({
@@ -2141,7 +2140,7 @@ function setBlogs(data) {
     data.forEach((el, ix) => {
         el.class = projectClass[ix];
     })
-    innerDom('blogs', data, 'pjs', null, false, null);
+    innerDom('blogs', data, 'bps', null, false, null);
 }
 
 function addBlog(obj) {
@@ -2267,6 +2266,59 @@ function blogExp(obj) {
     let page = root + 'pg/cal/blog.php';
     let f = new FormData(obj);
     f.append('f', 'blogExp');
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            handleErr(data, function(){loadBlogs(setBlogs);}, null, false, '', '', 'timer');
+        }
+    };
+}
+
+function startBlogLink(obj) {
+    let id = obj.getAttribute('kc-id');
+    loadBlogLink(blogLinkDialog, id);
+}
+
+function loadBlogLink(fn, id) {
+	let page = root + 'pg/cal/blog.php';
+    let f = new FormData();
+    f.append('f', 'loadBlogLink');
+    f.append('i', id);
+
+    let request = new XMLHttpRequest();
+
+    request.open('post', page);
+    request.send(f);
+
+    request.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(request.responseText);
+            fn(data[0]);
+        }
+    };
+}
+
+function blogLinkDialog(data) {
+	console.log(data);
+    document.getElementById('blog-link-dialog-holder').querySelector('input[name="i"]').value = data.ID;
+    document.getElementById('blog-link-dialog-holder').querySelector('input[name="l"]').value = data.link;
+    let pm = new popup({
+        id:'pmsg',
+        target:'blog-link-dialog',
+        type:'steady'
+    })
+}
+
+function blogLink(obj) {
+    let page = root + 'pg/cal/blog.php';
+    let f = new FormData(obj);
+    f.append('f', 'blogLink');
 
     let request = new XMLHttpRequest();
 

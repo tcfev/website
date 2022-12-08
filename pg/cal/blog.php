@@ -7,7 +7,7 @@ function loadBlogs() {
     $l = $_SESSION['lang'];
 
     $stmt = $con->prepare("SELECT b.*, bd.descr, bd.body, bd.title, IF(b.active = 1, 'checked', 'no') AS active FROM blogs b INNER JOIN
-    (SELECT * FROM blog_detail WHERE lang = ?) bd ON b.ID = bd.blog_id");
+    (SELECT * FROM blog_detail WHERE lang = ?) bd ON b.ID = bd.blog_id ORDER BY b.ID DESC");
     $stmt->bind_param("s", $l);
     $stmt->execute();
     $row = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -71,6 +71,7 @@ function addBlog() {
     } else {
         $msg['res'] = 1;
         $id = $con->insert_id;
+		$con->query("UPDATE blogs SET link = '$id' WHERE ID = '$id'");
         for ($i = 0; $i < count(langs); $i++) {
             $lang = langs[$i];
             $b = $text.' - '.$lang;
@@ -164,15 +165,55 @@ function blogDescr() {
             $stmt = $con->prepare("UPDATE blog_detail SET body = ? WHERE ID = ?");
             $stmt->bind_param('si', $text, $id);
             if (!$stmt->execute()) {
-                $msg['msg'] = 'Error: Something went - code: PPx011';
+                $msg['msg'] = 'Error: Something went wrong - code: PPx011';
                 $msg['res'] = 0;
             } else {
-                $msg['msg'] = 'Text ubdated successfully';
+                $msg['msg'] = 'Text updated successfully';
                 $msg['res'] = 1;
             }
         }
     }
 
+    echo json_encode($msg);
+}
+
+function blogLink() {
+	global $con;
+	$id = $_POST['i'];
+	$link = str_replace(' ', '+', $_POST['l']);
+	$err = array();
+
+	if (empty($id)) {
+        $msg['res'] = 0;
+        $msg['msg'] = 'Error: Unidentified request - code: PPx018';
+	} else {
+		if (empty($link)) {
+			array_push($err, 'Link is empty');
+		}
+		if (count($err) > 0) {
+            $msg['err'] = $err;
+            $msg['res'] = 2;
+        } else {
+			$stmt = $con->prepare("SELECT ID FROM blogs WHERE link = ?");
+			$stmt->bind_param("s", $link);
+			$stmt->execute();
+			$rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+			if (count($rows) > 0) {
+				$msg['msg'] = 'This link address already exists - code: PPx020';
+				$msg['res'] = 0;
+			} else {
+				$stmt = $con->prepare("UPDATE blogs SET link = ? WHERE ID = ?");
+				$stmt->bind_param('si', $link, $id);
+				if (!$stmt->execute()) {
+					$msg['msg'] = 'Error: Something went wrong - code: PPx019';
+					$msg['res'] = 0;
+				} else {
+					$msg['msg'] = 'Link updated successfully';
+					$msg['res'] = 1;
+				}
+			}
+        }
+	}
     echo json_encode($msg);
 }
 
@@ -366,6 +407,18 @@ function loadSingleBlogVideo() {
     $id = $_POST['i'];
 
     $stmt = $con->prepare("SELECT ID, blog_video_id AS bvID, title, video, lang FROM blog_video_detail WHERE blog_video_id = ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $row = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+    echo json_encode($row);
+}
+
+function loadBlogLink() {
+    global $con;
+    $id = $_POST['i'];
+
+    $stmt = $con->prepare("SELECT ID, link FROM blogs WHERE ID = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $row = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);

@@ -498,7 +498,7 @@ function innerFast(o) {
 
 function innerFast2(o){
   let maxStr, ids;
-  o.maxStr ? maxStr = o.maxStr : maxStr = 999999;
+  o.maxStr ? maxStr = o.maxStr : maxStr = 0;
   let tg = o.target;
   let doc;
   if (tg) {
@@ -535,7 +535,7 @@ function innerFast2(o){
           data[k] = '*';
         }
         if (typeof data[k].slice === 'function') {
-          if (data[k].length > maxStr) {
+          if (maxStr && data[k].length > maxStr) {
             doc.outerHTML = doc.outerHTML.replace(key[i], data[k].slice(0, maxStr) + '...');
             doc = parent.children[idx];
           } else {
@@ -557,7 +557,7 @@ function innerFast2(o){
 
 class InFast {
   constructor(o) {
-    this.maxStr = o.maxStr || 999999;
+    this.maxStr = o.maxStr || 0;
     this.fakeID = o.target;
     this.tg = o.target;
     this.doc = null;
@@ -614,7 +614,7 @@ class InFast {
           this.data[this.k] = '*';
         }
         if (typeof this.data[this.k].slice === 'function') {
-          if (this.data[this.k].length > this.maxStr) {
+          if (this.maxStr && this.data[this.k].length > this.maxStr) {
             this.doc.outerHTML = this.doc.outerHTML.replace(this.key[i], this.data[this.k].slice(0, this.maxStr) + '...');
             this.doc = this.parent.children[this.idx];
           } else {

@@ -55,3 +55,19 @@
         <span class="bx-btn bg-white cl-blue-6 m-1" kc-mode="kc-slider-next">></span>
     </div>
 </div>
+
+<div class="container-7 m-a popup" id="blog-link-dialog">
+    <h4 class="cl-grey-8 m-b-4">Edit link address</h4>
+    <div id="blog-link-dialog-holder">
+        <div class="m-1">
+            <form kc-mode="form-submit" kc-func="blogLink">
+				<div class="dsp-f">
+					<span>/blog/</span>
+					<input type="text" class="p-1 dsp-b m-a w-100p m-w-100p" name="l" placeholder="link" value="[[link]]">
+				</div>
+                <input type="hidden" name="i" value="[[ID]]">
+                <button type="submit" class="p-1 m-t-1 m-b-3">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
