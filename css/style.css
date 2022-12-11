@@ -69,7 +69,8 @@
   src: url("../fonts/YekanN.eot?#") format("eot"), url("../fonts/YekanN.woff") format("woff"), url("../fonts/YekanN.ttf") format("truetype");
 }
 
-html[lang="fa"] {
+html[lang="fa"],
+html[lang="ku"] {
   font-family: 'NYJ', 'Vazirmatn', cursive;
 }
 
