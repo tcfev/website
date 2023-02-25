@@ -8,7 +8,7 @@
             <div class="f-holder-2 dsp-f f-d-col fs-s">
                 <span class="m-b-4">Transnational Community Federation e.V. - VR 725308</span>
                 <span class="m-b-4">
-                    Hieberstraße 11, 74076 Heilbronn, Germany
+					<a class="cl-bright-blue-3 m-b-5" href="<?php echo root.$l?>/blog/64">Privacy Policy</a></br>
                     <a class="cl-bright-blue-3 m-b-5" href="mailto:hello@transcf.org">e-mail us</a>
                 </span>
 				<span>

@@ -3,6 +3,7 @@ if (!isset($_GET['b']))
     echo '<script>window.location = '.root.';</script>';
 else
     $id = $_GET['b'];
+	echo $id;
 $stmt = $con->prepare("SELECT b.*, bd.title, bd.body, bd.descr FROM 
 (SELECT * FROM blogs WHERE link = ?) b INNER JOIN (SELECT * FROM blog_detail WHERE lang = ?) bd ON b.ID = bd.blog_id");
 $stmt->bind_param("is", $id, $l);
